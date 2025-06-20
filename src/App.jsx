@@ -6,7 +6,8 @@ import Footer from './components/Footer'
 import Contact  from './pages/Contact'
 import Products from './pages/Products'
 import Notfound from './pages/Notfound'
-import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from 'react-router-dom'
+import {createBrowserRouter,  RouterProvider} from 'react-router-dom'
+import { LightProvider } from './LightContext'
 
 function App() {
 const router = createBrowserRouter([{path: '/', element: <Home/>},
@@ -17,9 +18,9 @@ const router = createBrowserRouter([{path: '/', element: <Home/>},
 ])
 
   return (
-    <>
+  <LightProvider>
    <RouterProvider router={router}/>
-    </>
+   </LightProvider>
   )
 }
 
