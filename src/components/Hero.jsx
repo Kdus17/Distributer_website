@@ -18,6 +18,7 @@ export default function Hero() {
                 confident in your supply chain's strength.
             </p>
         </div>
+
     </div>
   )
 }

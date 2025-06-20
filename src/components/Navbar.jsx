@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   return (
@@ -7,11 +8,11 @@ export default function Navbar() {
             <img src="https://placehold.co/60x60/FF6600/FFFFFF?text=KB" className='rounded-full' alt="LOGO" />
         </div>
         <div className='flex gap-8 uppercase'>
-            <a href="" className='py-1'>Home</a>
-            <a href="" className='py-1'>Product</a>
-            <a href="" className='py-1'>About Us</a>
-            <a href="" className='py-1'>Contact Us</a>
-            <a href="" className='bg-green-600 px-2 py-1 rounded-md'>Login</a>
+
+            <Link to={'/'} className='py-1'>Home</Link>
+            <Link to={'/About'} className='py-1'>About Us</Link>
+            <Link to={'/Contact'} className='py-1'>Contact Us</Link>
+            <Link to={'/login'} className='bg-green-600 px-2 py-1 rounded-md'>Login</Link>
         </div>
     </div>
   )
