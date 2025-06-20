@@ -11,8 +11,11 @@ import { useLightcontext } from '../LightContext'
         <div>
             <img src="https://placehold.co/60x60/FF6600/FFFFFF?text=KB" className='rounded-full' alt="LOGO" />
         </div>
+
         <div className='flex gap-8  dark:bg-black  uppercase'>
+
             <Link to={'/'} className='py-1'>Home</Link>
+            <Link to={'/products'} className='py-1'>Products</Link>
             <Link to={'/About'} className='py-1'>About Us</Link>
             <Link to={'/Contact'} className='py-1'>Contact Us</Link>
             <Link to={'/login'} className='bg-green-600 px-2 py-1 rounded-md'>Login</Link>

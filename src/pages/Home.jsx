@@ -1,18 +1,19 @@
-import React from 'react'
 import Hero from '../components/Hero'
 import Values from '../components/Values'
 import CallToAction from '../components/CallToAction'
 import Features from '../components/Features'
 import Navbar from '../components/Navbar'
 import { LightProvider } from '../LightContext'
+import Footer from '../components/Footer'
 export default function Home() {
   return (
-    
-    <Navbar>
+    <>
+        <Navbar/>
         <Hero/>
         <Values/>
         <Features/>
         <CallToAction/>
-    </Navbar>
+        <Footer/>
+    </>
   )
 }
