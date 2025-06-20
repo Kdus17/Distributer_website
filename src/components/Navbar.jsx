@@ -8,6 +8,7 @@ export default function Navbar() {
         </div>
         <div className='flex gap-8 uppercase'>
             <a href="" className='py-1'>Home</a>
+            <a href="" className='py-1'>Product</a>
             <a href="" className='py-1'>About Us</a>
             <a href="" className='py-1'>Contact Us</a>
             <a href="" className='bg-green-600 px-2 py-1 rounded-md'>Login</a>
