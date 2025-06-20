@@ -10,9 +10,10 @@ export default function Navbar() {
         <div className='flex gap-8 uppercase'>
 
             <Link to={'/'} className='py-1'>Home</Link>
+            <Link to={'/products'} className='py-1'>Products</Link>
             <Link to={'/About'} className='py-1'>About Us</Link>
             <Link to={'/Contact'} className='py-1'>Contact Us</Link>
-            <Link to={'/login'} className='bg-green-600 px-2 py-1 rounded-md'>Login</Link>
+            <Link to={'/login'} className='bg-green-500 transition duration-100 ease-in-out hover:-translate-y-1 px-4 py-1 rounded-md'>Login</Link>
         </div>
     </div>
   )
