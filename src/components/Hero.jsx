@@ -2,6 +2,7 @@ import React from 'react'
 
 export default function Hero() {
   return (
+
     <div className='flex flex-col md:flex-row justify-around items-center
                     px-24 gap-10'>
         <img src="https://placehold.co/600x600/FF6600/FFFFFF?text=abel"
