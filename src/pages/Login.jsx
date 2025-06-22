@@ -35,6 +35,10 @@ const Login = () => {
           <div className="flex justify-center">
             <button className="bg-red-600 w-full p-2 cursor-pointer text-white rounded-md uppercase hover:bg-red-700">Login</button>
           </div>
+          <div className="flex justify-center gap-1 items-center">
+            <p className="text-gray-400">Don't have an account?</p>
+            <Link to={'/signup'} className="text-red-500">SignUp</Link>
+          </div>
         </div>
     </div>
   )
