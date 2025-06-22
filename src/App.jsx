@@ -9,6 +9,7 @@ import Login from './pages/Login'
 
 import {createBrowserRouter,  RouterProvider} from 'react-router-dom'
 import { LightProvider } from './LightContext'
+import SignUp from './pages/SignUp'
 
 
 function App() {
@@ -17,7 +18,8 @@ const router = createBrowserRouter([{path: '/', element: <Home/>},
   {path:'/contact', element:  <Contact/> },
   {path: '/products', element: <Products/>},
   {path:"*", element: <Notfound/>},
-  {path:"/login", element: <Login/>}
+  {path:"/login", element: <Login/>},
+  {path:"/signup",element:<SignUp/>}
 ])
 
   return (
