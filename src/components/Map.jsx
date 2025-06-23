@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Polyline, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
-import { MapPin, Navigation, ExternalLink, Loader2 } from 'lucide-react';
+import { Navigation, ExternalLink, Loader2 } from 'lucide-react';
 import 'leaflet/dist/leaflet.css';
 
 // Import marker images
@@ -136,20 +136,12 @@ const Map = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 py-8 px-4">
+    
       <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <MapPin className="w-8 h-8 text-blue-600" />
-            <h1 className="text-3xl font-bold text-gray-800">Navigation to Alem Gebre Building</h1>
-          </div>
-          <p className="text-gray-600 text-lg">Find your way to the destination with ease</p>
-        </div>
 
         {/* Controls */}
-        <div className="bg-white rounded-2xl shadow-xl p-6 mb-8">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="bg-white rounded-2xl shadow-xl p-6">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <button
               onClick={openGoogleMapsSearch}
               className="group flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
@@ -185,10 +177,9 @@ const Map = () => {
               <p className="text-red-700 text-sm text-center">{locationError}</p>
             </div>
           )}
-        </div>
+        
 
         {/* Map Container */}
-        <div className="bg-white rounded-2xl shadow-2xl p-4 overflow-hidden">
           <MapContainer
             center={destination}
             zoom={14}
@@ -216,32 +207,7 @@ const Map = () => {
             )}
           </MapContainer>
         </div>
-
-        {/* Instructions */}
-        <div className="mt-8 bg-white rounded-2xl shadow-lg p-6">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
-            <Navigation className="w-5 h-5 text-blue-600" />
-            How to use
-          </h2>
-          <div className="grid md:grid-cols-2 gap-4 text-gray-600">
-            <div className="flex items-start gap-3">
-              <div className="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</div>
-              <div>
-                <div className="font-medium">Open in Google Maps</div>
-                <div className="text-sm">Launch Google Maps for turn-by-turn navigation</div>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</div>
-              <div>
-                <div className="font-medium">Show Route</div>
-                <div className="text-sm">Display the route from your current location</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
   );
 };
 
