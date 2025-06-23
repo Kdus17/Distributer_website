@@ -1,14 +1,18 @@
+
 import React, { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Polyline, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
+// Default Leaflet marker images
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
 import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 
+// Define the destination coordinates
 const destination = [9.00521778764852, 38.80887490601392];
 
+// Custom Leaflet icon for the user's location
 const userIcon = new L.Icon({
   iconUrl: markerIcon,
   iconRetinaUrl: markerIcon2x,
@@ -19,6 +23,7 @@ const userIcon = new L.Icon({
   shadowSize: [41, 41],
 });
 
+// Custom Leaflet icon for the destination (red marker)
 const destinationIcon = new L.Icon({
   iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
   iconRetinaUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
@@ -29,23 +34,28 @@ const destinationIcon = new L.Icon({
   shadowSize: [41, 41],
 });
 
+// Component to fetch and display the route on the map
 const FetchRoute = ({ start, destination }) => {
-  const map = useMap();
-  const [routeCoords, setRouteCoords] = useState([]);
+  const map = useMap(); // Get the Leaflet map instance
+  const [routeCoords, setRouteCoords] = useState([]); // State to store route coordinates
 
   useEffect(() => {
+    // Only fetch route if start location is available
     if (!start) return;
 
     const fetchRoute = async () => {
       try {
-        const res = await fetch(
-          `https://router.project-osrm.org/route/v1/driving/${start[1]},${start[0]};${destination[1]},${destination[0]}?overview=full&geometries=geojson`
-        );
-        const data = await res.json();
+        // Fetch route from OSRM demo server
+       const res = await fetch(
+  `https://router.project-osrm.org/route/v1/driving/${start[1]},${start[0]};${destination[1]},${destination[0]}?overview=full&geometries=geojson`
+);
 
+        const data = await res.json();
         if (data.routes && data.routes.length > 0) {
+          // Extract coordinates and reformat for Leaflet [lat, lng]
           const coords = data.routes[0].geometry.coordinates.map(c => [c[1], c[0]]);
           setRouteCoords(coords);
+          // Fit map bounds to show the entire route
           map.fitBounds(coords, { padding: [50, 50] });
         }
       } catch (err) {
@@ -54,16 +64,20 @@ const FetchRoute = ({ start, destination }) => {
     };
 
     fetchRoute();
-  }, [start, destination, map]);
+  }, [start, destination, map]); // Re-run when start, destination, or map changes
 
+  // Don't render polyline if no route coordinates
   if (!routeCoords.length) return null;
 
   return (
     <>
+      {/* Polyline to display the route */}
       <Polyline positions={routeCoords} color="#4285F4" weight={6} opacity={0.9} smoothFactor={1} />
+      {/* Marker for user's location */}
       <Marker position={start} icon={userIcon}>
         <Popup>Your Location</Popup>
       </Marker>
+      {/* Marker for destination */}
       <Marker position={destination} icon={destinationIcon}>
         <Popup>Destination</Popup>
       </Marker>
@@ -71,11 +85,13 @@ const FetchRoute = ({ start, destination }) => {
   );
 };
 
+// Main Map component
 const Map = () => {
-  const [userLocation, setUserLocation] = useState(null);
-  const [showRoute, setShowRoute] = useState(false);
+  const [userLocation, setUserLocation] = useState(null); // State for user's current location
+  const [showRoute, setShowRoute] = useState(false); // State to toggle route display
 
   useEffect(() => {
+    // Fetch user's location when showRoute is true
     if (showRoute) {
       navigator.geolocation.getCurrentPosition(
         pos => {
@@ -88,71 +104,47 @@ const Map = () => {
         }
       );
     } else {
-      setUserLocation(null);
+      setUserLocation(null); // Clear user location when route is hidden
     }
-  }, [showRoute]);
+  }, [showRoute]); // Re-run when showRoute changes
 
+  // Function to open Google Maps search
   const openGoogleMapsSearch = () => {
     const url = 'https://www.google.com/maps/search/?api=1&query=Alem%20Gebre%20Building';
     window.open(url, '_blank');
   };
 
-  // Styled button component
-  const StyledButton = ({ onClick, children }) => (
-    <button
-      onClick={onClick}
-      style={{
-        backgroundColor: '#4285F4',
-        marginTop: '10px',
-        color: 'white',
-        border: 'none',
-        borderRadius: 6,
-        padding: '10px 20px',
-        margin: '0 8px',
-        cursor: 'pointer',
-        fontSize: 16,
-        fontWeight: '600',
-        boxShadow: '0 3px 8px rgba(66, 133, 244, 0.4)',
-        transition: 'background-color 0.3s ease, box-shadow 0.3s ease',
-      }}
-      onMouseEnter={e => {
-        e.currentTarget.style.backgroundColor = '#3367D6';
-        e.currentTarget.style.boxShadow = '0 5px 12px rgba(51, 103, 214, 0.6)';
-      }}
-      onMouseLeave={e => {
-        e.currentTarget.style.backgroundColor = '#4285F4';
-        e.currentTarget.style.boxShadow = '0 3px 8px rgba(66, 133, 244, 0.4)';
-      }}
-      type="button"
-    >
-      {children}
-    </button>
-  );
-
-  return (
-    <div style={{ maxWidth: 360, margin: '20px auto', textAlign: 'center', fontFamily: 'Arial, sans-serif' }} className='flex flex-col gap-4'>
-      <StyledButton onClick={openGoogleMapsSearch}>Open in Google Maps</StyledButton>
-      <StyledButton onClick={() => setShowRoute(!showRoute)}>
+return (
+    <div className="max-w-md mx-auto my-5 text-center font-sans flex flex-col gap-4 p-4">
+      {/* Buttons */}
+      <button
+        onClick={openGoogleMapsSearch}
+        className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md shadow-md transition-all duration-300 ease-in-out text-base"
+        type="button"
+      >
+        Open in Google Maps
+      </button>
+      <button
+        onClick={() => setShowRoute(!showRoute)}
+        className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md shadow-md transition-all duration-300 ease-in-out text-base"
+        type="button"
+      >
         {showRoute ? 'Hide Route' : 'Show Route'}
-      </StyledButton>
+      </button>
 
+      {/* Map Container */}
       <MapContainer
         center={destination}
         zoom={14}
-        style={{
-          height: 300,
-          width: 300,
-          borderRadius: 8,
-          boxShadow: '0 0 15px rgba(0,0,0,0.2)',
-          marginTop: 20,
-        }}
+        className="h-80 w-80 rounded-lg shadow-lg mt-5 mx-auto" // Tailwind classes for styling
         scrollWheelZoom={false}
       >
         <TileLayer
-          attribution="&copy; OpenStreetMap & CartoDB"
+          attribution="© OpenStreetMap & CartoDB"
           url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
         />
 
+        {/* Conditionally render FetchRoute or just the destination marker */}
         {showRoute && userLocation ? (
           <FetchRoute start={userLocation} destination={destination} />
         ) : (
