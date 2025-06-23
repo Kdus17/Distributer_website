@@ -120,7 +120,7 @@ while building comprehensive trading solutions that support local communities an
 
       </div>
       
-      <div className='flex justify-center mt-2'> <img src={logo}className='rounded-xl ' alt="Logo" srcset="" />
+      <div className='flex justify-center mt-2'> <img src={logo}className='rounded-xl ' alt="Logo" />
       </div>
       <h1 className=' text-3xl md:text-4xl font-bold text-gray-50'>Join our trading network</h1>
       <div className='max-w-[650px] text-center  opacity-90 text-gray-100'>
