@@ -5,6 +5,7 @@ import { IoMdEyeOff } from "react-icons/io";
 import { useState } from "react";
 import { FaRegUser } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
+import { Loader2 } from "lucide-react";
 import ErrorCard from "../assets/ErrorCard";
 import LoadingCircle from "../assets/LoadingCircle";
 
@@ -68,7 +69,7 @@ const SignUp = () => {
             {/**SignUp Button */}
             <div className="flex justify-center mt-6">
               <button className="bg-red-600 w-full p-2 cursor-pointer text-white rounded-md uppercase hover:bg-red-700 flex justify-center items-center gap-2"> 
-                {/* <LoadingCircle/> */}
+                {/* <Loader2 className="w-5 h-5 animate-spin" /> */}
                 Sign Up</button>
             </div>
 
