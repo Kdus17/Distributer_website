@@ -48,13 +48,15 @@ export const Contact = () => {
     <>
     <Navbar/>
     <div className="flex flex-col min-h-screen bg-gray-200">
-      <div className="flex flex-col justify-center items-center h-100 bg-red-700 gap-6">
-        <h1 className="text-6xl md:text-7xl font-bold text-white  text-shadow-md">Contact Us</h1>
-        <div className="text-white flex flex-col items-center">
+      <div className="relative flex flex-col justify-center items-center h-100 bg-gradient-to-r  from-red-700 to-red-900 gap-6">
+        <h1 className="text-6xl md:text-7xl font-bold text-white  relative top-20 text-shadow-md">Contact Us</h1>
+        <div className="text-white flex flex-col items-center relative top-20">
           <p>Ready to explore our products </p>
           <p>or discuss comphrenesive trading partnerships</p>
           <p>We are ready to support your business</p>
         </div>
+        <div className="relative bottom-40 right-120 h-25 w-25  bg-white rounded-full opacity-15"></div>
+        <div className="relative bottom-30 right-40 h-15 w-15 bg-white rounded-full opacity-15"></div>
       </div>
 
 
@@ -115,7 +117,7 @@ export const Contact = () => {
 
 
       {/**Contact Form */}
-        <div className="flex flex-col my-12 h-full  border border-gray-200 shadow-lg rounded-lg px-12 bg-white self-center gap-6 pb-8 pt-6">
+        <div className="flex flex-col my-12 h-full  border border-gray-200 shadow-lg rounded-lg px-12 bg-white self-center gap-6 pb-8 pt-6 select-none">
           <div className="my-3 flex flex-col ">
             <p className="uppercase font-bold text-2xl">Send Us a Message</p>
             <p>Fill out the form below and we'll get back to you as soon as possible.</p>
@@ -127,7 +129,7 @@ export const Contact = () => {
               <div className="flex gap-2 w-full">
 
                 <div className="flex flex-col w-full gap-2">
-                  <label htmlFor="firstname" className="font-serif font-semibold text-black select-none">Firstname</label>
+                  <label htmlFor="firstname" className="font-serif font-semibold text-black ">Firstname</label>
                   <div className="px-1 py-1 border-2 border-gray-400 rounded-lg has-focus:border-red-500 has-focus:text-red-500 flex items-center">
                     <User2/>
                     <input type="text" name="firstname" id="firstname" 
@@ -137,7 +139,7 @@ export const Contact = () => {
                 </div>
 
                 <div className="flex flex-col w-full gap-2">
-                  <label htmlFor="lastname" className="font-serif font-semibold text-black select-none">Lastname</label>
+                  <label htmlFor="lastname" className="font-serif font-semibold text-black ">Lastname</label>
                   <div className=" py-1 px-1 border-2 border-gray-400 rounded-lg has-focus:border-red-500 has-focus:text-red-500">
                     <input type="text" name="lastname" id="lastname" 
                       className="px-2 py-1 w-full caret-red-500 text-black outline-none rounded-md  " 

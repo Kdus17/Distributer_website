@@ -7,7 +7,7 @@ import { useLightcontext } from '../LightContext'
         togglelight()
     }
   return (
-    <div className='h-20 bg-gray-100 flex justify-between px-24   dark:bg-black items-center select-none'>
+    <div className='h-20 bg-gray-100 flex justify-between px-24  sticky top-0 z-100 dark:bg-black items-center select-none'>
         <div>
             <img src="https://placehold.co/60x60/FF6600/FFFFFF?text=KB" className='rounded-full' alt="LOGO" />
         </div>
