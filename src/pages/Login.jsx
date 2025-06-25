@@ -1,10 +1,6 @@
 import { Link } from "react-router-dom"
-import { RiLockPasswordLine } from "react-icons/ri";
-import { IoMdEye } from "react-icons/io";
-import { IoMdEyeOff } from "react-icons/io";
 import { useState } from "react";
-import { FaRegUser } from "react-icons/fa6";
-import { Loader2, Mail,Lock } from "lucide-react";
+import { Loader2, Mail,Lock ,Eye,EyeClosed} from "lucide-react";
 import ErrorCard from "../assets/ErrorCard";
 
 
@@ -64,8 +60,8 @@ const Login = () => {
             <label htmlFor="password" className="border-2 border-gray-400 has-focus:border-red-500 has-focus:text-red-500 rounded-lg py-2  px-2 flex justify-between  items-center">
               <Lock />
               <input type={`${see ? "text":"password"}`} name="password" id="password" className="w-full font-sans caret-red-500 outline-none text-black px-2" onChange={handlechange}/>
-              {see && <IoMdEye onClick={()=>setsee(!see)} className="cursor-pointer text-2xl "/>}
-              {!see && <IoMdEyeOff onClick={()=>setsee(!see)} className="cursor-pointer text-2xl "/>}
+              {see && <Eye onClick={()=>setsee(!see)} className="cursor-pointer"/>}
+              {!see && <EyeClosed onClick={()=>setsee(!see)} className="cursor-pointer"/>}
             </label>
             {errors.password && <ErrorCard wrong={errors.password}/>}
           </div>

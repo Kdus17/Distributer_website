@@ -1,11 +1,7 @@
 import { Link } from "react-router-dom"
 import { RiLockPasswordLine } from "react-icons/ri";
-import { IoMdEye } from "react-icons/io";
-import { IoMdEyeOff } from "react-icons/io";
 import { useState } from "react";
-import { FaRegUser } from "react-icons/fa6";
-import { TfiEmail } from "react-icons/tfi";
-import { Loader2 } from "lucide-react";
+import { Loader2,Mail,Lock ,Eye,EyeClosed,User } from "lucide-react";
 import ErrorCard from "../assets/ErrorCard";
 import LoadingCircle from "../assets/LoadingCircle";
 
@@ -65,7 +61,7 @@ const SignUp = () => {
             <div className="flex flex-col gap-2 text-gray-700">
               <label htmlFor="name" className="font-serif font-semibold text-black ">Username</label>
               <label htmlFor="name" className="flex has-focus:border-red-500  has-focus:text-red-500 justify-between border-2 border-gray-400 rounded-lg items-center py-2 px-2">
-                <FaRegUser />
+                <User />
                 <input type="text" name="username" id="name" className=" px-2 w-full caret-red-500 text-black  outline-none" value={formData.username} onChange={handlechange}
                 placeholder="Enter your username"/>
               </label>
@@ -78,7 +74,7 @@ const SignUp = () => {
             <div className="flex flex-col gap-2 text-gray-700">
               <label htmlFor="email" className="font-serif font-semibold text-black ">Email</label>
               <label htmlFor="email" className="flex has-focus:border-red-500  has-focus:text-red-500 justify-between border-2 border-gray-400 rounded-lg items-center py-2 px-2">
-                <TfiEmail />
+                <Mail />
                 <input type="email" name="email" id="email" className=" px-2 w-full caret-red-500 text-black outline-none" value={formData.email} onChange={handlechange}
                 placeholder="Enter your email"/>
               </label>
@@ -90,11 +86,11 @@ const SignUp = () => {
             <div className="flex flex-col gap-2 text-gray-700">
               <label htmlFor="password" className="font-serif font-semibold text-black">Password</label>
               <label htmlFor="password" className="border-2 border-gray-400 has-focus:border-red-500 has-focus:text-red-500 rounded-lg py-2  px-2 flex justify-between  items-center">
-                <RiLockPasswordLine className="text-2xl " />
+                <Lock  />
                 <input type={`${see ? "text":"password"}`} name="password" id="password" className="w-full font-sans caret-red-500 text-black outline-none  px-2" value={formData.password} onChange={handlechange}
                 placeholder="Enter your password" />
-                {see && <IoMdEye onClick={()=>setsee(!see)} className="cursor-pointer text-2xl "/>}
-                {!see && <IoMdEyeOff onClick={()=>setsee(!see)} className="cursor-pointer text-2xl "/>}
+                {see && <Eye onClick={()=>setsee(!see)} className="cursor-pointer text-2xl "/>}
+                {!see && <EyeClosed onClick={()=>setsee(!see)} className="cursor-pointer text-2xl "/>}
               </label>
               {/* <ErrorCard wrong={"Invalid Password"}/> */}
               {errors.password && <ErrorCard wrong={errors.password}/>}
@@ -104,11 +100,11 @@ const SignUp = () => {
             <div className="flex flex-col gap-2 text-gray-700">
               <label htmlFor="confirm_password" className="font-serif font-semibold text-black">Confirm Password</label>
               <label htmlFor="confirm_password" className="border-2 border-gray-400 has-focus:border-red-500 has-focus:text-red-500 rounded-lg py-2  px-2 flex justify-between  items-center">
-                <RiLockPasswordLine className="text-2xl " />
+                <Lock  />
                 <input type={`${see ? "text":"password"}`} name="confirm_password" id="confirm_password" className="w-full font-sans caret-red-500 outline-none text-black  px-2" value={formData.confirm_password} onChange={handlechange}
                 placeholder="Confirm your password" />
-                {see2 && <IoMdEye onClick={()=>setsee2(!see2)} className="cursor-pointer text-2xl "/>}
-                {!see2 && <IoMdEyeOff onClick={()=>setsee2(!see2)} className="cursor-pointer text-2xl "/>}
+                {see2 && <Eye onClick={()=>setsee2(!see2)} className="cursor-pointer"/>}
+                {!see2 && <EyeClosed onClick={()=>setsee2(!see2)} className="cursor-pointer"/>}
               </label>
               {/* <ErrorCard wrong={"Password is not identical"}/> */}
               {errors.confirm_password && <ErrorCard wrong={errors.confirm_password}/>}
