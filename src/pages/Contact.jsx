@@ -1,6 +1,7 @@
 import ErrorCard from "../assets/ErrorCard"
 import { useState } from "react";
-import { Clock, Locate, Mail, MessageCircle, Phone, User2 } from "lucide-react";
+import { Clock, Locate, LocateIcon, Mail, MessageCircle,MapPin, Phone, User2 } from "lucide-react";
+import Navbar from "../components/Navbar";
 
 export const Contact = () => {
   const [formData, setFromData] = useState({
@@ -44,9 +45,11 @@ export const Contact = () => {
   }
 
   return (
+    <>
+    <Navbar/>
     <div className="flex flex-col min-h-screen bg-gray-200">
-      <div className="flex flex-col justify-center items-center h-120 bg-red-700 gap-6">
-        <h1 className="text-6xl md:text-8xl font-bold text-white  text-shadow-md">Contact Us</h1>
+      <div className="flex flex-col justify-center items-center h-100 bg-red-700 gap-6">
+        <h1 className="text-6xl md:text-7xl font-bold text-white  text-shadow-md">Contact Us</h1>
         <div className="text-white flex flex-col items-center">
           <p>Ready to explore our products </p>
           <p>or discuss comphrenesive trading partnerships</p>
@@ -56,40 +59,56 @@ export const Contact = () => {
 
 
       {/**Cards */}
-      <div className="bg-gray-200 flex flex-col md:flex-row justify-center p-4 md:px-24 gap-4">
-        <div className="flex flex-col self-center md:flex-row gap-4 w-2/3  md:w-1/2 md:h-50">
+      <div className="bg-gray-200 flex flex-col lg:flex-row justify-center p-4 lg:px-24 gap-6">
+        <div className="flex flex-col self-center md:flex-row gap-6 w-2/3 lg:w-2/5 md:h-50">
           {/**Phone Number */}
-          <div className="flex flex-col w-full border border-gray-200 md:p-2 py-12 rounded-2xl bg-white gap-2 items-center shadow-lg">
-            <Phone className="h-8 w-8 border-b-2 text-red-700"/>
-            <p className="uppercase text-sm font-semibold">phone</p>
-            <p className="text-sm font-semibold  ">+251xxxxxxxx</p>
-            <p className="text-sm font-semibold  ">+251xxxxxxxx</p>
-            <p className="font-light text-sm ">Mon-Fri 8AM-6PM</p>
+          <div className="flex flex-col w-full border border-gray-200 md:p-2 py-12 rounded-2xl bg-white gap-2 items-center  hover:shadow-lg ">
+            <div className="rounded-full bg-red-200 my-2">
+              <Phone className="h-12 w-12 p-2 text-red-700"/>
+            </div>
+            <div>
+              <p className="uppercase text-sm font-semibold">phone</p>
+              <p className="text-sm font-semibold  ">+251xxxxxxxx</p>
+              <p className="text-sm font-semibold  ">+251xxxxxxxx</p>
+              <p className="font-light text-sm ">Mon-Fri 8AM-6PM</p>
+            </div>
           </div>
           {/**Email */}
-          <div className="flex flex-col w-full border border-gray-200 md:p-2 py-12 rounded-2xl bg-white gap-2 items-center shadow-lg">
-            <Mail className="h-8 w-8 border-b-2 text-red-700"/>
-            <p className="uppercase text-sm font-semibold">Email</p>
-            <p className="uppercase text-sm font-semibold ">kb@gmail.com</p>
-            <p className="font-light text-sm ">we respond within 24 hours</p>
+          <div className="flex flex-col w-full border border-gray-200 md:p-2 py-12 rounded-2xl bg-white gap-2 items-center  hover:shadow-lg ">
+            <div className="rounded-full bg-red-200 my-2">
+              <Mail className="h-12 w-12 p-2 text-red-700"/>
+            </div>
+            <div>
+              <p className="uppercase text-sm font-semibold">Email</p>
+              <p className="uppercase text-sm font-semibold ">kb@gmail.com</p>
+              <p className="font-light text-sm ">we respond within 24 hours</p>
+            </div>
           </div>
         </div>
 
-        <div className="flex flex-col self-center md:flex-row gap-4 w-2/3  md:w-1/2 md:h-50">
+        <div className="flex flex-col self-center md:flex-row gap-6 w-2/3 lg:w-2/5  md:h-50">
           {/**Address */}
-          <div className="flex flex-col w-full  border border-gray-200 md:p-2 py-12 rounded-2xl bg-white gap-2 shadow-lg items-center">
-            <Locate className="h-8 w-8 border-b-2 text-red-700 self-center"/>
+          <div className="flex flex-col w-full  border border-gray-200 md:p-2 py-12 rounded-2xl bg-white gap-2 hover:shadow-lg items-center ">
+            <div className="rounded-full bg-red-200 my-2">
+              <MapPin className="h-12 w-12 p-2 text-red-700 self-center"/>
+            </div>
+            <div>
             <p className="uppercase text-sm font-semibold self-center">Address</p>
             <p className="text-sm font-semibold ">Addis Ababa, Ethiopia</p>
             <p className="text-sm font semibold">Alem Building</p>
             <p className="text-sm font-light">Visit us</p>
+            </div>
           </div>
           {/**Business Hours */}
-          <div className="flex flex-col w-full border border-gray-200 md:p-2 py-12 rounded-2xl bg-white gap-2 items-center shadow-lg">
-            <Clock className="h-8 w-8 border-b-2 text-red-700"/>
+          <div className="flex flex-col w-full border border-gray-200 md:p-2 py-12 rounded-2xl bg-white gap-2 items-center hover:shadow-lg ">
+            <div className="rounded-full bg-red-200 my-2">
+              <Clock className="h-12 w-12 p-2 text-red-700"/>
+            </div>
+            <div>
             <p className="font-semibold text-sm">Business Hours</p>
             <p className="font-light text-sm">Mon-Fri 8AM-6PM</p>
             <p className="font-light text-sm">Mon-Fri 8AM-6PM</p>
+            </div>
           </div>
         </div>
       </div>
@@ -177,6 +196,7 @@ export const Contact = () => {
         </div>
 
     </div>
+    </>
   )
 }
 export default Contact
