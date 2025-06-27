@@ -6,35 +6,21 @@ import Products from './pages/Products'
 import Notfound from './pages/Notfound'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
-
+import Home_2 from './pages/Home_2'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { LightProvider } from './LightContext'
-
+// eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion } from 'framer-motion'
-import SignUp from './pages/SignUp'
-import Home_2 from './pages/Home_2'
+
+
 
 function AppRoutes() {
   const location = useLocation();
-
-
   const variants = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0, transition: { duration: 0.5 } },
     exit: { opacity: 0, y: -20, transition: { duration: 0.4 } },
   };
-
-function App() {
-const router = createBrowserRouter([{path: '/', element: <Home/>},
-  {path: '/about', element: <About/>},
-  {path:'/contact', element:  <Contact/> },
-  {path: '/products', element: <Products/>},
-  {path:"*", element: <Notfound/>},
-  {path:"/login", element: <Login/>},
-  {path:"/signup",element:<SignUp/>},
-  {path:"/home",element:<Home_2/>}
-])
-
 
   return (
     <AnimatePresence mode="wait">
@@ -53,6 +39,7 @@ const router = createBrowserRouter([{path: '/', element: <Home/>},
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='*' element={<Notfound />} />
+          <Route path='/home' element={<Home_2/>}/>
         </Routes>
       </motion.div>
     </AnimatePresence>

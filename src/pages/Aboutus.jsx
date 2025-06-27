@@ -3,7 +3,6 @@ import Map from "../components/Map"
 import  buna from '../assets/Images/buna.jpg'
 import classNames from 'classnames'
 import {Coffee,Handshake,Globe,Crown, MoveRightIcon,Shield, BookOpen, Heart,  Zap, Award,Mountain, Leaf, Book, Target, TicketCheck, Check, CheckCheckIcon, CheckCircle} from "lucide-react"
-import { icon } from 'leaflet'
 
 const Aboutus = () => {
   const Vision =
@@ -175,7 +174,7 @@ while building comprehensive trading solutions that support local communities an
     <h1 className='text-4xl font-bold'> Our Business Objectives </h1>
     <p className='text-gray-600 text-base leading-relaxed mt-2'> Strategic goals driving our misson to enhance export and domestic trading operations</p>
     <div className='flex flex-col md:flex-row justify-center gap-6'>
-         { businessobj.map((Values,index)=>(<div className='flex flex-col gap-5 p-3 items-start shadow-lg shadow-gray-500 max-w-[330px] rounded-lg'>
+         { businessobj.map((Values)=>(<div className='flex flex-col gap-5 p-3 items-start shadow-lg shadow-gray-500 max-w-[330px] rounded-lg'>
            
            <div className='bg-red-500/20 rounded-full w-14 h-14 flex items-center justify-center '>
             <Values.icon className='text-red-600'/>
@@ -190,7 +189,7 @@ while building comprehensive trading solutions that support local communities an
   Our Strategic Vision
 </h1> 
 <div  className='flex flex-col items-center md:flex-row gap-5 p-5 md:justify-center'>
- { Vision.map((Values,index)=>(<div className='max-w-[330px] flex flex-col items-start'>
+ { Vision.map((Values)=>(<div className='max-w-[330px] flex flex-col items-start'>
    <CheckCircle className='text-green-500'/>
    <h1 className='text-2xl font-bold'>{Values.title}</h1>
    <p className='text-gray-600 text-base leading-relaxed mt-2'>{Values.Desc}</p>
