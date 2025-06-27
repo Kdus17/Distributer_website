@@ -47,71 +47,71 @@ export const Contact = () => {
   return (
     <>
     <Navbar/>
-    <div className="flex flex-col min-h-screen bg-gray-200">
-      <div className="relative flex flex-col justify-center items-center h-100 bg-gradient-to-r  from-red-700 to-red-900 gap-6">
+    <div className="flex flex-col min-h-screen">
+      <div className="relative flex flex-col justify-center items-center h-100 bg-gradient-to-r  from-red-700 to-red-800 gap-6">
         <h1 className="text-6xl md:text-7xl font-bold text-white  relative top-20 text-shadow-md">Contact Us</h1>
-        <div className="text-white flex flex-col items-center relative top-20">
-          <p>Ready to explore our products </p>
-          <p>or discuss comphrenesive trading partnerships</p>
-          <p>We are ready to support your business</p>
+        <div className="text-white flex flex-col items-center relative top-20 gap-4">
+          <p>Ready to explore our premium Ethiopian products</p>
+          <p>or discuss comprehensive trading partnerships?</p>
+          <p>We are ready to support your business growth</p>
         </div>
         <div className="relative bottom-40 right-120 h-25 w-25  bg-white rounded-full opacity-15"></div>
         <div className="relative bottom-30 right-40 h-15 w-15 bg-white rounded-full opacity-15"></div>
       </div>
-
-
+      
       {/**Cards */}
-      <div className="bg-gray-200 flex flex-col lg:flex-row justify-center p-4 lg:px-24 gap-6">
-        <div className="flex flex-col self-center md:flex-row gap-6 w-2/3 lg:w-2/5 md:h-50">
-          {/**Phone Number */}
-          <div className="flex flex-col w-full border border-gray-200 md:p-2 py-12 rounded-2xl bg-white gap-2 items-center  hover:shadow-lg ">
-            <div className="rounded-full bg-red-200 my-2">
-              <Phone className="h-12 w-12 p-2 text-red-700"/>
-            </div>
-            <div>
-              <p className="uppercase text-sm font-semibold">phone</p>
+      <div className="bg-gray-50 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 p-4 lg:px-24 gap-6 py-16">
+
+        <div className="group col-span-1 bg-white flex flex-col justify-center items-center py-10 rounded-2xl shadow-sm hover:shadow-lg
+        border border-white hover:border-red-400 transition-all duration-600 ease-in-out">
+          <div className="rounded-full mb-6 bg-red-200 group-hover:bg-red-700 p-1">
+            <Phone className="h-14 w-14 p-3 text-red-700 group-hover:text-white"/>
+          </div>
+            <div className="flex flex-col justify-center items-center gap-2 text-gray-700">
+              <p className="uppercase text-sm font-bold text-black">phone</p>
               <p className="text-sm font-semibold  ">+251xxxxxxxx</p>
               <p className="text-sm font-semibold  ">+251xxxxxxxx</p>
-              <p className="font-light text-sm ">Mon-Fri 8AM-6PM</p>
+              <p className="text-xs ">Mon-Fri 8AM-6PM</p>
             </div>
-          </div>
-          {/**Email */}
-          <div className="flex flex-col w-full border border-gray-200 md:p-2 py-12 rounded-2xl bg-white gap-2 items-center  hover:shadow-lg ">
-            <div className="rounded-full bg-red-200 my-2">
-              <Mail className="h-12 w-12 p-2 text-red-700"/>
-            </div>
-            <div>
-              <p className="uppercase text-sm font-semibold">Email</p>
-              <p className="uppercase text-sm font-semibold ">kb@gmail.com</p>
-              <p className="font-light text-sm ">we respond within 24 hours</p>
-            </div>
-          </div>
         </div>
 
-        <div className="flex flex-col self-center md:flex-row gap-6 w-2/3 lg:w-2/5  md:h-50">
-          {/**Address */}
-          <div className="flex flex-col w-full  border border-gray-200 md:p-2 py-12 rounded-2xl bg-white gap-2 hover:shadow-lg items-center ">
-            <div className="rounded-full bg-red-200 my-2">
-              <MapPin className="h-12 w-12 p-2 text-red-700 self-center"/>
-            </div>
-            <div>
-            <p className="uppercase text-sm font-semibold self-center">Address</p>
-            <p className="text-sm font-semibold ">Addis Ababa, Ethiopia</p>
-            <p className="text-sm font semibold">Alem Building</p>
-            <p className="text-sm font-light">Visit us</p>
-            </div>
+        <div className="group col-span-1 bg-white flex flex-col justify-center items-center py-10 rounded-2xl shadow-sm hover:shadow-lg
+        border border-white hover:border-red-400 transition-all duration-600 ease-in-out">
+          <div className="rounded-full mb-6 bg-red-200 group-hover:bg-red-700 p-1 transition-all duration-600 ease-in-out">
+            <Mail className="h-14 w-14 p-3 text-red-700 group-hover:text-white transition-all duration-600 ease-in-out"/>
           </div>
-          {/**Business Hours */}
-          <div className="flex flex-col w-full border border-gray-200 md:p-2 py-12 rounded-2xl bg-white gap-2 items-center hover:shadow-lg ">
-            <div className="rounded-full bg-red-200 my-2">
-              <Clock className="h-12 w-12 p-2 text-red-700"/>
+            <div className="flex flex-col justify-center items-center gap-2 text-gray-700">
+              <p className="uppercase text-sm font-bold text-black">Email</p>
+              <p className="text-sm font-semibold  ">kingdombusiness@gmail.com</p>
+              <p className="text-sm font-semibold  ">infoatkingdombusiness@gmail.com</p>
+              <p className="text-xs ">We respond within 24 hours</p>
             </div>
-            <div>
-            <p className="font-semibold text-sm">Business Hours</p>
-            <p className="font-light text-sm">Mon-Fri 8AM-6PM</p>
-            <p className="font-light text-sm">Mon-Fri 8AM-6PM</p>
-            </div>
+        </div>
+
+        <div className="group col-span-1 bg-white flex flex-col justify-center items-center py-10 rounded-2xl shadow-sm hover:shadow-lg
+        border border-white hover:border-red-400 transition-all duration-600 ease-in-out">
+          <div className="rounded-full mb-6 bg-red-200 group-hover:bg-red-700 p-1 transition-all duration-600 ease-in-out">
+            <MapPin className="h-14 w-14 p-3 text-red-700 group-hover:text-white transition-all duration-600 ease-in-out"/>
           </div>
+            <div className="flex flex-col justify-center items-center gap-2 text-gray-700">
+              <p className="uppercase text-sm font-bold text-black">Address</p>
+              <p className="text-sm font-semibold  ">Addis Ababa, Ethiopia</p>
+              <p className="text-sm font-semibold  ">Alem Building, 5th Floor</p>
+              <p className="text-xs ">Visit us anytime</p>
+            </div>
+        </div>
+
+        <div className="group col-span-1 bg-white flex flex-col justify-center items-center py-10 rounded-2xl shadow-sm hover:shadow-lg
+        border border-white hover:border-red-400 transition-all duration-600 ease-in-out">
+          <div className="rounded-full mb-6 bg-red-200 group-hover:bg-red-700 p-1 transition-all duration-600 ease-in-out">
+            <Clock className="h-14 w-14 p-3 text-red-700 group-hover:text-white transition-all duration-600 ease-in-out"/>
+          </div>
+            <div className="flex flex-col justify-center items-center gap-2 text-gray-700">
+              <p className="uppercase text-sm font-bold text-black">Business Hours</p>
+              <p className="text-sm ">Monday - Friday</p>
+              <p className="text-sm font-semibold  ">8:00 AM - 6:00 PM</p>
+              <p className="text-xs ">Ethiopian Time (EAT)</p>
+            </div>
         </div>
       </div>
 
