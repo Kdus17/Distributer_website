@@ -241,7 +241,7 @@ export default function Home_2() {
                     </div>
                 </div>
                 <div className='w-full lg:mt-10'>
-                    <div className='bg-gray-100 opacity-20  py-8 rounded-2xl'>
+                    <div className='bg-gray-100/30   py-8 rounded-2xl'>
                         <div className='grid grid-cols-2 gap-6'>
                             <div className='col-span-1 flex flex-col gap-2 items-center'>
                                 <h3 className='text-3xl text-white font-bold'>100%</h3>
