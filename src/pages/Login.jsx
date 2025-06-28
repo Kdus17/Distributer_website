@@ -40,8 +40,8 @@ const Login = () => {
   }
 
   return (
-    <div className="min-h-screen flex  justify-center items-center bg-gray-100">
-        <div className="flex flex-col w-120 h-full pb-3 border border-gray-200 shadow-lg rounded-lg px-12 bg-white  gap-6">
+    <div className="min-h-screen flex  justify-center items-center bg-gray-100 dark:bg-[#121212]">
+        <div className="flex flex-col w-120 h-full pb-3 border border-gray-200 shadow-lg rounded-lg px-12 bg-white dark:bg-gray-500 gap-6">
           <p className="uppercase self-center my-6 font-bold text-shadow-lg text-2xl select-none">kingdom's business</p>
 
           {/** Email*/}

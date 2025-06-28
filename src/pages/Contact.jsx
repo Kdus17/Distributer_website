@@ -54,9 +54,9 @@ export const Contact = () => {
 
   return (
     <>
-    <Navbar/>
-    <div className="flex flex-col min-h-screen">
-      <div className="relative flex flex-col justify-center px-8 items-center h-100 bg-gradient-to-r  from-red-700 to-red-800 gap-6">
+    
+    <div className="flex flex-col min-h-screen ">
+      <div className="relative flex flex-col justify-center px-8 items-center h-100 bg-gradient-to-r  from-red-700 to-red-800 gap-6 dark:from-black dark:to-gray-600">
         <h1 className="text-6xl md:text-7xl font-bold text-white  relative top-20 text-shadow-md">Contact Us</h1>
         <div className="text-white flex flex-col items-center relative top-20 gap-4">
           <p>Ready to explore our premium Ethiopian products</p>
@@ -68,15 +68,15 @@ export const Contact = () => {
       </div>
       
       {/**Cards */}
-      <div className="bg-gray-50 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 sm:p-4  lg:px-24 gap-6 py-16">
+      <div className="bg-gray-50 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 sm:p-4  lg:px-24 gap-6 py-16 dark:bg-[#121212]">
 
         <div className="group col-span-1 bg-white flex flex-col justify-center items-center py-10 mx-2 sm:mx-32 md:mx-0 rounded-2xl shadow-sm hover:shadow-lg
-        border border-white hover:border-red-400 transition-all duration-600 ease-in-out">
-          <div className="rounded-full mb-6 bg-red-200 group-hover:bg-red-700 p-1">
+        border border-white hover:border-red-400 transition-all duration-600 ease-in-out dark:bg-gray-700 dark:text-white">
+          <div className="rounded-full mb-6 bg-red-200 group-hover:bg-red-700 p-1 dark:bg-red-900">
             <Phone className="h-14 w-14 p-3 text-red-700 group-hover:text-white"/>
           </div>
-            <div className="flex flex-col justify-center items-center gap-2 text-gray-700">
-              <p className="uppercase text-sm font-bold text-black">phone</p>
+            <div className="flex flex-col justify-center items-center gap-2 text-gray-700 dark:text-gray-300  ">
+              <p className="uppercase text-sm font-bold text-black dark:text-white">phone</p>
               <p className="text-sm font-semibold  ">+251xxxxxxxx</p>
               <p className="text-sm font-semibold  ">+251xxxxxxxx</p>
               <p className="text-xs ">Mon-Fri 8AM-6PM</p>
@@ -84,12 +84,12 @@ export const Contact = () => {
         </div>
 
         <div className="group col-span-1 bg-white flex flex-col justify-center items-center py-10 mx-2 sm:mx-32 md:mx-0 rounded-2xl shadow-sm hover:shadow-lg
-        border border-white hover:border-red-400 transition-all duration-600 ease-in-out">
-          <div className="rounded-full mb-6 bg-red-200 group-hover:bg-red-700 p-1 transition-all duration-600 ease-in-out">
+        border border-white hover:border-red-400 transition-all duration-600 ease-in-out dark:bg-gray-700">
+          <div className="rounded-full mb-6 bg-red-200 group-hover:bg-red-700 p-1 transition-all duration-600 ease-in-out  dark:bg-red-900">
             <Mail className="h-14 w-14 p-3 text-red-700 group-hover:text-white transition-all duration-600 ease-in-out"/>
           </div>
-            <div className="flex flex-col justify-center items-center gap-2 text-gray-700">
-              <p className="uppercase text-sm font-bold text-black">Email</p>
+            <div className="flex flex-col justify-center items-center gap-2 text-gray-700 dark:text-gray-200">
+              <p className="uppercase text-sm font-bold text-black  dark:text-white">Email</p>
               <p className="text-sm font-semibold  ">kingdombusiness@gmail.com</p>
               <p className="text-sm font-semibold  ">infoatkingdombusiness@gmail.com</p>
               <p className="text-xs ">We respond within 24 hours</p>
@@ -97,12 +97,12 @@ export const Contact = () => {
         </div>
 
         <div className="group col-span-1 bg-white flex flex-col justify-center items-center py-10 mx-2 sm:mx-32 md:mx-0 rounded-2xl shadow-sm hover:shadow-lg
-        border border-white hover:border-red-400 transition-all duration-600 ease-in-out">
-          <div className="rounded-full mb-6 bg-red-200 group-hover:bg-red-700 p-1 transition-all duration-600 ease-in-out">
+        border border-white hover:border-red-400 transition-all duration-600 ease-in-out dark:bg-gray-700">
+          <div className="rounded-full mb-6 bg-red-200 group-hover:bg-red-700 p-1 transition-all duration-600 ease-in-out dark:bg-red-900">
             <MapPin className="h-14 w-14 p-3 text-red-700 group-hover:text-white transition-all duration-600 ease-in-out"/>
           </div>
-            <div className="flex flex-col justify-center items-center gap-2 text-gray-700">
-              <p className="uppercase text-sm font-bold text-black">Address</p>
+            <div className="flex flex-col justify-center items-center gap-2 text-gray-700 dark:text-gray-200">
+              <p className="uppercase text-sm font-bold text-black dark:text-white">Address</p>
               <p className="text-sm font-semibold  ">Addis Ababa, Ethiopia</p>
               <p className="text-sm font-semibold  ">Alem Building, 5th Floor</p>
               <p className="text-xs ">Visit us anytime</p>
@@ -110,12 +110,12 @@ export const Contact = () => {
         </div>
 
         <div className="group col-span-1 bg-white flex flex-col justify-center items-center py-10 mx-2 sm:mx-32 md:mx-0 rounded-2xl shadow-sm hover:shadow-lg
-        border border-white hover:border-red-400 transition-all duration-600 ease-in-out">
-          <div className="rounded-full mb-6 bg-red-200 group-hover:bg-red-700 p-1 transition-all duration-600 ease-in-out">
+        border border-white hover:border-red-400 transition-all duration-600 ease-in-out dark:bg-gray-700">
+          <div className="rounded-full mb-6  bg-red-200 group-hover:bg-red-700 p-1 transition-all duration-600 ease-in-out dark:bg-red-900">
             <Clock className="h-14 w-14 p-3 text-red-700 group-hover:text-white transition-all duration-600 ease-in-out"/>
           </div>
-            <div className="flex flex-col justify-center items-center gap-2 text-gray-700">
-              <p className="uppercase text-sm font-bold text-black">Business Hours</p>
+            <div className="flex flex-col justify-center items-center gap-2 text-gray-700 dark:text-gray-200">
+              <p className="uppercase text-sm font-bold text-black dark:text-white">Business Hours</p>
               <p className="text-sm ">Monday - Friday</p>
               <p className="text-sm font-semibold  ">8:00 AM - 6:00 PM</p>
               <p className="text-xs ">Ethiopian Time (EAT)</p>
@@ -125,12 +125,12 @@ export const Contact = () => {
 
 
       {/**Contact Form */}
-      <div className="flex flex-col my-12 ">
-          <div className="py-12 px-12 self-center rounded-t-2xl bg-red-700 flex flex-col w-full md:w-5/6 lg:w-2/3 ">
+      <div className="flex flex-col py-12 dark:bg-[#121212]">
+          <div className="py-12 px-12 self-center rounded-t-2xl bg-red-700 flex flex-col w-full md:w-5/6 lg:w-2/3 dark:bg-gray-700">
             <p className="uppercase font-bold text-3xl text-white mb-4">Send Us a Message</p>
             <p className="text-white">Fill out the form below and we'll get back to you as soon as possible.</p>
           </div>
-        <div className="flex flex-col  h-full  border border-gray-200 shadow-2xl rounded-b-2xl px-12 py-12 bg-white w-full md:w-5/6 lg:w-2/3 self-center gap-6 pb-8 select-none">
+        <div className="flex flex-col  h-full  border border-gray-200 shadow-2xl rounded-b-2xl px-12 py-12 bg-white w-full md:w-5/6 lg:w-2/3 self-center gap-6 pb-8 select-none dark:bg-gray-200">
 
           <div className="flex flex-col gap-2">
 

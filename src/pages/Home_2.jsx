@@ -4,7 +4,7 @@ export default function Home_2() {
   return (
     <div>
         {/**Hero */}
-        <div className='flex flex-col lg:flex-row w-full p-4 lg:p-24 gap-2 bg-gradient-to-r from-red-50 to-transparent shadow-lg shadow-gray-100'>
+        <div className='flex flex-col lg:flex-row w-full p-4 lg:p-24 gap-2 bg-gradient-to-r from-red-50 to-transparent shadow-lg shadow-gray-100  dark:bg-[#121212]'>
             {/**Text With Buttons */}
             <div className='flex flex-col'>
                 <h1 className='text-4xl sm:text-6xl font-bold'>Promoting <br /> Ethiopian</h1>
@@ -25,29 +25,29 @@ export default function Home_2() {
             </div>
 
             {/**The Four Figures */}
-            <div className='w-full bg-red-600 rounded-3xl rotate-3 my-8 p-8 flex flex-col justify-center items-center gap-2'>
-                <div className='bg-white -rotate-3 w-full sm:w-11/12 rounded-3xl flex flex-col gap-6 py-8 px-8 select-none'>
-                    <div className='flex gap-4 sm:gap-8 justify-center'>
+            <div className='w-full bg-red-600 rounded-3xl rotate-3 my-8 p-8 flex flex-col justify-center items-center gap-2 dark:bg-gray-800'>
+                <div className='bg-white -rotate-3 w-full sm:w-11/12 rounded-3xl flex flex-col gap-6 py-8 px-8 select-none dark:bg-gray-700'>
+                    <div className='flex gap-4 sm:gap-8 justify-center dark:text-gray-600'>
                         <div className='flex flex-col items-center justify-center w-full hover:-translate-y-1 transition duration-300 ease-in-out'>
                             <Coffee className='w-12 h-12 text-red-600'/>
-                            <h2 className='font-semibold'>Premium Coffee</h2>
+                            <h2 className='font-semibold dark:text-gray-900'>Premium Coffee</h2>
                             <p className='text-gray-500'>Special aroma & distinct flavor</p>
                         </div>
                         <div className='flex flex-col items-center justify-center w-full hover:-translate-y-1 transition duration-300 ease-in-out'>
                             <Leaf className='w-12 h-12 text-red-600'/>
-                            <h2 className='font-semibold'>Quality Pulses</h2>
+                            <h2 className='font-semibold dark:text-gray-900'>Quality Pulses</h2>
                             <p className='text-gray-500'>Organic by default</p>
                         </div>
                     </div>
-                    <div className='flex gap-4 sm:gap-8 justify-center'>
+                    <div className='flex gap-4 sm:gap-8 justify-center  dark:text-gray-600'>
                         <div className='flex flex-col items-center justify-center w-full hover:-translate-y-1 transition duration-300 ease-in-out'>
                             <Globe className='w-12 h-12 text-red-600'/>
-                            <h2 className='font-semibold'>Global Export</h2>
+                            <h2 className='font-semibold dark:text-gray-900'>Global Export</h2>
                             <p className='text-gray-500'>International markets</p>
                         </div>
                         <div className='flex flex-col items-center justify-center w-full hover:-translate-y-1 transition duration-300 ease-in-out'>
                             <TrendingUp className='w-12 h-12 text-red-600'/>
-                            <h2 className='font-semibold'>Growing Business</h2>
+                            <h2 className='font-semibold dark:text-gray-900'>Growing Business</h2>
                             <p className='text-gray-500'>Expanding operations</p>
                         </div>                        
                     </div>
@@ -56,33 +56,33 @@ export default function Home_2() {
         </div>
 
         {/**Our Mission and Vision */}
-        <div className='w-full p-4 lg:px-24 bg-gray-50 flex flex-col items-center py-24 gap-4'>
+        <div className='w-full p-4 lg:px-24 bg-gray-50 flex flex-col items-center py-24 gap-4 dark:bg-[#121212] dark:text-[#E0E0E0]'>
             <h1 className='px-4  lg:px-24 text-4xl font-bold'>Our Vision & Mission</h1>
             <p className='px-4 lg:px-24 text-xl text-gray-600'>Leading the way in Ethiopian agricultural exports with quality and value at our core</p>
             <div className='flex flex-col lg:flex-row w-full gap-10 mt-24'>
-                <div className='bg-white rounded-2xl w-full p-8 flex flex-col gap-8 shadow-lg hover:shadow-xl'>
+                <div className='bg-white rounded-2xl w-full p-8 flex flex-col gap-8 shadow-lg hover:shadow-xl dark:bg-gray-700 '>
                     <div className='flex gap-4 items-center'>
-                        <Target className='min-w-14 w-14 h-14 rounded-md text-red-600 bg-red-200 p-2'/>
+                        <Target className='min-w-14 w-14 h-14 rounded-md text-red-600 bg-red-200  dark:bg-red-900  p-2'/>
                         <p className='text-2xl font-bold'>Vision</p>
                     </div>
-                    <p className='text-lg text-gray-600'>To promote Ethiopian coffee and pulses globally, 
+                    <p className='text-lg text-gray-600 dark:text-black'>To promote Ethiopian coffee and pulses globally, 
                         establishing KINGDOM among the leaders in the export and general trading business that prioritizes quality and value for the satisfaction of customers, 
                         employees and stakeholders.</p>
                 </div>
-                <div className='bg-white rounded-2xl w-full p-8 flex flex-col gap-8 shadow-lg hover:shadow-xl'>
+                <div className='bg-white rounded-2xl w-full p-8 flex flex-col gap-8 shadow-lg hover:shadow-xl dark:bg-gray-700'>
                     <div className='flex gap-4 items-center'>
-                        <Heart className='min-w-14  w-14 h-14 rounded-md text-red-600 bg-red-200 p-2'/>
+                        <Heart className='min-w-14  w-14 h-14 rounded-md text-red-600 bg-red-200 dark:bg-red-900 p-2'/>
                         <p className='text-2xl font-bold'>Mission</p>
                     </div>
-                    <p className='text-lg text-gray-600'>To participate in profitable export trade of coffee and pulses
+                    <p className='text-lg text-gray-600 dark:text-black'>To participate in profitable export trade of coffee and pulses
                         to generate income in the form of profit and thereby expand the business to address shareholder expectations.</p>
                 </div>
             </div>
         </div>
 
         {/**Why Choose Us */}
-        <div className='flex flex-col gap-6 mt-24'>
-            <h1 className='px-4  lg:px-24 text-4xl font-bold self-center'>Why Choose Kingdom Business</h1>
+        <div className='flex flex-col gap-6 py-24 dark:bg-[#121212]'>
+            <h1 className='px-4  lg:px-24 text-4xl font-bold self-center dark:text-white'>Why Choose Kingdom Business</h1>
             <p className='px-4 lg:px-24 text-xl text-gray-600 self-center'>Your trusted partner for premium Ethiopian agricultural exports</p>
             <div className='p-4 py-12 lg:px-24 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8'>
 
@@ -144,18 +144,18 @@ export default function Home_2() {
         </div>
         
         {/**Services */}
-        <div className='flex flex-col gap-6 mt-12 py-24 bg-gray-50 px-4 lg:px-24'>
-            <h1 className='text-4xl font-bold self-center'>Our Services</h1>
+        <div className='flex flex-col gap-6 py-36 bg-gray-50 px-4 lg:px-24 dark:bg-[#121212]'>
+            <h1 className='text-4xl font-bold self-center  text-gray-600 dark:text-white'>Our Services</h1>
             <p className='text-xl text-gray-600 self-center mb-12'>Comprehensive trading solutions for global markets</p>
 
             {/**Service Cards */}
-            <div className='grid lg:grid-cols-3 gap-8'>
-                <div className='bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl'>
+            <div className='grid lg:grid-cols-3 gap-8 '>
+                <div className='bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl dark:bg-gray-700'>
                     <CoffeeIcon className='w-12 h-12 text-red-600 mb-6'/>
-                    <h1 className='text-xl font-bold mb-4'>Coffee Export</h1>
-                    <p className='text-gray-600  mb-6'>Export quality Ethiopian coffee to international markets,
+                    <h1 className='text-xl font-bold mb-4 text-black'>Coffee Export</h1>
+                    <p className='text-gray-600  mb-6 dark:text-black'>Export quality Ethiopian coffee to international markets,
                         known for its special aroma and distinct flavor.</p>
-                    <div className='flex flex-col gap-3 text-gray-600 mb-6'>
+                    <div className='flex flex-col gap-3 text-gray-600 mb-6 dark:text-black '>
                         <div className='flex gap-2'>
                             <CircleCheckBig className='text-green-600'/>
                             <p>Premium quality beans</p>
@@ -172,12 +172,12 @@ export default function Home_2() {
                 </div>
 
 
-                <div className='bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl'>
+                <div className='bg-white rounded-2xl p-8 shadow-lg hover:shadow-x dark:bg-gray-700 '>
                     <LeafIcon className='w-12 h-12 text-red-600 mb-6'/>
-                    <h1 className='text-xl font-bold mb-4'>Pulses Export</h1>
-                    <p className='text-gray-600  mb-6'>High-quality Ethiopian pulses, organic by default,
+                    <h1 className='text-xl font-bold mb-4 dark:text-black'>Pulses Export</h1>
+                    <p className='text-gray-600  mb-6 dark:text-black'>High-quality Ethiopian pulses, organic by default,
                          meeting international demand for healthy food products.</p>
-                    <div className='flex flex-col gap-3 text-gray-600 mb-6'>
+                    <div className='flex flex-col gap-3 text-gray-600 mb-6 dark:text-black'>
                         <div className='flex gap-2'>
                             <CircleCheckBig className='text-green-600'/>
                             <p>Organic by default</p>
@@ -194,12 +194,12 @@ export default function Home_2() {
                 </div>
 
 
-                <div className='bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl'>
+                <div className='bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl dark:bg-gray-700 '>
                     <Users className='w-12 h-12 text-red-600 mb-6'/>
                     <h1 className='text-xl font-bold mb-4'>General Trading</h1>
-                    <p className='text-gray-600  mb-6'>Comprehensive trading services including stationery materials,
+                    <p className='dark:text-black mb-6'>Comprehensive trading services including stationery materials,
                          paper products, household equipment, and furniture.</p>
-                    <div className='flex flex-col gap-3 text-gray-600 mb-6'>
+                    <div className='flex flex-col gap-3 text-gray-600 dark:text-black mb-6'>
                         <div className='flex gap-2'>
                             <CircleCheckBig className='text-green-600'/>
                             <p>Diverse product range</p>
@@ -219,8 +219,8 @@ export default function Home_2() {
         </div>
 
         {/**Coffee Excellence Card */}
-        <div className='mt-12 py-24 px-4 lg:px-24'>
-            <div className='flex flex-col lg:flex-row gap-12 bg-gradient-to-r from-red-600 to-red-700 p-12 rounded-2xl'>
+        <div className='py-36 px-4 dark:bg-[#121212] lg:px-24'>
+            <div className='flex flex-col lg:flex-row gap-12 bg-gradient-to-r from-red-600 to-red-700 p-12 rounded-2xl dark:from-black dark:to-gray-600'>
                 <div className='w-full flex flex-col gap-6'>
                     <h2 className='text-4xl font-bold text-white'>Ethiopian Coffee Excellence</h2>
                     <p className='text-red-100 text-xl'>Ethiopian coffee enjoys high demand in the international market, 
