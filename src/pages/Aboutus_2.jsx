@@ -70,7 +70,7 @@ export default function Aboutus_2() {
         </div>
     </div>
 
-    <div className='bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl p-12 shadow-2xl flex flex-col lg:flex-row gap-12 mx-24'>
+    <div className='bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl p-8 lg:p-12 shadow-2xl flex flex-col lg:flex-row gap-12 lg:mx-24'>
             <div className='flex flex-col w-full text-center '>
                 <h1 className='text-5xl font-bold mb-6 '>Ethiopian Coffee Excellence</h1>
                 <div className='w-1/6 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mb-12'></div>
@@ -91,16 +91,18 @@ export default function Aboutus_2() {
                     </div>
                 </div>
             </div>
-            <div className='w-full flex flex-col h-full justify-center  items-center relative'> 
-                  <img
-                    src={buna}
-                    alt="buna"
-                    className="rounded-xl shadow-lg object-cover"
-                  />
-                  <div className=' absolute z-100 bottom-35  md:py-2 md:px-4 rounded-xl text-center bg-gradient-to-r from-orange-500 to-amber-500 '>
-                    <h2 className='md:text-2xl  font-bold text-white'>Premium</h2>
-                    <p className='lg:w-30 w-25 text-white'>Ethiopian Coffee</p>
-                  </div>
+            <div className='w-full flex flex-col justify-center items-center relative'>
+                <div className='relative'> 
+                    <img
+                        src={buna}
+                        alt="buna"
+                        className="rounded-3xl shadow-2xl w-96 h-96 object-cover"
+                    />
+                    <div className='absolute -bottom-6 -left-6 bg-gradient-to-r from-orange-500 to-amber-500 rounded-2xl px-6 py-4 shadow-xl text-white'>
+                        <h2 className='md:text-2xl font-bold text-white'>Premium</h2>
+                        <p className='text-white'>Ethiopian Coffee</p>
+                    </div>
+                </div>
             </div>
     </div>
 
