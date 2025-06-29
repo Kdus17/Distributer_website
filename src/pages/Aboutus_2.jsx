@@ -34,6 +34,27 @@ const info =
     desc: "We strive to achieve excellence in our product & Service delivery",
     color:"bg-gradient-to-br from-green-500 to-green-700"
     }];
+const businessobj =[
+  {
+    icon: Coffee,
+    title: "Premium Coffee Export",
+    desc: "Export high-quality Ethiopian coffee to international markets, showcasing the unique aroma and distinct flavor that make Ethiopian coffee globally renowned.",
+    color: "text-amber-500"
+  },
+  {
+    icon: Handshake,
+    title: "Comprehensive Trading",
+    desc: "Engage in trading activities involving stationery materials, paper products, household equipment, furniture, and other essential business supplies.",
+    color: "text-blue-500"
+  },
+  {
+    icon: Leaf,
+    title: "Agricultural Excellence",
+    desc: "Expand the export trade of other agricultural products, supporting Ethiopian farmers and bringing premium produce to global markets.",
+    color: "text-green-500"
+  }
+]
+
 
 export default function Aboutus_2() {
   return (
@@ -70,7 +91,8 @@ export default function Aboutus_2() {
         </div>
     </div>
 
-    <div className='bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl p-8 lg:p-12 shadow-2xl flex flex-col lg:flex-row gap-12 lg:mx-24'>
+    {/**mountain and leafes */}        
+    <div className='bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl my-20 p-8 lg:p-12 shadow-2xl flex flex-col lg:flex-row gap-12 lg:mx-24'>
             <div className='flex flex-col w-full text-center '>
                 <h1 className='text-5xl font-bold mb-6 '>Ethiopian Coffee Excellence</h1>
                 <div className='w-1/6 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mb-12'></div>
@@ -106,6 +128,23 @@ export default function Aboutus_2() {
             </div>
     </div>
 
+    {/**Business Objectives */}
+    <div className='flex flex-col '>
+        <h1 className='text-5xl font-bold text-center'>Our Business Objectives</h1>
+        <p className='text-xl text-center'>Strategic goals driving our misson to enhance export and domestic trading operations</p>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:px-24 px-4 lg:px-24 gap-6 py-12'>
+            {businessobj.map((info, index)=>(
+                <div key={index} className={`group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-3xl border border-red-100`}>  
+                    <div className='flex flex-col gap-3 p-8'>
+                        <info.icon className={`h-16 w-16 group-hover:scale-125 ${info.color} transition-all duration-300 ease-in-out p-3 bg-red-200/30  rounded-2xl`}/>
+                        <h2 className='text-xl  font-bold '>{info.title}</h2>
+                        <p className=''>{info.desc}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+    
 
 </>
   )
