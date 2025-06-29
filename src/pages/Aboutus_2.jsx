@@ -7,31 +7,31 @@ const info =
     icon: Shield,
     title: "Accountability",
     desc: "All our employees and management will be accountable for what we do ",
-    color:"bg-blue-600"
+    color:"bg-gradient-to-br from-blue-500 to-blue-700"
     },
     {
     icon: Book,
     title: "knowledge",
     desc: "We constantly learn,grow and innovate with new ways to better serve our customers",
-    color:"bg-purple-600"
+    color:"bg-gradient-to-br from-purple-500 to-purple-700"
     },
     {
     icon:  Heart,
     title :"Care",
     desc: "We deeply care for all our employees and  customers with humility and  provide solutions  that take care of your business needs",
-    color:"bg-red-600"
+    color:"bg-gradient-to-br from-red-500 to-red-700"
     },
     {
     icon:  Zap,
     title: "impact",
     desc:"We aspire to have a truly great impact on all thatwe do and touch",
-    color:"bg-orange-600"
+    color:"bg-gradient-to-br from-orange-500 to-orange-700"
     },
     {
     icon:  Award,
     title: "Quality",
     desc: "We strive to achieve excellence in our product & Service delivery",
-    color:"bg-green-600"
+    color:"bg-gradient-to-br from-green-500 to-green-700"
     }];
 
 export default function Aboutus_2() {
@@ -53,22 +53,49 @@ export default function Aboutus_2() {
         </div>
     </div>
 
-    <div className='flex flex-col items-center '>
+    <div className='flex flex-col items-center'>
         <h1 className='text-5xl font-bold my-10'>Our Core Values</h1>
         <p className='text-center max-w-150 text-xl text-gray-600 mb-10'>Guiding principles that shape every decision we make and every relationship we build</p>
-        <div className='grid lg:grid-cols-3 lg:px-24 gap-6 py-12'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:px-24 px-4 lg:px-24 gap-6 py-12'>
             {info.map((info, index)=>(
-                <div key={index} className='bg-gradient-to-r from-red-50  group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-2xl border border-red-100'>  
+                <div key={index} className={`${info.color}  group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-3xl border border-red-100`}>  
                     <div className='grid sm:grid-rows-3 gap-3 sm:gap-0 p-8'>
-                        <info.icon className='row-span-1 min-w-16 h-16 w-16 group-hover:scale-125 transition-all duration-300 ease-in-out p-3 bg-red-600 text-white rounded-xl'/>
-                        <h2 className='row-span-1 text-xl font-bold self-center'>{info.title}</h2>
-                        <p className='row-span-1 text-gray-600'>{info.desc}</p>
+                        <info.icon className='row-span-1 h-16 w-16 group-hover:scale-125 transition-all duration-300 ease-in-out p-3 bg-white/30 text-white rounded-full'/>
+                        <h2 className='row-span-1 text-xl text-white font-bold self-center'>{info.title}</h2>
+                        <p className='row-span-1 text-white'>{info.desc}</p>
                     </div>
                 </div>
             ))}
         </div>
-
     </div>
+
+    <div className='bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl p-12 shadow-2xl flex flex-col lg:flex-row gap-24 mx-24'>
+            <div className='flex flex-col w-full text-center '>
+                <h1 className='text-5xl font-bold mb-6 '>Ethiopian Coffee Excellence</h1>
+                <div className='w-1/6 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mb-12'></div>
+                <p className='text-lg mb-6'>Ethiopian coffee continues to enjoy strong international demand, renowned for its unique aroma and distinct flavor. 
+                Despite ongoing challenges such as climate change and deforestation, we remain committed to sourcing and delivering high-quality coffee.</p>
+                <p className='text-lg mb-6'>While most Ethiopian coffee is grown in the highlands, the country's diverse geography and climate allow for a wide range of coffee varieties.
+                    The most popular varieties include: Gesha (or Geisha), Yirgacheffe, and Sidamo</p>
+                <div className='flex flex-col lg:flex-row gap-6 w-full'>
+                    <div className='bg-white flex flex-col text-center px-8 gap-3 py-6 rounded-lg shadow-xl w-full'>
+                        <Mountain className='w-14 h-14 text-orange-500'/>
+                        <h2 className='text-2xl font-bold'>High Altitude</h2>
+                        <p className='text-md'>Sourcing from optimal growing regions for superior flavor profiles</p>
+                    </div>
+                    <div className='bg-white flex flex-col text-center px-8 gap-3 py-6 rounded-lg shadow-xl w-full'>
+                        <Leaf className='w-14 h-14 text-green-500'/>
+                        <h2 className='text-2xl font-bold'>Organic Quality</h2>
+                        <p className='text-md'>Supporting naturally organic farming practices and certification</p>
+                    </div>
+                </div>
+            </div>
+            <div className='w-full'> 
+
+            </div>
+    </div>
+
+
 </>
   )
 }
