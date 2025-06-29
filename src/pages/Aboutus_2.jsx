@@ -2,6 +2,21 @@ import React from 'react'
 import  buna from '../assets/Images/buna.jpg'
 import {Coffee,Handshake,Globe,Crown, MoveRightIcon,Shield, BookOpen, Heart,  Zap, Award,Mountain, Leaf, Book, Target, CheckCircle} from "lucide-react"
 
+const Vision =
+    [
+    {
+    title: "Revenue Growth",
+    Desc:"Realize growing revenue and  profit through strategic export and  wholsale trading oppurtunites",
+    },
+    {
+    title: "Bussiness Exellence",
+    Desc: "Establish a competent export and domestic trading business with international standards"
+    },
+    {
+        title: "Financial Growth",
+        Desc: "Acquire funding from financial insitutions to support working capital and expansion needs"
+
+    }]
 const info =
     [
     {
@@ -134,15 +149,34 @@ export default function Aboutus_2() {
         <p className='text-xl text-center'>Strategic goals driving our misson to enhance export and domestic trading operations</p>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:px-24 px-4 lg:px-24 gap-6 py-12'>
             {businessobj.map((info, index)=>(
-                <div key={index} className={`group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-3xl border border-red-100`}>  
+                <div key={index} className={`group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-3xl border border-red-100 hover:-translate-y-1`}>  
                     <div className='flex flex-col gap-3 p-8'>
-                        <info.icon className={`h-16 w-16 group-hover:scale-125 ${info.color} transition-all duration-300 ease-in-out p-3 bg-red-200/30  rounded-2xl`}/>
+                        <info.icon className={`h-16 w-16 group-hover:scale-110 ${info.color} transition-all duration-300 ease-in-out p-3 bg-red-200/30  rounded-2xl`}/>
                         <h2 className='text-xl  font-bold '>{info.title}</h2>
                         <p className=''>{info.desc}</p>
                     </div>
                 </div>
             ))}
         </div>
+    </div>
+
+    <div className='flex flex-col  gap-6 bg-gradient-to-r from-red-600 to-red-700 p-12 rounded-2xl mx-24 justify-center items-center'>
+            <div className='bg-white/30 rounded-full p-2'> 
+                <Target className='text-white p-3 w-16 h-16'/>
+            </div>
+            <h1 className='text-4xl text-white font-bold'>Our Strategic Vision</h1>
+            <div className='bg-amber-300 w-20 h-1 self-center'></div>
+            <div className='grid lg:grid-cols-3 md:grid-cols-1 sm:px-24 px-4 lg:px-24 gap-6 py-12'>
+                {Vision.map((info, index)=>(
+                <div key={index} className={`group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-xl border border-red-100 hover:-translate-y-1 bg-white/10`}>  
+                    <div className='flex flex-col gap-3 p-8'>
+                        <CheckCircle className='text-green-500'/>
+                        <h2 className='text-xl  font-bold text-white'>{info.title}</h2>
+                        <p className='text-white'>{info.Desc}</p>
+                    </div>
+                </div>
+                ))}
+            </div>
     </div>
     
 
