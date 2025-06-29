@@ -1,4 +1,5 @@
 import React from 'react'
+import  buna from '../assets/Images/buna.jpg'
 import {Coffee,Handshake,Globe,Crown, MoveRightIcon,Shield, BookOpen, Heart,  Zap, Award,Mountain, Leaf, Book, Target, CheckCircle} from "lucide-react"
 
 const info =
@@ -69,7 +70,7 @@ export default function Aboutus_2() {
         </div>
     </div>
 
-    <div className='bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl p-12 shadow-2xl flex flex-col lg:flex-row gap-24 mx-24'>
+    <div className='bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl p-12 shadow-2xl flex flex-col lg:flex-row gap-12 mx-24'>
             <div className='flex flex-col w-full text-center '>
                 <h1 className='text-5xl font-bold mb-6 '>Ethiopian Coffee Excellence</h1>
                 <div className='w-1/6 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mb-12'></div>
@@ -90,8 +91,16 @@ export default function Aboutus_2() {
                     </div>
                 </div>
             </div>
-            <div className='w-full'> 
-
+            <div className='w-full flex flex-col h-full justify-center  items-center relative'> 
+                  <img
+                    src={buna}
+                    alt="buna"
+                    className="rounded-xl shadow-lg object-cover"
+                  />
+                  <div className=' absolute z-100 bottom-35  md:py-2 md:px-4 rounded-xl text-center bg-gradient-to-r from-orange-500 to-amber-500 '>
+                    <h2 className='md:text-2xl  font-bold text-white'>Premium</h2>
+                    <p className='lg:w-30 w-25 text-white'>Ethiopian Coffee</p>
+                  </div>
             </div>
     </div>
 
