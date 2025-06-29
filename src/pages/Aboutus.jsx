@@ -2,7 +2,7 @@ import logo  from '../assets/Images/businesslogo.jpg'
 import Map from "../components/Map"
 import  buna from '../assets/Images/buna.jpg'
 import classNames from 'classnames'
-import {Coffee,Handshake,Globe,Crown, MoveRightIcon,Shield, BookOpen, Heart,  Zap, Award,Mountain, Leaf, Book, Target, TicketCheck, Check, CheckCheckIcon, CheckCircle} from "lucide-react"
+import {Coffee,Handshake,Globe,Crown, MoveRightIcon,Shield, BookOpen, Heart,  Zap, Award,Mountain, Leaf, Book, Target, CheckCircle} from "lucide-react"
 
 const Aboutus = () => {
   const Vision =
@@ -22,11 +22,11 @@ const Aboutus = () => {
   }]
   const info =
   [
-  {
-     icon: Shield,
-     title: "Accountability",
-     desc: "All our employees and management will be accountable for what we do ",
-     color:"bg-blue-600"
+{
+  icon: Shield,
+  title: "Accountability",
+  desc: "All our employees and management will be accountable for what we do ",
+  color:"bg-blue-600"
 },
 {
 icon: Book,
