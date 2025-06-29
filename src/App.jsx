@@ -1,48 +1,108 @@
-import './index.css'
-import Home from './pages/Home'
-import About from './pages/Aboutus'
-import Navbar from './components/Navbar'
-import Contact  from './pages/Contact'
-import Products from './pages/Products'
-import Notfound from './pages/Notfound'
-import Login from './pages/Login'
-import SignUp from './pages/SignUp'
-import Home_2 from './pages/Home_2'
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
-import { LightProvider } from './LightContext'
-import { AnimatePresence, motion } from 'framer-motion'
+// App.jsx
+import React, { useEffect, useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 
+import Navbar from './components/Navbar';
+import { LightProvider } from './LightContext';
 
+import Home_2 from './pages/Home_2';
+import About from './pages/Aboutus';
+import Contact from './pages/Contact';
+import Products from './pages/Products';
+import Login from './pages/Login';
+import SignUp from './pages/SignUp';
+import Notfound from './pages/Notfound';
 
+import coffeeImage from './assets/Images/coffee.jpg';
 
+const NUM_COLUMNS = 12; // Number of vertical columns to split screen width
 
-function AppRoutes() {
-  
-  const location = useLocation();
-  const variants = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-    exit: { opacity: 0, y: -20, transition: { duration: 0.4 } },
-  };
+function TransitionOverlayWithFullScreenRepeat() {
+  const columns = Array.from({ length: NUM_COLUMNS });
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={location.pathname}
-        variants={variants}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-      >
-        <Routes location={location} key={location.pathname}>
-          <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/products' element={<Products />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/signup' element={<SignUp />} />
-          <Route path='*' element={<Notfound />} />
-          <Route path='/' element={<Home_2/>}/>
-        </Routes>
+    <div className="fixed inset-0 z-50 pointer-events-none flex overflow-hidden">
+      {columns.map((_, i) => (
+        <motion.div
+          key={i}
+     className="
+            h-full flex-1 
+            filter  opacity-90 
+            drop-shadow-md
+            bg-no-repeat"
+          style={{
+            backgroundImage: `url(${coffeeImage})`,
+            backgroundRepeat: 'repeat',
+            backgroundPosition: 'top left',
+            backgroundSize: '100px 100px', // adjust tile size here
+          }}
+          initial={{ y: '-100%' }}
+          animate={{ y: '0%' }}
+          exit={{ y: '100%' }}
+          transition={{
+            duration: 2,
+            ease: 'easeInOut',
+            delay: i * 0.25,
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
+function AppRoutes() {
+  const location = useLocation();
+
+  const [showTransition, setShowTransition] = useState(true);
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    setShowTransition(true);
+    setShowContent(false);
+
+    // total animation duration + stagger + buffer time
+    const totalDuration = 2 + NUM_COLUMNS * 0.25 + 0.5;
+
+    const timer = setTimeout(() => {
+      setShowTransition(false);
+      setShowContent(true);
+    }, totalDuration * 1000);
+
+    return () => clearTimeout(timer);
+  }, [location.pathname]);
+
+  return (
+    <AnimatePresence mode="wait" initial={false}>
+      <motion.div key={location.pathname} className="relative min-h-screen">
+        {/* Animated overlay */}
+        {showTransition && <TransitionOverlayWithFullScreenRepeat />}
+
+        {/* Page content */}
+        {showContent && (
+          <motion.div
+            className="relative z-40"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Routes location={location} key={location.pathname}>
+              <Route path="/" element={<Home_2 />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="*" element={<Notfound />} />
+            </Routes>
+          </motion.div>
+        )}
       </motion.div>
     </AnimatePresence>
   );
@@ -52,11 +112,11 @@ function App() {
   return (
     <LightProvider>
       <Router>
-        <Navbar/>
+        <Navbar />
         <AppRoutes />
       </Router>
     </LightProvider>
-  )
+  );
 }
 
 export default App;
