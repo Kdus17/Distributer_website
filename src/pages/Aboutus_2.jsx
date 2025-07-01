@@ -70,11 +70,33 @@ const businessobj =[
   }
 ]
 
+const Impact =[
+  {
+    icon: Coffee,
+    title: "Premium",
+    Desc: "Ethiopian Coffee Quality",
+  },
+  {
+      icon: Globe,
+    title: "Global",
+    Desc: "Market Reach",
+  },
+  {
+     icon: Leaf,
+    title: "Sustainable",
+    Desc: "Trading Practices",
+  },
+  {
+  icon: Award,
+  title:"Certified",
+  Desc: "Export Standards"
+  }]
+
 
 export default function Aboutus_2() {
   return (
 <>
-    <div className='flex flex-col justify-center items-center bg-gradient-to-r from-red-500 to-red-700 max-h-screen min-h-screen text-white'>
+    <div className='flex flex-col justify-center items-center bg-gradient-to-r from-red-500 to-red-700 max-h-screen min-h-screen text-white mb-12'>
         <div className='flex gap-2 mb-10'>
             <div className='bg-white/30 rounded-full'><Coffee className='w-16 h-16 p-3'/></div>
             <div className='bg-white/30 rounded-full'><Crown className='w-16 h-16 p-3 text-yellow-400'/></div>
@@ -160,26 +182,47 @@ export default function Aboutus_2() {
         </div>
     </div>
 
-    <div className='flex flex-col  gap-6 bg-gradient-to-r from-red-600 to-red-700 p-12 rounded-2xl mx-24 justify-center items-center'>
-            <div className='bg-white/30 rounded-full p-2'> 
-                <Target className='text-white p-3 w-16 h-16'/>
-            </div>
-            <h1 className='text-4xl text-white font-bold'>Our Strategic Vision</h1>
-            <div className='bg-amber-300 w-20 h-1 self-center'></div>
-            <div className='grid lg:grid-cols-3 md:grid-cols-1 sm:px-24 px-4 lg:px-24 gap-6 py-12'>
-                {Vision.map((info, index)=>(
-                <div key={index} className={`group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-xl border border-red-100 hover:-translate-y-1 bg-white/10`}>  
-                    <div className='flex flex-col gap-3 p-8'>
-                        <CheckCircle className='text-green-500'/>
-                        <h2 className='text-xl  font-bold text-white'>{info.title}</h2>
-                        <p className='text-white'>{info.Desc}</p>
-                    </div>
+    {/**Vision */}
+    <div className='py-24'>
+        <div className='flex flex-col  gap-6 bg-gradient-to-r from-red-600 to-red-700 p-12 rounded-2xl lg:mx-24 mx-2 justify-center items-center '>
+                <div className='bg-white/30 rounded-full p-2'> 
+                    <Target className='text-white p-3 w-16 h-16'/>
                 </div>
-                ))}
-            </div>
+                <h1 className='text-4xl text-white font-bold'>Our Strategic Vision</h1>
+                <div className='bg-amber-300 w-20 h-1 self-center'></div>
+                <div className='grid lg:grid-cols-3 md:grid-cols-1 sm:px-24 px-4 lg:px-24 gap-6 py-12'>
+                    {Vision.map((info, index)=>(
+                    <div key={index} className={`group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-xl border border-red-100 hover:-translate-y-1 bg-white/10`}>  
+                        <div className='flex flex-col gap-3 p-8'>
+                            <CheckCircle className='text-green-500'/>
+                            <h2 className='text-xl  font-bold text-white'>{info.title}</h2>
+                            <p className='text-white'>{info.Desc}</p>
+                        </div>
+                    </div>
+                    ))}
+                </div>
+        </div>
     </div>
     
-
+    {/**Impacts */}
+    <div className='bg-gray-50 p-24 text-center flex flex-col items-center'>
+        <h1 className='text-5xl  font-bold mb-6'>Our Impact Today</h1>
+        <p className='text-xl max-w-200 mb-12 text-gray-600'>Building bridges between Ethiopian excellence and global markets through sustainable trading practices</p>
+        <div className='grid grid-cols-4 gap-12 w-full'>
+        {Impact.map((Impact, index)=>(
+            
+                <div key={index} className='col-span-1 flex flex-col items-center group shadow-xl bg-white justigy-center p-10 rounded-2xl'>
+                    <div className='bg-red-50 group-hover:scale-120 p-2 rounded-2xl mb-6'>
+                        <Impact.icon className='w-16 h-16 p-3 text-red-600'/>
+                    </div>
+                    <strong className='text-xl mb-3'>{Impact.title}</strong>
+                    <p>{Impact.Desc}</p>
+                </div>
+            
+        ))}
+        </div>
+        
+    </div>
 </>
   )
 }
