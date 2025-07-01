@@ -89,7 +89,7 @@ export default function Home_2() {
                 {/**Feature One */}
                 <div className='bg-gradient-to-r from-red-50  group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-2xl border border-red-100'>
                     <div className='grid sm:grid-rows-3 gap-3 sm:gap-0 p-8'>
-                        <Star className='row-span-1 min-w-16 h-16 w-16 group-hover:w-18 group-hover:h-18 group-hover:-translate-y-1 group-hover:-translate-x-1
+                        <Star className='row-span-1 min-w-16 h-16 w-16 group-hover:scale-125
                                             transition-all duration-300 ease-in-out p-3 bg-red-600 text-white rounded-xl'/>
                         <h2 className='row-span-1 text-xl font-bold self-center'>Premium Quality</h2>
                         <p className='row-span-1 text-gray-600'>Ethiopian coffee with special aroma and distinct flavor,
@@ -100,7 +100,7 @@ export default function Home_2() {
                 {/**Feature Two */}
                 <div className='bg-gradient-to-r from-red-50  group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-2xl border border-red-100'>
                     <div className='grid sm:grid-rows-3 gap-3 sm:gap-0 p-8'>
-                        <LeafIcon className='row-span-1 min-w-16 h-16 w-16 group-hover:w-18 group-hover:h-18 group-hover:-translate-y-1 group-hover:-translate-x-1
+                        <LeafIcon className='row-span-1 min-w-16 h-16 w-16 group-hover:scale-125
                                             transition-all duration-300 ease-in-out p-3 bg-red-600 text-white rounded-xl'/>
                         <h2 className='row-span-1 text-xl font-bold self-center'>Organic by Defaulty</h2>
                         <p className='row-span-1 text-gray-600'>Our coffee and pulses are naturally organic, 
@@ -111,7 +111,7 @@ export default function Home_2() {
                 {/**Feature Three */}
                 <div className='bg-gradient-to-r from-red-50  group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-2xl border border-red-100'>
                     <div className='grid sm:grid-rows-3 gap-3 sm:gap-0 p-8'>
-                        <Users className='row-span-1 min-w-16 h-16 w-16 group-hover:w-18 group-hover:h-18 group-hover:-translate-y-1 group-hover:-translate-x-1
+                        <Users className='row-span-1 min-w-16 h-16 w-16 group-hover:scale-125
                                             transition-all duration-300 ease-in-out p-3 bg-red-600 text-white rounded-xl'/>
                         <h2 className='row-span-1 text-xl font-bold self-center'>Expert Team</h2>
                         <p className='row-span-1 text-gray-600'>Competent management team with special knowledge, skills,
@@ -122,7 +122,7 @@ export default function Home_2() {
                 {/**Feature Four */}
                 <div className='bg-gradient-to-r from-red-50  group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-2xl border border-red-100'>
                     <div className='grid sm:grid-rows-3 gap-3 sm:gap-0 p-8'>
-                        <Truck className='row-span-1 min-w-16 h-16 w-16 group-hover:w-18 group-hover:h-18 group-hover:-translate-y-1 group-hover:-translate-x-1
+                        <Truck className='row-span-1 min-w-16 h-16 w-16 group-hover:scale-125
                                             transition-all duration-300 ease-in-out p-3 bg-red-600 text-white rounded-xl'/>
                         <h2 className='row-span-1 text-xl font-bold self-center'>Complete Solutions</h2>
                         <p className='row-span-1 text-gray-600'>Comprehensive trading services including export logistics, 
@@ -133,7 +133,7 @@ export default function Home_2() {
                 {/**Feature Five */}
                 <div className='bg-gradient-to-r from-red-50  md:col-span-2 lg:col-span-1 group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-2xl border border-red-100'>
                     <div className='grid sm:grid-rows-3 gap-3 sm:gap-0 p-8'>
-                        <Clock className='row-span-1 min-w-16 h-16 w-16 group-hover:w-18 group-hover:h-18 group-hover:-translate-y-1 group-hover:-translate-x-1
+                        <Clock className='row-span-1 min-w-16 h-16 w-16 group-hover:scale-125
                                             transition-all duration-300 ease-in-out p-3 bg-red-600 text-white rounded-xl'/>
                         <h2 className='row-span-1 text-xl font-bold self-center'>Reliable Delivery</h2>
                         <p className='row-span-1 text-gray-600'>Consistent and timely delivery schedules with efficient logistics 

@@ -2,8 +2,10 @@ import logo  from '../assets/Images/businesslogo.jpg'
 import Map from "../components/Map"
 import  buna from '../assets/Images/buna.jpg'
 import classNames from 'classnames'
+
 import { useLightcontext } from '../LightContext'
 import {Coffee,Handshake,Globe,Crown, MoveRightIcon,Shield, BookOpen, Heart,  Zap, Award,Mountain, Leaf, Book, Target, TicketCheck, Check, CheckCheckIcon, CheckCircle} from "lucide-react"
+
 const Aboutus = () => {
   const {light,togglelight} = useLightcontext()
  
@@ -24,11 +26,13 @@ const Aboutus = () => {
   }]
   const info =
   [
+
   {
      icon: Shield,
      title: "Accountability",
      desc: "All our employees and management will be accountable for what we do ",
      color: light ? "bg-[#1E3A8A]":"bg-blue-600"
+
 },
 {
 icon: Book,
