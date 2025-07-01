@@ -7,6 +7,7 @@ import Notfound from './pages/Notfound'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import Home_2 from './pages/Home_2'
+import Aboutus_2 from './pages/Aboutus_2'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { LightProvider } from './LightContext'
 // eslint-disable-next-line no-unused-vars
@@ -40,6 +41,7 @@ function AppRoutes() {
           <Route path='/signup' element={<SignUp />} />
           <Route path='*' element={<Notfound />} />
           <Route path='/home' element={<Home_2/>}/>
+          <Route path='/us' element={<Aboutus_2/>}/>
         </Routes>
       </motion.div>
     </AnimatePresence>
