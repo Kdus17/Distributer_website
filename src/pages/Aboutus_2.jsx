@@ -1,6 +1,7 @@
 import React from 'react'
+import Map from "../components/Map"
 import  buna from '../assets/Images/buna.jpg'
-import {Coffee,Handshake,Globe,Crown, MoveRightIcon,Shield, BookOpen, Heart,  Zap, Award,Mountain, Leaf, Book, Target, CheckCircle} from "lucide-react"
+import {Coffee,Handshake,Globe,Crown, MoveRightIcon,Shield, BookOpen, Heart,  Zap, Award,Mountain, Leaf, Book, Target, CheckCircle, ArrowRight} from "lucide-react"
 
 const Vision =
     [
@@ -129,7 +130,7 @@ export default function Aboutus_2() {
     </div>
 
     {/**mountain and leafes */}        
-    <div className='bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl my-20 p-8 lg:p-12 shadow-2xl flex flex-col lg:flex-row gap-12 lg:mx-24'>
+    <div className='bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl my-20 mx-4 p-8 lg:p-12 shadow-2xl flex flex-col lg:flex-row gap-12 md:mx-24'>
             <div className='flex flex-col w-full text-center '>
                 <h1 className='text-4xl sm:text-5xl font-bold mb-6 '>Ethiopian Coffee Excellence</h1>
                 <div className='w-1/6 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mb-12'></div>
@@ -222,6 +223,41 @@ export default function Aboutus_2() {
         ))}
         </div>
         
+    </div>
+
+    {/**Map and all */}
+    <div className=' bg-gradient-to-r from-red-500 to-red-700 min-h-screen md:px-12 lg:px-24 py-24 flex flex-col items-center'>
+        <div className='bg-white/15 p-4 rounded-2xl mb-6'>
+            <Crown className='w-16 h-16 text-amber-300'/>
+        </div>
+        <h1 className='md:text-7xl sm:text-5xl text-4xl text-white mb-8 font-bold text-center'>Join Our Trading Network</h1>
+        <p className='text-xl text-center max-w-220 text-white mb-12'>Whether you're looking to source premium Ethiopian coffee, explore trading opportunities, or partner with us in sustainable business practices,
+             we're here to build lasting relationships that benefit communities and markets worldwide.</p>
+        
+        {/**The Mini-Cards */}
+        <div className='grid lg:grid-cols-3  gap-4 text-white mb-12'>
+            <div className='col-span-1 group bg-white/20 border border-white/30 py-4 px-8 rounded-2xl flex md:gap-12 items-center hover:bg-white/30  transition-all duration-300 ease-in-out'>
+                <Coffee className='group-hover:scale-110 w-8 h-8 transition-all duration-300 ease-in-out'/>
+                <p className='text-center max-w-30'>Explore Coffee Products</p>
+            </div>
+            <div className='col-span-1 group bg-white/20 border border-white/30 py-4 px-8 rounded-2xl flex md:gap-12 items-center hover:bg-white/30  transition-all duration-300 ease-in-out'>
+                <Handshake className='group-hover:scale-110 w-8 h-8 transition-all duration-300 ease-in-out'/>
+                <p className='text-center max-w-30'>Partnership Opportunities</p>
+            </div>
+            <div className='col-span-1 group bg-white/20 border border-white/30 py-4 px-8 rounded-2xl flex md:gap-12 items-center hover:bg-white/30  transition-all duration-300 ease-in-out'>
+                <Globe className='group-hover:scale-110 w-8 h-8 transition-all duration-300 ease-in-out'/>
+                <p className='text-center max-w-30'>Global Trading</p>
+            </div>
+        </div>
+
+        {/**Map */}
+        <h1 className='sm:text-4xl text-3xl text-white mb-8 font-bold text-center'>Ready to Experience Ethiopian Excellence?</h1>
+        <p className='text-xl text-center max-w-180 text-white mb-12'>Connect with us to discover how Kingdom Business PLC can enhance your trading operations 
+            and bring you closer to Ethiopia's finest products.</p>
+        <button className='py-4 px-6 rounded-2xl font-bold text-lg bg-white text-red-600 flex gap-4 items-center group shadow-xl mb-12'>Start Your Journey 
+            <ArrowRight className='group-hover:translate-x-1  transition-all duration-300 ease-in-out'/>
+        </button>
+        <Map/>
     </div>
 </>
   )
