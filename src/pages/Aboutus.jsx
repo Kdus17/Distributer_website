@@ -2,9 +2,13 @@ import logo  from '../assets/Images/businesslogo.jpg'
 import Map from "../components/Map"
 import  buna from '../assets/Images/buna.jpg'
 import classNames from 'classnames'
-import {Coffee,Handshake,Globe,Crown, MoveRightIcon,Shield, BookOpen, Heart,  Zap, Award,Mountain, Leaf, Book, Target, CheckCircle} from "lucide-react"
+
+import { useLightcontext } from '../LightContext'
+import {Coffee,Handshake,Globe,Crown, MoveRightIcon,Shield, BookOpen, Heart,  Zap, Award,Mountain, Leaf, Book, Target, TicketCheck, Check, CheckCheckIcon, CheckCircle} from "lucide-react"
 
 const Aboutus = () => {
+  const {light,togglelight} = useLightcontext()
+ 
   const Vision =
   [
   {
@@ -22,35 +26,37 @@ const Aboutus = () => {
   }]
   const info =
   [
-{
-  icon: Shield,
-  title: "Accountability",
-  desc: "All our employees and management will be accountable for what we do ",
-  color:"bg-blue-600"
+
+  {
+     icon: Shield,
+     title: "Accountability",
+     desc: "All our employees and management will be accountable for what we do ",
+     color: light ? "bg-[#1E3A8A]":"bg-blue-600"
+
 },
 {
 icon: Book,
 title: "knowledge",
 desc: "We constantly learn,grow and innovate with new ways to better serve our customers",
-color:"bg-purple-600"
+color: light ? "bg-[#3F0F87]" :"bg-purple-600" 
 },
 {
 icon:  Heart,
 title :"Care",
 desc: "We deeply care for all our employees and  customers with humility and  provide solutions  that take care of your business needs",
-color:"bg-red-600"
+color: light? "bg-[#B91C1C]":"bg-red-600"
 },
 {
 icon:  Zap,
 title: "impact",
 desc:"We aspire to have a truly great impact on all thatwe do and touch",
-color:"bg-orange-600"
+color: light ? "bg-[#9A3412]" :"bg-orange-600"
 },
 {
   icon:  Award,
   title: "Quality",
   desc: "We strive to achieve excellence in our product & Service delivery",
-  color:"bg-green-600"
+  color:light ? "bg-[#065F46]":"bg-green-600"
 }];
 const businessobj =[
   {
@@ -94,7 +100,7 @@ const Impact =[
   const  Transparentbutton = 'gap-x-2 opacity-40 bg-white rounded-xl px-3 py-1 flex flex-row '
   return (
     
-    <div className="bg-red-500  font-sans flex flex-col   items-center mt-3 w-full">
+    <div className="bg-red-500  font-sans flex flex-col dark:text-[#E0E0E0]  dark:bg-[#121212] items-center  w-full">
       
       <div className='flex gap-2 text-white  '> <Coffee  className='size-9'/><span className='text-yellow-400 '><Crown  className='size-10'/></span><Globe className='size-9'/></div>
        <h1 className='text-4xl md:text-7xl text-center max-w-[820px]  text-gray-50'> Connecting  Ethiopia's <span className='text-red-400'>Finest Coffee</span>  to the World
@@ -108,7 +114,7 @@ while building comprehensive trading solutions that support local communities an
       <p className='text-gray-100  font-bold text-center max-w-[600px] py-5'>
         We're bridging the contintents through qualit, integrity and sustainable trade practices
       </p>
-      <div  className='bg-white w-full flex  flex-col text-center '>
+      <div  className='bg-white w-full flex  flex-col text-center dark:bg-[#121212]'>
           <h1  className='text-center mt-5  font-bold text-3xl'> Our Core Values </h1>
           <p className=''>Guiding princples that  shape every decision we make  and  every relationship we build</p>
        <div className="flex flex-wrap justify-center gap-6 my-8">
@@ -116,7 +122,7 @@ while building comprehensive trading solutions that support local communities an
     <div
       key={index}
       className={classNames(
-        `rounded-2xl shadow-lg p-6 w-[300px] h-[220px] text-white flex flex-col justify-start ${Info.color}`
+        `rounded-2xl shadow-lg p-6 w-[300px] h-[220px] text-white flex flex-col justify-start  ${Info.color}`
       )}
     >
       <div className="flex items-center gap-4 mb-4">
@@ -129,7 +135,7 @@ while building comprehensive trading solutions that support local communities an
     </div>
   ))}
 </div>
-<div className='bg-yellow-50  flex gap-10 py-10 px-12 flex-col md:flex-row justify-center'>
+<div className='bg-yellow-50 dark:bg-inherit flex gap-10 py-10 px-12 flex-col md:flex-row justify-center'>
   <div className='flex flex-col gap-6 items-center   md:w-1/2 '>
 <h1 className='text-5xl'>Ethiopian Coffee Exellence</h1>
 <p className='font-sans'>
@@ -138,15 +144,15 @@ while building comprehensive trading solutions that support local communities an
 <p>
   While most ethiopian coffee is grown in the highlands, the country's diverse geography and climate allow for a wide range of coffee varieties. The most popular varieties include:Gesha (or Geisha), Yirgacheffe, and Sidamo
 </p>
-<div className='flex flex-col md:flex-row  gap-5'>
- <div className=' rounded-xl shadow-lg/20 shadow-black flex flex-col bg-white max-w-[300px] p-6 text-left gap-5'>
+<div className='flex flex-col  md:flex-row  gap-5'>
+ <div className=' rounded-xl dark:bg-gray-800 shadow-lg/20 shadow-black flex flex-col bg-white max-w-[300px] p-6 text-left gap-5'>
   <Mountain className='text-orange-400 size-10'/>
     <h1 className='font-bold text-2xl'>High Altitude  </h1>
     <p>
       Sourcing from opitimal growing regions for superior flavor profiles
     </p>
 </div>
-<div className=' rounded-xl shadow-lg/20 shadow-black flex flex-col bg-white max-w-[300px] p-6 text-left gap-5'>
+<div className=' rounded-xl dark:bg-gray-800 shadow-lg/20 shadow-black flex flex-col bg-white max-w-[300px] p-6 text-left gap-5'>
   <Leaf className='text-green-400 size-10'/>
     <h1 className='font-bold text-2xl'> Organic Quality </h1>
     <p>
@@ -170,11 +176,11 @@ while building comprehensive trading solutions that support local communities an
 </div>
 </div>
       </div>
-   <div className='bg-white w-full p-10 flex flex-col items-center gap-6'>
+   <div className='bg-white w-full p-10 flex flex-col dark:bg-inherit items-center gap-6'>
     <h1 className='text-4xl font-bold'> Our Business Objectives </h1>
     <p className='text-gray-600 text-base leading-relaxed mt-2'> Strategic goals driving our misson to enhance export and domestic trading operations</p>
     <div className='flex flex-col md:flex-row justify-center gap-6'>
-         { businessobj.map((Values)=>(<div className='flex flex-col gap-5 p-3 items-start shadow-lg shadow-gray-500 max-w-[330px] rounded-lg'>
+         { businessobj.map((Values)=>(<div className='flex flex-col gap-5 p-3 items-start shadow-lg shadow-gray-500 max-w-[330px] rounded-lg  dark:bg-gray-800 dark:shadow-gray-300 dark:shadow-sm'>
            
            <div className='bg-red-500/20 rounded-full w-14 h-14 flex items-center justify-center '>
             <Values.icon className='text-red-600'/>
@@ -183,7 +189,7 @@ while building comprehensive trading solutions that support local communities an
            <p className='text-gray-600 text-base leading-relaxed mt-2'>{Values.desc}</p>
           </div>))}
     </div>
-<div  className='p-3 bg-red-500 flex-col gap-4 rounded-lg flex items-center py-3 text-gray-200'>
+<div  className='p-3 dark:bg-gray-600 d bg-red-500 flex-col gap-4 rounded-lg flex items-center py-3 text-gray-200'>
   <Target className='size-9'/>
 <h1 className='text-2xl font-bold'>
   Our Strategic Vision
@@ -192,20 +198,20 @@ while building comprehensive trading solutions that support local communities an
  { Vision.map((Values)=>(<div className='max-w-[330px] flex flex-col items-start'>
    <CheckCircle className='text-green-500'/>
    <h1 className='text-2xl font-bold'>{Values.title}</h1>
-   <p className='text-gray-600 text-base leading-relaxed mt-2'>{Values.Desc}</p>
+   <p className='text-gray-100 text-base leading-relaxed mt-2'>{Values.Desc}</p>
  </div>))}
 </div>
 </div>
    </div>
-   <div className='flex flex-col py-6 px-6 gap-4 items-center bg-white  w-full '>
+   <div className='flex flex-col py-6 px-6 dark:bg-inherit  gap-4 items-center bg-white  w-full '>
     <h1 className='font-bold text-2xl'>
       Our Impact Today
     </h1>
-    <p className='text-center text-gray-600 text-base leading-relaxed mt-'>
+    <p className='text-center dark:text-gray-100 text-base leading-relaxed mt-'>
 Building bridges between Ethiopian excellence and global markets through sustainable trading practcies
     </p>
     <div className='flex gap-7 flex-col items-center md:flex-row md:justify-center'>
-           {Impact.map((Values,index)=>(<div key={index} className='flex flex-col gap-4 py-4 px-5 items-center min-w-[250px] shadow-lg shadow-gray-300 rounded-lg'>
+           {Impact.map((Values,index)=>(<div key={index} className='flex flex-col gap-4 py-4 px-5 items-center min-w-[250px] shadow-lg shadow-gray-300 rounded-lg dark:shadow-gray-800'>
                         <div className='bg-red-500/20 rounded-full w-14 h-14 flex items-center justify-center '>
                         <Values.icon className='text-red-600'/>
                         </div>
@@ -216,7 +222,7 @@ Building bridges between Ethiopian excellence and global markets through sustain
            </div>))}
     </div>
    </div>
-      
+      <div className='bg-red-500  font-sans flex flex-col dark:text-[#E0E0E0] gap-4  dark:bg-[#121212] items-center  w-full'>
       <div className='flex justify-center mt-2'> <img src={logo}className='rounded-xl ' alt="Logo" />
       </div>
       <h1 className=' text-3xl md:text-4xl font-bold text-gray-50'>Join our trading network</h1>
@@ -226,7 +232,7 @@ Building bridges between Ethiopian excellence and global markets through sustain
           we're here to build lasting relationships that benefit communities and markets worldwide.
         </p>
       </div>
-      <div className='flex gap-3 md:flex-row flex-col '>
+      <div className='flex gap-3 md:flex-row flex-col dark:text-black '>
         <button className={Transparentbutton}><Coffee /> explore  coffee products</button>
         <button  className={Transparentbutton}><Handshake/> partnership opportunities</button>
         <button className={Transparentbutton}> <Globe/>global trading </button>
@@ -243,6 +249,7 @@ Start Your Journey <MoveRightIcon/>
       </button>
       </div>
 <Map/>
+</div>
     </div>
   )
 }
