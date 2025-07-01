@@ -102,7 +102,7 @@ export default function Aboutus_2() {
             <div className='bg-white/30 rounded-full'><Crown className='w-16 h-16 p-3 text-yellow-400'/></div>
             <div className='bg-white/30 rounded-full'><Globe className='w-16 h-16 p-3'/></div>
         </div>
-        <p className='md:text-8xl text-7xl max-w-240 font-bold  text-center'>
+        <p className='md:text-8xl text-4xl sm:text-7xl max-w-240 font-bold  text-center'>
             Connecting Ethiopia's <span className='text-yellow-300'>Finest Coffee</span> to the World
         </p>
         <p className='mt-12 max-w-160 text-center'>Kingdom Business PLC is dedicated to showcasing Ethiopia's premium coffee to international markets while 
@@ -113,7 +113,7 @@ export default function Aboutus_2() {
     </div>
 
     <div className='flex flex-col items-center'>
-        <h1 className='text-5xl font-bold my-10'>Our Core Values</h1>
+        <h1 className='text-4xl sm:text-5xl font-bold my-10'>Our Core Values</h1>
         <p className='text-center max-w-150 text-xl text-gray-600 mb-10'>Guiding principles that shape every decision we make and every relationship we build</p>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:px-24 px-4 lg:px-24 gap-6 py-12'>
             {info.map((info, index)=>(
@@ -131,7 +131,7 @@ export default function Aboutus_2() {
     {/**mountain and leafes */}        
     <div className='bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl my-20 p-8 lg:p-12 shadow-2xl flex flex-col lg:flex-row gap-12 lg:mx-24'>
             <div className='flex flex-col w-full text-center '>
-                <h1 className='text-5xl font-bold mb-6 '>Ethiopian Coffee Excellence</h1>
+                <h1 className='text-4xl sm:text-5xl font-bold mb-6 '>Ethiopian Coffee Excellence</h1>
                 <div className='w-1/6 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mb-12'></div>
                 <p className='text-lg mb-6'>Ethiopian coffee continues to enjoy strong international demand, renowned for its unique aroma and distinct flavor. 
                 Despite ongoing challenges such as climate change and deforestation, we remain committed to sourcing and delivering high-quality coffee.</p>
@@ -167,7 +167,7 @@ export default function Aboutus_2() {
 
     {/**Business Objectives */}
     <div className='flex flex-col '>
-        <h1 className='text-5xl font-bold text-center'>Our Business Objectives</h1>
+        <h1 className='text-4xl sm:text-5xl font-bold text-center'>Our Business Objectives</h1>
         <p className='text-xl text-center'>Strategic goals driving our misson to enhance export and domestic trading operations</p>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:px-24 px-4 lg:px-24 gap-6 py-12'>
             {businessobj.map((info, index)=>(
@@ -183,14 +183,14 @@ export default function Aboutus_2() {
     </div>
 
     {/**Vision */}
-    <div className='py-24'>
+    <div className='py-24 px-4 sm:px-12 md:px-24'>
         <div className='flex flex-col  gap-6 bg-gradient-to-r from-red-600 to-red-700 p-12 rounded-2xl lg:mx-24 mx-2 justify-center items-center '>
                 <div className='bg-white/30 rounded-full p-2'> 
                     <Target className='text-white p-3 w-16 h-16'/>
                 </div>
-                <h1 className='text-4xl text-white font-bold'>Our Strategic Vision</h1>
+                <h1 className='text-4xl text-white font-bold text-center'>Our Strategic Vision</h1>
                 <div className='bg-amber-300 w-20 h-1 self-center'></div>
-                <div className='grid lg:grid-cols-3 md:grid-cols-1 sm:px-24 px-4 lg:px-24 gap-6 py-12'>
+                <div className='grid lg:grid-cols-3 md:grid-cols-1  gap-6 py-12'>
                     {Vision.map((info, index)=>(
                     <div key={index} className={`group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-xl border border-red-100 hover:-translate-y-1 bg-white/10`}>  
                         <div className='flex flex-col gap-3 p-8'>
@@ -205,14 +205,14 @@ export default function Aboutus_2() {
     </div>
     
     {/**Impacts */}
-    <div className='bg-gray-50 p-24 text-center flex flex-col items-center'>
-        <h1 className='text-5xl  font-bold mb-6'>Our Impact Today</h1>
+    <div className='bg-gray-50 px-4 sm:px-12 md:px-24 py-24 text-center flex flex-col items-center'>
+        <h1 className='text-4xl sm:text-5xl  font-bold mb-6'>Our Impact Today</h1>
         <p className='text-xl max-w-200 mb-12 text-gray-600'>Building bridges between Ethiopian excellence and global markets through sustainable trading practices</p>
-        <div className='grid grid-cols-4 gap-12 w-full'>
+        <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-12 w-full'>
         {Impact.map((Impact, index)=>(
             
-                <div key={index} className='col-span-1 flex flex-col items-center group shadow-xl bg-white justigy-center p-10 rounded-2xl'>
-                    <div className='bg-red-50 group-hover:scale-120 p-2 rounded-2xl mb-6'>
+                <div key={index} className='col-span-1 flex flex-col items-center group shadow-xl bg-white justigy-center p-10 rounded-2xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out'>
+                    <div className='bg-red-50 group-hover:scale-120 p-2 rounded-2xl mb-6 transition-all duration-300 ease-in-out'>
                         <Impact.icon className='w-16 h-16 p-3 text-red-600'/>
                     </div>
                     <strong className='text-xl mb-3'>{Impact.title}</strong>
