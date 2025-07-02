@@ -203,7 +203,7 @@ export const Contact = () => {
 
           {/**Message */}
           <div className="flex flex-col gap-2 ">
-            <label htmlFor="message" className="font-serif font-medium text-black flex gap-2">Message <span className="font-black text-red-700 ">*</span></label>
+            <label htmlFor="messeage" className="font-serif font-medium text-black flex gap-2">Message <span className="font-black text-red-700 ">*</span></label>
                 <div className=" py-1 px-2   border border-gray-400 rounded-lg  has-focus:border-red-500 has-focus:text-red-500 flex">
                   <MessageCircle className="self-start my-1"/>
                   <textarea rows={6} name="messeage" id="messeage" 

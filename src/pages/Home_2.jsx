@@ -153,7 +153,7 @@ export default function Home_2() {
         {/**Feature One */}
         <div className='bg-gradient-to-r from-red-50  group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-2xl border border-red-100'>
             <div className='grid sm:grid-rows-3 gap-3 sm:gap-0 p-8'>
-                <Star className='row-span-1 min-w-16 h-16 w-16 group-hover:w-18 group-hover:h-18 group-hover:-translate-y-1 group-hover:-translate-x-1
+                <Star className='row-span-1 min-w-16 h-16 w-16 group-hover:scale-125
                                 transition-all duration-300 ease-in-out p-3 bg-red-600 text-white rounded-xl'/>
                 <h2 className='row-span-1 text-xl font-bold self-center'>{language.h22}</h2>
                 <p className='row-span-1 text-gray-600'>{language.h23}</p>
@@ -163,7 +163,7 @@ export default function Home_2() {
         {/**Feature Two */}
         <div className='bg-gradient-to-r from-red-50  group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-2xl border border-red-100'>
             <div className='grid sm:grid-rows-3 gap-3 sm:gap-0 p-8'>
-                <LeafIcon className='row-span-1 min-w-16 h-16 w-16 group-hover:w-18 group-hover:h-18 group-hover:-translate-y-1 group-hover:-translate-x-1
+                <LeafIcon className='row-span-1 min-w-16 h-16 w-16 group-hover:scale-125
                                 transition-all duration-300 ease-in-out p-3 bg-red-600 text-white rounded-xl'/>
                 <h2 className='row-span-1 text-xl font-bold self-center'>{language.h24}</h2>
                 <p className='row-span-1 text-gray-600'>{language.h25}.</p>
@@ -173,7 +173,7 @@ export default function Home_2() {
         {/**Feature Three */}
         <div className='bg-gradient-to-r from-red-50  group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-2xl border border-red-100'>
             <div className='grid sm:grid-rows-3 gap-3 sm:gap-0 p-8'>
-                <Users className='row-span-1 min-w-16 h-16 w-16 group-hover:w-18 group-hover:h-18 group-hover:-translate-y-1 group-hover:-translate-x-1
+                <Users className='row-span-1 min-w-16 h-16 w-16 group-hover:scale-125
                                 transition-all duration-300 ease-in-out p-3 bg-red-600 text-white rounded-xl'/>
                 <h2 className='row-span-1 text-xl font-bold self-center'>{language.h26}</h2>
                 <p className='row-span-1 text-gray-600'>{language.h27}</p>
@@ -183,7 +183,7 @@ export default function Home_2() {
         {/**Feature Four */}
         <div className='bg-gradient-to-r from-red-50  group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-2xl border border-red-100'>
             <div className='grid sm:grid-rows-3 gap-3 sm:gap-0 p-8'>
-                <Truck className='row-span-1 min-w-16 h-16 w-16 group-hover:w-18 group-hover:h-18 group-hover:-translate-y-1 group-hover:-translate-x-1
+                <Truck className='row-span-1 min-w-16 h-16 w-16 group-hover:scale-125
                                 transition-all duration-300 ease-in-out p-3 bg-red-600 text-white rounded-xl'/>
                 <h2 className='row-span-1 text-xl font-bold self-center'>{language.h28}</h2>
                 <p className='row-span-1 text-gray-600'>{language.h29}</p>
@@ -193,7 +193,7 @@ export default function Home_2() {
         {/**Feature Five */}
         <div className='bg-gradient-to-r from-red-50  md:col-span-2 lg:col-span-1 group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-2xl border border-red-100'>
             <div className='grid sm:grid-rows-3 gap-3 sm:gap-0 p-8'>
-                <Clock className='row-span-1 min-w-16 h-16 w-16 group-hover:w-18 group-hover:h-18 group-hover:-translate-y-1 group-hover:-translate-x-1
+                <Clock className='row-span-1 min-w-16 h-16 w-16 group-hover:scale-125
                                 transition-all duration-300 ease-in-out p-3 bg-red-600 text-white rounded-xl'/>
                 <h2 className='row-span-1 text-xl font-bold self-center'>{language.h30}</h2>
                 <p className='row-span-1 text-gray-600'>{language.h31}</p>
