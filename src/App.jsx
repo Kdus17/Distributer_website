@@ -1,4 +1,4 @@
-// App.jsx
+
 import React, { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router,
@@ -10,8 +10,10 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 import Navbar from './components/Navbar';
 import { LightProvider } from './LightContext';
+import { LanguageProvider } from './LanguageContext';
 
 import Home_2 from './pages/Home_2';
+import Footer from './components/Footer'
 import About from './pages/Aboutus';
 import Contact from './pages/Contact';
 import Products from './pages/Products';
@@ -111,10 +113,13 @@ function AppRoutes() {
 function App() {
   return (
     <LightProvider>
+      <LanguageProvider>
       <Router>
         <Navbar />
         <AppRoutes />
+        <Footer/>
       </Router>
+        </LanguageProvider>
     </LightProvider>
   );
 }
