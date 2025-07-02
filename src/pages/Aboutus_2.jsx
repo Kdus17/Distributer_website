@@ -1,7 +1,8 @@
 import React from 'react'
+import logo  from '../assets/Images/businesslogo.jpg'
 import Map from "../components/Map"
 import  buna from '../assets/Images/buna.jpg'
-import {Coffee,Handshake,Globe,Crown, MoveRightIcon,Shield, BookOpen, Heart,  Zap, Award,Mountain, Leaf, Book, Target, CheckCircle, ArrowRight} from "lucide-react"
+import {Coffee,Handshake,Globe,Crown, Shield, Heart,  Zap, Award,Mountain, Leaf, Book, Target, CheckCircle, ArrowRight} from "lucide-react"
 
 const Vision =
     [
@@ -98,7 +99,8 @@ export default function Aboutus_2() {
   return (
 <>
     <div className='flex flex-col justify-center items-center bg-gradient-to-r from-red-500 to-red-700 max-h-screen min-h-screen text-white mb-12'>
-        <div className='flex gap-2 mb-10'>
+        <img src={logo} alt="logo" className='mb-10'/>
+        <div className='flex gap-2 '>
             <div className='bg-white/30 rounded-full'><Coffee className='w-16 h-16 p-3'/></div>
             <div className='bg-white/30 rounded-full'><Crown className='w-16 h-16 p-3 text-yellow-400'/></div>
             <div className='bg-white/30 rounded-full'><Globe className='w-16 h-16 p-3'/></div>
@@ -113,6 +115,7 @@ export default function Aboutus_2() {
         </div>
     </div>
 
+    {/**Our Core Values */}
     <div className='flex flex-col items-center'>
         <h1 className='text-4xl sm:text-5xl font-bold my-10'>Our Core Values</h1>
         <p className='text-center max-w-150 text-xl text-gray-600 mb-10'>Guiding principles that shape every decision we make and every relationship we build</p>
