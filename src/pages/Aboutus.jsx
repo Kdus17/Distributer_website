@@ -4,9 +4,10 @@ import  buna from '../assets/Images/buna.jpg'
 import classNames from 'classnames'
 
 import { useLightcontext } from '../LightContext'
-import {Coffee,Handshake,Globe,Crown, MoveRightIcon,Shield, BookOpen, Heart,  Zap, Award,Mountain, Leaf, Book, Target, TicketCheck, Check, CheckCheckIcon, CheckCircle} from "lucide-react"
+import {Coffee,Handshake,Globe,Crown, MoveRightIcon,Shield,  Heart,  Zap, Award,Mountain, Leaf, Book, Target, CheckCircle} from "lucide-react"
 
 const Aboutus = () => {
+  // eslint-disable-next-line no-unused-vars
   const {light,togglelight} = useLightcontext()
  
   const Vision =

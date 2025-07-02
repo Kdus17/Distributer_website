@@ -5,6 +5,7 @@ import {
   Route,
   useLocation,
 } from 'react-router-dom';
+// eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion } from 'framer-motion';
 
 import Navbar from './components/Navbar';
@@ -17,6 +18,7 @@ import Products from './pages/Products';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Notfound from './pages/Notfound';
+import Aboutus_2 from './pages/Aboutus_2';
 
 import coffeeImage from './assets/Images/coffee.jpg';
 
@@ -99,6 +101,8 @@ function AppRoutes() {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="*" element={<Notfound />} />
+              <Route path="/us" element={<Aboutus_2/>}/>
+
             </Routes>
           </motion.div>
         )}
