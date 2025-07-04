@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 43e7df26857ce046dbc8a12b15c6f4eae5aad245
 import React, { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router,
