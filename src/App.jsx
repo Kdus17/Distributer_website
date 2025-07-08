@@ -24,7 +24,7 @@ import Aboutus_2 from './pages/Aboutus_2';
 
 import coffeeImage from './assets/Images/coffee.jpg';
 
-const NUM_COLUMNS = 12; // Number of vertical columns to split screen width
+const NUM_COLUMNS = 0; // Number of vertical columns to split screen width
 
 function TransitionOverlayWithFullScreenRepeat() {
   const columns = Array.from({ length: NUM_COLUMNS });
@@ -51,7 +51,7 @@ function TransitionOverlayWithFullScreenRepeat() {
           transition={{
             duration: 2,
             ease: 'easeInOut',
-            delay: i * 0.25,
+            
           }}
         />
       ))}
@@ -70,7 +70,7 @@ function AppRoutes() {
     setShowContent(false);
 
     // total animation duration + stagger + buffer time
-    const totalDuration = 2 + NUM_COLUMNS * 0.25 + 0.5;
+    const totalDuration = 0 + NUM_COLUMNS * 0 + 0;
 
     const timer = setTimeout(() => {
       setShowTransition(false);
