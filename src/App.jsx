@@ -10,8 +10,10 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 import Navbar from './components/Navbar';
 import { LightProvider } from './LightContext';
+import { LanguageProvider } from './LanguageContext';
 
 import Home_2 from './pages/Home_2';
+import Footer from './components/Footer'
 import About from './pages/Aboutus';
 import Contact from './pages/Contact';
 import Products from './pages/Products';
@@ -22,7 +24,7 @@ import Aboutus_2 from './pages/Aboutus_2';
 
 import coffeeImage from './assets/Images/coffee.jpg';
 
-const NUM_COLUMNS = 12; // Number of vertical columns to split screen width
+const NUM_COLUMNS = 0; // Number of vertical columns to split screen width
 
 function TransitionOverlayWithFullScreenRepeat() {
   const columns = Array.from({ length: NUM_COLUMNS });
@@ -49,7 +51,7 @@ function TransitionOverlayWithFullScreenRepeat() {
           transition={{
             duration: 2,
             ease: 'easeInOut',
-            delay: i * 0.25,
+            
           }}
         />
       ))}
@@ -68,7 +70,7 @@ function AppRoutes() {
     setShowContent(false);
 
     // total animation duration + stagger + buffer time
-    const totalDuration = 2 + NUM_COLUMNS * 0.25 + 0.5;
+    const totalDuration = 0 + NUM_COLUMNS * 0 + 0;
 
     const timer = setTimeout(() => {
       setShowTransition(false);
@@ -114,10 +116,13 @@ function AppRoutes() {
 function App() {
   return (
     <LightProvider>
+      <LanguageProvider>
       <Router>
         <Navbar />
         <AppRoutes />
+        <Footer/>
       </Router>
+        </LanguageProvider>
     </LightProvider>
   );
 }
