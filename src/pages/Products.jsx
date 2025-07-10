@@ -1,6 +1,7 @@
 import {Coffee,Handshake,Globe,Crown, Shield, Heart,  Zap, Award,Mountain, Leaf, Book, Target, CheckCircle, ArrowRight, PhoneCall, CoffeeIcon, Cuboid, Globe2, MountainIcon, Square, BoxIcon, CalendarDays, CalendarDaysIcon, Calendar, LucideCoffee, ForkKnife, PersonStanding, Contact, Contact2, Contact2Icon, Users, Wifi, Music, CuboidIcon} from "lucide-react"
 import  cafe1  from "../assets/Images/cafe 1.jpg"
 import  cafe2  from "../assets/Images/cafe 2.jpg"
+
 const Products = () => {
   const sectionNav = "flex gap-3 bg-gray-400/10 py-3 px-7 rounded-xl hover:bg-orange-600";
   const coffeeProducts = [
@@ -52,7 +53,7 @@ const Products = () => {
   return (
     <div className="flex flex-col items-center">
    {/*   Hero  */}
-      <div className="flex flex-col gap-2 items-center">
+      <div className="flex flex-col gap-2 items-center bg-red-500 w-full">
  <div className='flex gap-2 pt-5'>
             <div className='bg-gray-300/20 rounded-full p-1 '><Coffee className='w-16 h-16 p-3'/></div>
             <div className='bg-gray-300/20 rounded-full p-1'><Crown className='w-16 h-16 p-3 text-yellow-400'/></div>
@@ -69,12 +70,12 @@ const Products = () => {
         </p>
       </div>
 {/*  section nav  */}
-<nav className="flex gap-4 justify-center  mt-6"> 
+<nav className="flex gap-4 justify-center  my-6"> 
   <a href="#coffee" className={sectionNav}> <CoffeeIcon/> premium coffee</a>
   <a href="" className={sectionNav}><Cuboid/> trading products</a>
   <a href="#cafe" className={sectionNav}><Globe/> services</a>
 </nav>
-<section id="coffee" className="flex flex-col items-center gap-4 px-12 bg-red-500">
+<section id="coffee" className="flex flex-col items-center gap-4 px-12 py-4 ">
   <h1 className="text-center text-black font-bold text-4xl mt-4"> 
 Premium Ethiopian Coffee
   </h1>
@@ -176,11 +177,12 @@ Global distribution network
   
   </div>
 </div>
-{/* coffee section */}
 </section>
-<section id ="cafe" className="grid grid-cols-2 bg-gray-200 gap-4">
-  <div className="grid grid-cols-1">
-<div className="flex flex-col justify-end gap-4  pr-20 pl-8 pt-6 bg-gray-500 rounded-xl ">
+
+<section id ="cafe" className="grid grid-cols-2 bg-gray-200 gap-4  px-6 py-6">
+  <div className="grid grid-cols-1 gap-4">
+ {/*    Kingdome house coffee card */}
+<div className="flex flex-col justify-end gap-4  pr-20 pl-8 pt-6 bg-gradient-to-r from-red-50 to-red-600 rounded-xl  py-4">
 <div className="flex justify-start gap-4 ">
   <div className="bg-yellow-300  rounded-full ">
     <Crown className="w-14 h-14 p-3"/>
@@ -195,23 +197,25 @@ Kingdom house coffee
 <p>
   Experience the authentic Ethiopian coffee culture in our upcoming cafe. From traditional coffee ceremonies to modern brewing techniques, we'll showcase the rich heritage of Ethiopian coffee alongside delicious traditional cuisine.
   </p>
+  
+{/*  the two cards */}
 <div className="flex gap-3">
-  <div className="flex flex-col items-start w-full bg-black/50 rounded-lg p-3">
+  <div className="flex flex-col items-start w-full bg-gray-100/50 rounded-lg p-3">
 <Calendar/>
 <p>Opening date</p>
 <time dateTime="2025-9-9">2025, septemeber 9 </time>
   </div>
-  <div className="flex flex-col items-start w-full bg-black/50 rounded-lg p-3">
+  <div className="flex flex-col items-start w-full bg-gray-100/50 rounded-lg p-3">
 <Calendar/>
 <p>Opening date</p>
 <time dateTime="2025-9-9">2025, septemeber 9 </time>
   </div>
 </div>
 </div>
-<div className="grid grid-cols-2 gap-4  bg-gray-500 p-4">
-  <div className=" flex  flex-col bg-gray-100 p-4 rounded-lg">
-    <div className=' p-2 rounded-full w-fit bg-yellow-300/30'>
-            <LucideCoffee className='w-9 h-9 p-1 text-yellow-400 '/>
+<div className="grid grid-cols-2 gap-4   p-4">
+  <div className=" flex  flex-col bg-gray-400/20 p-4 rounded-lg">
+    <div className=' p-2 rounded-full w-fit bg-black/20 dark:bg-yellow-300/30'>
+            <LucideCoffee className='w-9 h-9 p-1 text-black dark:text-yellow-400  '/>
      </div>
      <h1 className="text-2xl font-bold">
 Authentic Ethiopian coffee
@@ -220,9 +224,9 @@ Authentic Ethiopian coffee
       traditional coffee ceremonies and premium single-origin brews
      </p>
      </div>
-  <div className=" flex  flex-col bg-gray-100 p-4 rounded-lg">
-    <div className=' p-2 rounded-full w-fit bg-yellow-300/30'>
-            <ForkKnife className='w-9 h-9 p-1 text-yellow-400 '/>
+  <div className=" flex  flex-col bg-gray-400/20 p-4 rounded-lg">
+    <div className=' p-2 rounded-full w-fit bg-black/20 dark:bg-yellow-300/30'>
+            <ForkKnife className='w-9 h-9 p-1 text-black dark:text-yellow-400 '/>
      </div>
      <h1 className="text-2xl font-bold">
 Ethiopian Cusine
@@ -231,9 +235,9 @@ Ethiopian Cusine
       Authentic  dishes showcasing  Ethiopia's rich culinary heritage
        </p>
      </div>
-  <div className=" flex  flex-col bg-gray-100 p-4 rounded-lg">
-    <div className=' p-2 rounded-full w-fit bg-yellow-300/30'>
-            <Users className='w-9 h-9 p-1 text-yellow-400 '/>
+  <div className=" flex  flex-col bg-gray-400/20 p-4 rounded-lg">
+    <div className=' p-2 rounded-full w-fit bg-black/20 dark:bg-yellow-300/30'>
+            <Users className='w-9 h-9 p-1 text-black dark:text-yellow-400 '/>
      </div>
      <h1 className="text-2xl font-bold">
 Cultural Experience 
@@ -242,9 +246,9 @@ Cultural Experience
   Immersive environment celebrating Ethiopian culture and traditions
      </p>
      </div>
-  <div className=" flex  flex-col bg-gray-100 p-4 rounded-lg">
-    <div className=' p-2 rounded-full w-fit bg-yellow-300/30'>
-            <Wifi className='w-9 h-9 p-1 text-yellow-400 '/>
+  <div className=" flex  flex-col bg-gray-400/20 p-4 rounded-lg">
+    <div className=' p-2 rounded-full w-fit bg-black/20 dark:bg-yellow-300/30'>
+            <Wifi className='w-9 h-9 p-1 text-black dark:text-yellow-400 '/>
      </div>
      <h1 className="text-2xl font-bold">
 Business Hub 
@@ -253,9 +257,9 @@ Business Hub
 Modern amenities for meeting,work and networking
      </p>
      </div>
-  <div className=" flex  flex-col bg-gray-100 p-4 rounded-lg">
-    <div className=' p-2 rounded-full w-fit bg-yellow-300/30'>
-            <Music className='w-9 h-9 p-1 text-yellow-400 '/>
+  <div className=" flex  flex-col bg-gray-400/20 p-4 rounded-lg">
+    <div className=' p-2 rounded-full w-fit bg-black/20 dark:bg-yellow-300/30'>
+            <Music className='w-9 h-9 p-1 text-black  dark:text-yellow-400 '/>
      </div>
      <h1 className="text-2xl font-bold">
 Entertainment
@@ -264,9 +268,9 @@ Entertainment
   Movies,shows,news and other form of Entertainment
      </p>
      </div>
-  <div className=" flex  flex-col bg-gray-100 p-4 rounded-lg">
-    <div className=' p-2 rounded-full w-fit bg-yellow-300/30'>
-            <Heart className='w-9 h-9 p-1 text-yellow-400 '/>
+  <div className=" flex  flex-col bg-gray-400/20 p-4 rounded-lg">
+    <div className=' p-2 rounded-full w-fit  bg-black/20 dark:bg-yellow-300/30'>
+            <Heart className='w-9 h-9 p-1 text-black dark:text-yellow-400 '/>
      </div>
      <h1 className="text-2xl font-bold">
 Community Space
@@ -277,12 +281,18 @@ Bringing together coffee lovers and cultural  enthusiasts
      </div>
 
 </div>
+
+{/* The images */}
+
   </div>
-<div className="flex flex-col justify-around py-8  px-8">
-<img src={cafe1} alt="" />
-<img src={cafe2} alt="" />
+<div className="flex flex-col justify-around  px-8 ">
+<img src={cafe1} alt="img1"  />
+<img src={cafe2} alt="img2"  />
 </div>
-<div className="flex flex-col  items-center gap-6 bg-red-500">
+</section> 
+
+{/* stay updated */}
+<div className="flex flex-col  items-center gap-6 w-full  bg-gradient-to-r from-red-400 to-red-600   pt-8  pb-4">
   <h1 className="text-3xl  font-bold">
 Stay Updated
   </h1>
@@ -290,12 +300,13 @@ Stay Updated
     Be first to  know about our cafe opening, special events and exclusive 
   </p>
   <div  className="flex justify-center gap-4 ">
- <input type="email" className="p-1  bg-gray-600"  placeholder="enter your email" name="" id="" />
- <p> email </p>
+ <input type="email" className="pl-4 py-2 rounded-lg  bg-gray-600/20"  placeholder="enter your email" name="" id="" />
+ <button className=" flex justify-around py-2 px-5 gap-1 bg-gray-700 text-white rounded-lg">
+  Notify me <ArrowRight/>
+ </button>
   </div>
 
 </div>
-</section>
 {/* ready to partner to us */}
 <div className="flex flex-col items-center gap-7 my-4 max-w-[600px]">
   <h1 className="text-2xl font-bold">Ready to Partner with us?</h1>
