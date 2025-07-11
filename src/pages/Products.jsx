@@ -214,7 +214,7 @@ Kingdom house coffee
 </div>
 </div>
 <div className="grid grid-cols-2 gap-4   p-4">
-  <div className=" flex items-start  flex-col bg-gray-400/20 p-4 rounded-lg">
+  <div className=" flex items-start  flex-col bg-gray-400/20 p-4 rounded-lg bg-gradient-to-r from-red-50 to-red-600">
     <div className=' p-2 rounded-full w-fit bg-black/20 dark:bg-yellow-300/30'>
             <LucideCoffee className='w-9 h-9 p-1 text-black dark:text-yellow-400  '/>
      </div>
@@ -225,7 +225,7 @@ Authentic Ethiopian coffee
       traditional coffee ceremonies and premium single-origin brews
      </p>
      </div>
-  <div className=" flex items-start  flex-col bg-gray-400/20 p-4 rounded-lg">
+  <div className=" flex items-start  flex-col bg-gray-400/20 p-4 rounded-lg bg-gradient-to-r from-red-50 to-red-600">
     <div className=' p-2 rounded-full w-fit bg-black/20 dark:bg-yellow-300/30'>
             <ForkKnife className='w-9 h-9 p-1 text-black dark:text-yellow-400 '/>
      </div>
@@ -236,7 +236,7 @@ Ethiopian Cusine
       Authentic  dishes showcasing  Ethiopia's rich culinary heritage
        </p>
      </div>
-  <div className=" flex items-start  flex-col bg-gray-400/20 p-4 rounded-lg">
+  <div className=" flex items-start  flex-col bg-gray-400/20 p-4 rounded-lg bg-gradient-to-r from-red-50 to-red-600">
     <div className=' p-2 rounded-full w-fit bg-black/20 dark:bg-yellow-300/30'>
             <Users className='w-9 h-9 p-1 text-black dark:text-yellow-400 '/>
      </div>
@@ -247,7 +247,7 @@ Cultural Experience
   Immersive environment celebrating Ethiopian culture and traditions
      </p>
      </div>
-  <div className=" flex items-start  flex-col bg-gray-400/20 p-4 rounded-lg">
+  <div className=" flex items-start  flex-col bg-gray-400/20 p-4 rounded-lg bg-gradient-to-r from-red-50 to-red-600">
     <div className=' p-2 rounded-full w-fit bg-black/20 dark:bg-yellow-300/30'>
             <Wifi className='w-9 h-9 p-1 text-black dark:text-yellow-400 '/>
      </div>
@@ -258,7 +258,7 @@ Business Hub
 Modern amenities for meeting,work and networking
      </p>
      </div>
-  <div className=" flex items-start  flex-col bg-gray-400/20 p-4 rounded-lg">
+  <div className=" flex items-start  flex-col bg-gray-400/20 p-4 rounded-lg bg-gradient-to-r from-red-50 to-red-600">
     <div className=' p-2 rounded-full w-fit bg-black/20 dark:bg-yellow-300/30'>
             <Music className='w-9 h-9 p-1 text-black  dark:text-yellow-400 '/>
      </div>
@@ -269,7 +269,7 @@ Entertainment
   Movies,shows,news and other form of Entertainment
      </p>
      </div>
-  <div className=" flex items-start  flex-col bg-gray-400/20 p-4 rounded-lg">
+  <div className=" flex items-start  flex-col bg-gray-400/20 p-4 rounded-lg bg-gradient-to-r from-red-50 to-red-600">
     <div className=' p-2 rounded-full w-fit  bg-black/20 dark:bg-yellow-300/30'>
             <Heart className='w-9 h-9 p-1 text-black dark:text-yellow-400 '/>
      </div>
