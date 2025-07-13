@@ -20,18 +20,18 @@ export default function Add() {
         </div>
 
         {/**Filters */}
-        <div className='bg-red-300 flex gap-2 py-4 border-red-200 border-b-1 px-24'>
+        <div className='bg-red-50 flex gap-2 py-4 border-red-200 border-b-1 px-24'>
             <div className='flex bg-white justify-around  py-3 px-4 rounded-xl border-1 border-red-200 gap-4 items-center select-none'>
                 <Coffee/>
                 <span className=' font-semibold'>Coffee Products</span>
-                <div className='border-1 font-bold rounded-full  flex justify-center items-center w-5 h-5'>
+                <div className='bg-red-200/30 text-red-800 text-sm font-semibold rounded-full  flex justify-center items-center w-5 h-5'>
                     <span>2</span>
                 </div>
             </div>
             <div className='flex bg-white justify-around  py-3 px-4 rounded-xl border-1 border-red-200 gap-4 items-center select-none'>
                 <Box/>
                 <span className=' font-semibold'>Trading Products</span>
-                <div className='border-1 font-bold rounded-full  flex justify-center items-center w-5 h-5'>
+                <div className='bg-red-200/30 text-red-800 text-sm font-semibold font-bold rounded-full  flex justify-center items-center w-5 h-5'>
                     <span>2</span>
                 </div>
             </div>
