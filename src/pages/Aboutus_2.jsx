@@ -136,9 +136,9 @@ const lang = {
    
   }
   return (
-<>
-    <div className='flex flex-col justify-center items-center bg-gradient-to-r from-red-500 to-red-700 max-h-screen min-h-screen text-white mb-12'>
-        <img src={logo} alt="logo" className='mb-10'/>
+<div className='flex flex-col items-center '>
+    <div className='flex flex-col justify-center items-center bg-gradient-to-r from-red-500 to-red-700  py-10 text-white w-full dark:from-gray-800 dark:to-gray-700'>
+        <img src={logo} alt="logo" className='mb-10 rounded-full'/>
         <div className='flex gap-2 '>
             <div className='bg-white/30 rounded-full'><Coffee className='w-16 h-16 p-3'/></div>
             <div className='bg-white/30 rounded-full'><Crown className='w-16 h-16 p-3 text-yellow-400'/></div>
@@ -154,24 +154,25 @@ const lang = {
     </div>
 
     {/**Our Core Values */}
-    <div className='flex flex-col items-center'>
-        <h1 className='text-4xl sm:text-5xl font-bold my-10'> {lang.t6}</h1>
+    <div className='flex flex-col items-center dark:bg-[#121212]'>
+        <h1 className='text-4xl sm:text-5xl font-bold my-10 dark:text-white'> {lang.t6}</h1>
         <p className='text-center max-w-150 text-xl text-gray-600 mb-10'> {lang.t7}</p>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:px-24 px-4 lg:px-24 gap-6 py-12'>
             {info.map((info, index)=>(
                 <div key={index} className={`${info.color}  group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-3xl border border-red-100`}>  
-                    <div className='grid sm:grid-rows-3 gap-3 sm:gap-0 p-8'>
-                        <info.icon className='row-span-1 h-16 w-16 group-hover:scale-125 transition-all duration-300 ease-in-out p-3 bg-white/30 text-white rounded-full'/>
-                        <h2 className='row-span-1 text-xl text-white font-bold self-center'>{info.title}</h2>
-                        <p className='row-span-1 text-white'>{info.desc}</p>
+                    <div className='flex flex-col items-start  gap-6 sm:gap-4 p-8'>
+                        <info.icon className='h-16 w-16 group-hover:scale-125 transition-all duration-300 ease-in-out p-3 bg-white/30 text-white rounded-full'/>
+                        <h2 className=' text-xl text-white font-bold '>{info.title}</h2>
+                        <p className=' text-white'>{info.desc}</p>
                     </div>
                 </div>
             ))}
         </div>
     </div>
 
-    {/**mountain and leafes */}        
-    <div className='bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl my-20 mx-4 p-8 lg:p-12 shadow-2xl flex flex-col lg:flex-row gap-12 md:mx-24'>
+    {/**mountain and leafes */}      
+    <div className='dark:bg-darkc'>
+    <div className='bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl my-20 mx-4 p-8 lg:p-12 shadow-2xl flex flex-col lg:flex-row gap-12 md:mx-24v dark:from-gray-700 dark:to-gray-600'>
             <div className='flex flex-col w-full text-center '>
                 <h1 className='text-4xl sm:text-5xl font-bold mb-6 '> {lang.t8}</h1>
                 <div className='w-1/6 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mb-12'></div>
@@ -204,14 +205,15 @@ const lang = {
                 </div>
             </div>
     </div>
+    </div>  
 
     {/**Business Objectives */}
-    <div className='flex flex-col '>
-        <h1 className='text-4xl sm:text-5xl font-bold text-center'> {lang.t17}</h1>
-        <p className='text-xl text-center'> {lang.t18}</p>
+    <div className='flex flex-col py-8 dark:bg-[#121212] '>
+        <h1 className='text-4xl sm:text-5xl font-bold text-center dark:text-white'> {lang.t17}</h1>
+        <p className='text-xl text-center dark:text-gray-400 mt-4'> {lang.t18}</p>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:px-24 px-4 lg:px-24 gap-6 py-12'>
             {businessobj.map((info, index)=>(
-                <div key={index} className={`group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-3xl border border-red-100 hover:-translate-y-1`}>  
+                <div key={index} className={`group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-3xl border border-red-100 hover:-translate-y-1 dark:bg-gray-800 dark:text-white`}>  
                     <div className='flex flex-col gap-3 p-8'>
                         <info.icon className={`h-16 w-16 group-hover:scale-110 ${info.color} transition-all duration-300 ease-in-out p-3 bg-red-200/30  rounded-2xl`}/>
                         <h2 className='text-xl  font-bold '>{info.title}</h2>
@@ -223,8 +225,8 @@ const lang = {
     </div>
 
     {/**Vision */}
-    <div className='py-24 px-4 sm:px-12 md:px-24'>
-        <div className='flex flex-col  gap-6 bg-gradient-to-r from-red-600 to-red-700 p-12 rounded-2xl lg:mx-24 mx-2 justify-center items-center '>
+    <div className='py-24 px-4 sm:px-12 md:px-24 dark:bg-darkc'>
+        <div className='flex flex-col  gap-6 bg-gradient-to-r from-red-600 to-red-700 dark:from-gray-700 dark:to-gray-800 p-12 rounded-2xl lg:mx-24 mx-2 justify-center items-center '>
                 <div className='bg-white/30 rounded-full p-2'> 
                     <Target className='text-white p-3 w-16 h-16'/>
                 </div>
@@ -245,8 +247,8 @@ const lang = {
     </div>
     
     {/**Impacts */}
-    <div className='bg-gray-50 px-4 sm:px-12 md:px-24 py-24 text-center flex flex-col items-center'>
-        <h1 className='text-4xl sm:text-5xl  font-bold mb-6'> {lang.t20}</h1>
+    <div className='bg-gray-50 px-4 sm:px-12 md:px-24 py-24 text-center flex flex-col items-center dark:bg-[#121212]'>
+        <h1 className='text-4xl sm:text-5xl  font-bold mb-6 dark:text-white'> {lang.t20}</h1>
         <p className='text-xl max-w-200 mb-12 text-gray-600'> {lang.t21}</p>
         <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-12 w-full'>
         {Impact.map((Impact, index)=>(
@@ -265,7 +267,8 @@ const lang = {
     </div>
 
     {/**Map and all */}
-    <div className=' bg-gradient-to-r from-red-500 to-red-700 min-h-screen md:px-12 lg:px-24 py-24 flex flex-col items-center'>
+    <div className='w-full'>
+    <div className=' bg-gradient-to-r from-red-500 to-red-700 min-h-screen md:px-12 lg:px-24 py-24 flex flex-col items-center dark:from-gray-500 dark:to-gray-700 dark:text-white'>
         <div className='bg-white/15 p-4 rounded-2xl mb-6'>
             <Crown className='w-16 h-16 text-amber-300'/>
         </div>
@@ -296,6 +299,7 @@ const lang = {
         </button>
         <Map/>
     </div>
-</>
+</div>
+</div>
   )
 }

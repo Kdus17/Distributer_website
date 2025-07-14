@@ -28,7 +28,7 @@ import { useLanguageContext } from '../LanguageContext';
 
             <Link to={'/'} className='py-1 '>{language.Home}</Link>
             <Link to={'/products'} className='py-1'>{language.Products}</Link>
-            <Link to={'/About'} className='py-1'>{language.Aboutus}</Link>
+            <Link to={'/us'} className='py-1'>{language.Aboutus}</Link>
             <Link to={'/Contact'} className='py-1'>{language.Contactus}</Link>
             <Link to={'/login'} className='bg-green-600 px-2 py-1 rounded-md'>{language.Login}</Link>
             <button onClick={toggleLang} className='p-2 bg-black text-white rounded-full dark:bg-white dark:text-black'>{language.Language}</button>
