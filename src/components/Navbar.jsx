@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from '../assets/Images/businesslogo.jpg'
 import { Link } from 'react-router-dom'
 import { useLightcontext } from '../LightContext' 
 import { useLanguageContext } from '../LanguageContext';
@@ -18,9 +19,9 @@ import { useLanguageContext } from '../LanguageContext';
         togglelight()
     }
   return (
-    <div className='h-20 bg-gray-100 flex justify-between px-24  sticky top-0 z-100 dark:bg-[#121212] items-center select-none'>
+    <div className='h-20 bg-gray-100 flex justify-between px-24  sticky top-0 z-100 dark:bg-darkc items-center select-none'>
         <div>
-            <img src="https://placehold.co/60x60/FF6600/FFFFFF?text=KB" className='rounded-full' alt="LOGO" />
+            <img src={logo} className='rounded-full size-18' alt="LOGO" />
         </div>
 
         <div className='flex gap-8 dark:text-[#E0E0E0] dark:bg-[#121212]uppercase'>
