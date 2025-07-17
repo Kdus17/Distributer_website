@@ -45,6 +45,8 @@ export default function CoffeeManagment() {
 
       {/**Cards */}
       <div className='h-100  grid grid-cols-2 gap-8 relative'>
+
+        {/**Card 1 */}
         <div className='h-full col-span-1 border-1 rounded-2xl relative flex flex-col'>
           {/**Symbols */}
           <span className='absolute top-2 left-4 border-1 bg-red-500 p-1 rounded-full text-white'>
@@ -58,14 +60,15 @@ export default function CoffeeManagment() {
           </span>
 
         <img src="https://placehold.co/200x200/FF6600/FFFFFF?text=abel"
-            className='w-full h-100
-            rounded-full  select-none ' alt="asd" />
+            className='w-full h-1/2  select-none bg-black' alt="asd" />
 
 
 
           {/**The Rest */}
           
         </div>
+
+        {/**Cards 2 */}
         <div className='h-full col-span-1 border-1 rounded-2xl relative'>
           {/**Symbols */}
           <span className='absolute top-2 left-4 border-1 bg-red-500 p-1 rounded-full text-white'>
