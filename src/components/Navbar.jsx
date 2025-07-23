@@ -1,11 +1,23 @@
-import React from 'react'
+import navbar_en from '../Lang/en/navbar.json'
+import navbar_amh from '../Lang/amh/navbar.json'
 import logo from '../assets/Images/businesslogo.jpg'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useLightcontext } from '../LightContext' 
 import { useLanguageContext } from '../LanguageContext';
  function Navbar() {
   const {Lang, toggleLang} = useLanguageContext();
-  const language = { 
+  const [language,setLanguage] = useState([])
+  useEffect(()=>{
+  if(Lang){
+  setLanguage(navbar_amh)
+  }else{
+    setLanguage(navbar_en)
+  }
+},[Lang])
+
+
+  /* const language = { 
     Home: Lang ? "ዋና ገፅ" : "Home",
     Products: Lang ? "ምርቶች" : "products",
     Aboutus: Lang ? "ስለ እኛ" : "about us",
@@ -13,7 +25,7 @@ import { useLanguageContext } from '../LanguageContext';
     Login : Lang ? "መግቢያ" : "login",
     Language : Lang ? "amh" : "eng" 
  
-  }
+  } */
     const  {togglelight} = useLightcontext()
     function Toggle(){
         togglelight()
