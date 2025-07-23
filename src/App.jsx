@@ -21,6 +21,7 @@ import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Notfound from './pages/Notfound';
 import Aboutus_2 from './pages/Aboutus_2';
+import Add from './pages/Admin/Add';
 
 import coffeeImage from './assets/Images/coffee.jpg';
 
@@ -104,6 +105,7 @@ function AppRoutes() {
               <Route path="/signup" element={<SignUp />} />
               <Route path="*" element={<Notfound />} />
               <Route path="/us" element={<Aboutus_2/>}/>
+              <Route path='/add' element={<Add/>}/>
 
             </Routes>
           </motion.div>
