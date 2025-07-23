@@ -29,7 +29,7 @@ export default function Home_2() {
     h22: Lang ?  "ከፍተኛ ጥራት ያለው":  "Premium Quality" ,
     h23: Lang ?  "ልዩ መዓዛና ልዩ ጣዕም ያለው የኢትዮጵያ ቡና ለየት ባለ ጥራቱ በዓለም አቀፍ ገበያዎች ከፍተኛ ዋጋ ይሰጠዋል።":  "Ethiopian coffee with special aroma and distinct flavor, highly valued in international markets for its exceptional quality." ,
     h24: Lang ?  "በነባሪነት ኦርጋኒክ":  "Organic by Default" ,
-    h25: Lang ?  "ቡናችን እና ጥራጥሬዎቻችን በተፈጥሮ ኦርጋኒክ ናቸው፣ ያለ ሰው ሠራሽ ኬሚካሎች ወይም ፀረ-ተባይ መድኃኒቶች ባህላዊ ዘዴዎችን በመጠቀም ያደጉ ናቸው።":  "Our coffee and pulses are naturally organic, grown using traditional methods without synthetic chemicals or pesticides." ,
+    h25: Lang ?  "ቡናችንና ጥራጥሬዎቻችን በተፈጥሮ ኦርጋኒክ ናቸው፣ ያለ ኬሚካል እና ፀረ-ተባይ መድኃኒት በባህላዊ ዘዴ የታመኑ ናቸው።":  "Our coffee and pulses are naturally organic, grown using traditional methods without synthetic chemicals or pesticides." ,
     h26: Lang ?  "የባለሙያዎች ቡድን":  "Expert Team" ,
     h27: Lang ?  "ልዩ እውቀት፣ ክህሎትና በተለያዩ የኢኮኖሚ ዘርፎች የብዙ ዓመታት የሥራ ልምድ ያለው ብቃት ያለው የአመራር ቡድን":  "Competent management team with special knowledge, skills, and years of business experience in various economic sectors." ,
     h28: Lang ?  "የተሟላ መፍትሄዎች":  "Complete Solutions" ,
@@ -38,7 +38,7 @@ export default function Home_2() {
     h31: Lang ?  "የንግድ መስፈርቶች ለማሟላት ውጤታማ ሎጂስቲክስ አስተዳደር ጋር ወጥነት እና ወቅታዊ መላኪያ መርሃግብሮች.":  "Consistent and timely delivery schedules with efficient logistics management to meet your business requirements." ,
     h32: Lang ?  "አገልግሎታችን":  "Our Services" ,
     h33: Lang ?  "ለዓለም ገበያዎች ሁሉን አቀፍ የግብይት መፍትሄዎች":  "Comprehensive trading solutions for global markets" ,
-    h34: Lang ?  "" : "Coffee Export",
+    h34: Lang ?  "የቡና ኤክስፖርት" : "Coffee Export",
     h35: Lang ?  "ልዩ መዓዛና ልዩ ጣዕም ያለው ጥራት ያለው የኢትዮጵያ ቡና ወደ ዓለም አቀፍ ገበያዎች መላክ":  "Export quality Ethiopian coffee to international markets, known for its special aroma and distinct flavor." ,
     h36: Lang ?  "ከፍተኛ ጥራት ያላቸው ባቄላዎች።":  "Premium quality beans" ,
     h37: Lang ?  "ዓለም አቀፍ መመዘኛዎች":  "International standards" ,
@@ -127,14 +127,14 @@ export default function Home_2() {
             <h1 className='px-4  lg:px-24 text-4xl font-bold'>{language.h14}</h1>
            <p className='px-4 lg:px-24 text-xl text-gray-600'>{language.h15}</p>
 <div className='flex flex-col lg:flex-row w-full gap-10 mt-24'>
-    <div className='bg-white rounded-2xl w-full p-8 flex flex-col gap-8 shadow-lg hover:shadow-xl dark:bg-gray-700 '>
+    <div className='bg-white rounded-2xl w-full p-8 flex flex-col gap-8 shadow-lg hover:shadow-xl dark:bg-gradient-to-r dark:from-gray-800 dark:to-gray-700'>
         <div className='flex gap-4 items-center'>
             <Target className='min-w-14 w-14 h-14 rounded-md text-red-600 bg-red-200  dark:bg-red-900  p-2'/>
             <p className='text-2xl font-bold'>{language.h16}</p>
         </div>
         <p className='text-lg text-gray-600 dark:text-black'>{language.h17}</p>
     </div>
-    <div className='bg-white rounded-2xl w-full p-8 flex flex-col gap-8 shadow-lg hover:shadow-xl dark:bg-gray-700'>
+    <div className='bg-white rounded-2xl w-full p-8 flex flex-col gap-8 shadow-lg hover:shadow-xl dark:bg-gradient-to-r dark:from-gray-800 dark:to-gray-700'>
         <div className='flex gap-4 items-center'>
             <Heart className='min-w-14  w-14 h-14 rounded-md text-red-600 bg-red-200 dark:bg-red-900 p-2'/>
             <p className='text-2xl font-bold'>{language.h18}</p>
@@ -145,58 +145,58 @@ export default function Home_2() {
 </div>
 
 {/**Why Choose Us */}
-<div className='flex flex-col gap-6 py-24 dark:bg-[#121212]'>
+<div className='flex flex-col gap-6 py-24 dark:bg-darkc'>
     <h1 className='px-4  lg:px-24 text-4xl font-bold self-center dark:text-white'>{language.h20}</h1>
     <p className='px-4 lg:px-24 text-xl text-gray-600 self-center'>{language.h21}</p>
     <div className='p-4 py-12 lg:px-24 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8'>
 
         {/**Feature One */}
-        <div className='bg-gradient-to-r from-red-50  group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-2xl border border-red-100'>
+        <div className='bg-gradient-to-r from-red-50 dark:bg-gradient-to-l  dark:to-gray-800 group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-2xl border border-red-100'>
             <div className='grid sm:grid-rows-3 gap-3 sm:gap-0 p-8'>
                 <Star className='row-span-1 min-w-16 h-16 w-16 group-hover:scale-125
                                 transition-all duration-300 ease-in-out p-3 bg-red-600 text-white rounded-xl'/>
                 <h2 className='row-span-1 text-xl font-bold self-center'>{language.h22}</h2>
-                <p className='row-span-1 text-gray-600'>{language.h23}</p>
+                <p className='row-span-1 text-gray-600 dark:text-black'>{language.h23}</p>
             </div>
         </div>
 
         {/**Feature Two */}
-        <div className='bg-gradient-to-r from-red-50  group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-2xl border border-red-100'>
+        <div className='bg-gradient-to-r from-red-50 dark:bg-gradient-to-l  dark:to-gray-800 group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-2xl border border-red-100'>
             <div className='grid sm:grid-rows-3 gap-3 sm:gap-0 p-8'>
                 <LeafIcon className='row-span-1 min-w-16 h-16 w-16 group-hover:scale-125
                                 transition-all duration-300 ease-in-out p-3 bg-red-600 text-white rounded-xl'/>
                 <h2 className='row-span-1 text-xl font-bold self-center'>{language.h24}</h2>
-                <p className='row-span-1 text-gray-600'>{language.h25}.</p>
+                <p className='row-span-1 text-gray-600 dark:text-black'>{language.h25}.</p>
             </div>
         </div>
 
         {/**Feature Three */}
-        <div className='bg-gradient-to-r from-red-50  group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-2xl border border-red-100'>
+        <div className='bg-gradient-to-r from-red-50 dark:bg-gradient-to-l  dark:to-gray-800 group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-2xl border border-red-100'>
             <div className='grid sm:grid-rows-3 gap-3 sm:gap-0 p-8'>
                 <Users className='row-span-1 min-w-16 h-16 w-16 group-hover:scale-125
                                 transition-all duration-300 ease-in-out p-3 bg-red-600 text-white rounded-xl'/>
                 <h2 className='row-span-1 text-xl font-bold self-center'>{language.h26}</h2>
-                <p className='row-span-1 text-gray-600'>{language.h27}</p>
+                <p className='row-span-1 text-gray-600 dark:text-black'>{language.h27}</p>
             </div>
         </div>
 
         {/**Feature Four */}
-        <div className='bg-gradient-to-r from-red-50  group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-2xl border border-red-100'>
+        <div className='bg-gradient-to-r from-red-50 dark:bg-gradient-to-l  dark:to-gray-800 group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-2xl border border-red-100'>
             <div className='grid sm:grid-rows-3 gap-3 sm:gap-0 p-8'>
                 <Truck className='row-span-1 min-w-16 h-16 w-16 group-hover:scale-125
                                 transition-all duration-300 ease-in-out p-3 bg-red-600 text-white rounded-xl'/>
                 <h2 className='row-span-1 text-xl font-bold self-center'>{language.h28}</h2>
-                <p className='row-span-1 text-gray-600'>{language.h29}</p>
+                <p className='row-span-1 text-gray-600 dark:text-black'>{language.h29}</p>
             </div>
         </div>
 
         {/**Feature Five */}
-        <div className='bg-gradient-to-r from-red-50  md:col-span-2 lg:col-span-1 group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-2xl border border-red-100'>
+        <div className='bg-gradient-to-r from-red-50 dark:bg-gradient-to-l  dark:to-gray-800 md:col-span-2 lg:col-span-1 group h-full transition-all duration-300 ease-in-out hover:shadow-lg rounded-2xl border border-red-100'>
             <div className='grid sm:grid-rows-3 gap-3 sm:gap-0 p-8'>
                 <Clock className='row-span-1 min-w-16 h-16 w-16 group-hover:scale-125
                                 transition-all duration-300 ease-in-out p-3 bg-red-600 text-white rounded-xl'/>
                 <h2 className='row-span-1 text-xl font-bold self-center'>{language.h30}</h2>
-                <p className='row-span-1 text-gray-600'>{language.h31}</p>
+                <p className='row-span-1 text-gray-600 dark:text-black'>{language.h31}</p>
             </div>
         </div>
     </div>
@@ -272,8 +272,8 @@ export default function Home_2() {
 </div>
 
 {/**Coffee Excellence Card */}
-<div className='py-36 px-4 dark:bg-[#121212] lg:px-24'>
-    <div className='flex flex-col lg:flex-row gap-12 bg-gradient-to-r from-red-600 to-red-700 p-12 rounded-2xl dark:from-black dark:to-gray-600'>
+<div className='py-36 px-4 dark:bg-darkc lg:px-24'>
+    <div className='flex flex-col lg:flex-row gap-12 bg-gradient-to-r from-red-600 to-red-700 p-12 rounded-2xl dark:from-gray-800 dark:to-gray-700'>
         <div className='w-full flex flex-col gap-6'>
             <h2 className='text-4xl font-bold text-white'>{language.h49}</h2>
             <p className='text-red-100 text-xl'>{language.h50}</p>
