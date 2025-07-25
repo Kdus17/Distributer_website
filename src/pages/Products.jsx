@@ -2,7 +2,26 @@ import {Coffee,Handshake,Globe,Crown, Shield, Heart,  Zap, Award,Mountain, Leaf,
 import  cafe1  from "../assets/Images/cafe 1.jpg"
 import  cafe2  from "../assets/Images/cafe 2.jpg"
 import { useLanguageContext } from '../LanguageContext';
+import { useState } from "react";
+
 const Products = () => {
+
+const [email, setemail] = useState("")
+
+const handleclick = async() => {
+  const post_options = {
+    method: "POST",
+    headers:{
+      "content-type": "application/json"
+    },
+    body: JSON.stringify({
+      email
+    })
+  }
+  const response = await fetch(`http://localhost:4000/local/e`, post_options)
+  const json_response = await response.json();
+  console.log(json_response);
+}
   const sectionNav = "flex gap-3  bg-white/15  inset-ring-1 inset-ring-gray-400/20  p-3 py-3 px-7 rounded-xl hover:bg-orange-600";
   const {Lang,toggleLang} = useLanguageContext();
   const  Langopt ={
@@ -119,11 +138,8 @@ const Products = () => {
         <p className="mt-12 max-w-160 text-center">
 {Langopt.h4}
         </p>
-        <p className="text-center mt-3 p-4 dark:bg-white/5 dark:text-gray-400 bg-gray-600  inset-ring-1 inset-ring-gray-400/20 rounded-lg "> 
-{Langopt.h5}
-
         <div className='bg-gray-100/20 px-11 py-6 mt-6 rounded-2xl '>
-            <p className='max-w-130 text-center font-semibold'> from farm to cup, from to Ethiopia to the world.</p>
+            <p className='max-w-130 text-center font-semibold'> {Langopt.h5}</p>
         </div>
 
       </div>
@@ -389,8 +405,9 @@ const Products = () => {
   </p>
 
   <div  className="flex justify-center gap-4 w-2/3 ">
- <input type="email" className="pl-4 py-4 rounded-lg  bg-white w-2/5 border border-red-200"  placeholder="enter your email" name="" id="" />
- <button className=" flex justify-around py-4 px-5 gap-1 bg-gradient-to-r from-red-600 to-red-800 w-1/5 text-white rounded-lg">
+ <input type="email" className="pl-4 py-4 rounded-lg  bg-white w-2/5 border border-red-200"  placeholder="enter your email" name="email" id="email" value={email} 
+ onChange={(e)=>{setemail(e.target.value)}}/>
+ <button onClick={handleclick} className=" flex justify-around py-4 px-5 gap-1 bg-gradient-to-r from-red-600 to-red-800 w-1/5 text-white rounded-lg">
  {Langopt.h46} <ArrowRight/>
 
  </button>
@@ -400,8 +417,8 @@ const Products = () => {
 {/* ready to partner to us */}
 
 <div className="flex flex-col items-center gap-7 my-4 py-12 max-w-[800px]">
-  <h1 className="text-6xl font-bold text-center">Ready to Partner with us?</h1>
-  <p className="text-center text-lg font-light text-gray-700">Whether you're interested in our premium coffee, trading products, professional services, or excited about our upcoming cafe, we're here to build lasting partnerships that benefit communities and markets worldwide.</p>
+  <h1 className="text-6xl font-bold text-center">{Langopt.h47}</h1>
+  <p className="text-center text-lg font-light text-gray-700">{Langopt.h48}</p>
 <div className="flex justify-center gap-4">
   <button className="flex justify-around gap-3 px-4 py-4 bg-white rounded-xl border border-red-300 cursor-pointer hover:bg-red-600 hover:text-white hover:scale-103 transition duration:400 shadow-lg">
     <p>{Langopt.h49}</p>
