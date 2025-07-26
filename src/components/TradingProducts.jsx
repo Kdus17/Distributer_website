@@ -1,7 +1,7 @@
 import { Box, Cross, Pencil, Plus, Trash, X } from 'lucide-react'
 import React from 'react'
 
-export default function TradingProducts() {
+export default function TradingProducts({see3, setsee3}) {
   return (
     <div className='flex flex-col px-24 py-5 min-h-screen'>
       
@@ -12,8 +12,8 @@ export default function TradingProducts() {
           <p className='text-gray-600'>Manage your trading products catalog</p>
         </div>
         <div className='flex items-center'>
-          <div className='bg-red-600 text-white cursor-pointer hover:bg-red-800 rounded-xl py-3 px-4 flex gap-4'>
-            <Plus/>
+          <div className='bg-red-600 text-white cursor-pointer hover:bg-red-800 rounded-xl py-3 px-4 flex gap-4' onClick={()=>setsee3(!see3)}>
+            <Plus />
             Add new category
           </div>
         </div>

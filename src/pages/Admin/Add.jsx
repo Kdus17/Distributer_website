@@ -3,16 +3,20 @@ import React, { useState } from 'react'
 import CoffeeManagment from '../../components/CoffeeManagment'
 import TradingProducts from '../../components/TradingProducts'
 import AddCoffee from '../../components/AddCoffee'
+import AddTrad from '../../components/AddTrad'
 
 export default function Add() {
   const [see, setsee] = useState(true)
   const [see1, setsee1] = useState(false)
   const [see2, setsee2] = useState(false)
+  const [see3, setsee3] = useState(false)
   return (
     <div className='flex flex-col items-center'>
+    {see3 &&
+    <AddTrad setsee3={setsee3} see3={see3}/>}
     {see2 &&
     <AddCoffee setsee2={setsee2} see2={see2}/>}
-    <div className={`min-h-screen w-full ${see2 ? "blur":""}`}>
+    <div className={`min-h-screen w-full ${see2 ? "blur":""} ${see3 ? "blur":""}`}>
         {/**At the top */}
         <div className='flex px-24 bg-red-600 items-center py-4'>
             <div className='flex gap-4 items-center'>
@@ -58,7 +62,7 @@ export default function Add() {
             <CoffeeManagment setsee2={setsee2} see2={see2}/>
         }
         {see1 &&
-            <TradingProducts/>
+            <TradingProducts setsee3={setsee3} see3={see3}/>
         }
     </div>
     
