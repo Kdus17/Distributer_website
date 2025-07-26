@@ -6,7 +6,7 @@ export default function TradingProducts() {
     <div className='flex flex-col px-24 py-5 min-h-screen'>
       
       {/**Head */}
-      <div className='flex justify-between py-4'>
+      <div className='flex justify-between py-4 lg:px-10'>
         <div className='flex flex-col gap-2'>
           <h1 className='text-3xl font-bold '>Trading Products Managment</h1>
           <p className='text-gray-600'>Manage your trading products catalog</p>
@@ -20,7 +20,7 @@ export default function TradingProducts() {
       </div>
 
       {/**Cards */}
-      <div className=' grid grid-cols-2 gap-8'>
+      <div className=' grid md:grid-cols-2 gap-8 lg:px-10'>
 
         {/**Card one */}
         <div className='h-full col-span-1 border-1 rounded-2xl relative flex flex-col p-4 gap-3'>

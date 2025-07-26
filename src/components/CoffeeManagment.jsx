@@ -1,7 +1,7 @@
 import { Edit, Plus, Search, Trash } from 'lucide-react'
 import React from 'react'
 
-export default function CoffeeManagment() {
+export default function CoffeeManagment({setsee2, see2}) {
   return (
     <div className='flex flex-col px-24 py-5 min-h-screen'>
       
@@ -12,7 +12,7 @@ export default function CoffeeManagment() {
           <p className='text-gray-600'>Manage your premium Ethiopian coffee product catalog</p>
         </div>
         <div className='flex items-center'>
-          <div className='bg-red-600 text-white cursor-pointer hover:bg-red-800 rounded-xl py-3 px-4 flex gap-4'>
+          <div className='bg-red-600 text-white cursor-pointer hover:bg-red-800 rounded-xl py-3 px-4 flex gap-4' onClick={()=>setsee2(!see2)}>
             <Plus/>
             Add new coffee
           </div>
@@ -44,7 +44,7 @@ export default function CoffeeManagment() {
       </div>
 
       {/**Cards */}
-      <div className='h-120  grid grid-cols-2 gap-8 relative'>
+      <div className=' grid md:grid-cols-2 gap-8 relative'>
 
         {/**Card 1 */}
         <div className='h-full col-span-1 border-1 rounded-2xl relative flex flex-col'>
@@ -60,12 +60,37 @@ export default function CoffeeManagment() {
           </span>
 
         <img src="https://images.app.goo.gl/D6PhtQn9d46L34ud9"
-            className='w-full h-2/5  select-none bg-black rounded-t-2xl' alt="asd" />
-
-
-
+            className='w-full h-48  select-none bg-black rounded-t-2xl mb-2' alt="asd" />
           {/**The Rest */}
+        <div className='p-4 flex flex-col'>
+          <div className='flex flex-col gap-2'>
+            <h1 className='font-bold text-lg'>Name</h1>
+            <p>Name</p>
+          </div>
 
+          <div className='grid grid-cols-2'>
+            <div className='flex flex-col gap-2'>
+              <h1 className='font-bold text-lg'>Flavor</h1>
+              <p>Name</p>
+            </div> 
+            <div className='flex flex-col gap-2'>
+              <h1 className='font-bold text-lg'>Processing</h1>
+              <p>Name</p>
+            </div> 
+            <div className='flex flex-col gap-2'>
+              <h1 className='font-bold text-lg'>Altitude</h1>
+              <p>Name</p>
+            </div> 
+            <div className='flex flex-col gap-2'>
+              <h1 className='font-bold text-lg'>Quality</h1>
+              <p>Name</p>
+            </div> 
+
+            <div className=' col-span-2 py-2'>
+              <p>Renowned for its bright acidity and complex floral notes, our Yirgacheffe coffee represents the pinnacle of Ethiopian coffee excellence.</p>
+            </div> 
+          </div>
+        </div>
         
           
         </div>
@@ -84,11 +109,41 @@ export default function CoffeeManagment() {
             Grade 1
           </span>
         <img src="https://images.app.goo.gl/D6PhtQn9d46L34ud9"
-            className='w-full h-2/5 select-none bg-black rounded-t-2xl' alt="asd" />
+            className='w-full h-48 select-none bg-black rounded-t-2xl' alt="asd" />
 
           {/**The Rest */}
+        <div className='p-4 flex flex-col'>
+          <div className='flex flex-col gap-2'>
+            <h1 className='font-bold text-lg'>Name</h1>
+            <p>Name</p>
+          </div>
+
+          <div className='grid grid-cols-2'>
+            <div className='flex flex-col gap-2'>
+              <h1 className='font-bold text-lg'>Flavor</h1>
+              <p>Name</p>
+            </div> 
+            <div className='flex flex-col gap-2'>
+              <h1 className='font-bold text-lg'>Processing</h1>
+              <p>Name</p>
+            </div> 
+            <div className='flex flex-col gap-2'>
+              <h1 className='font-bold text-lg'>Altitude</h1>
+              <p>Name</p>
+            </div> 
+            <div className='flex flex-col gap-2'>
+              <h1 className='font-bold text-lg'>Quality</h1>
+              <p>Name</p>
+            </div> 
+
+            <div className=' col-span-2 py-2'>
+              <p>Renowned for its bright acidity and complex floral notes, our Yirgacheffe coffee represents the pinnacle of Ethiopian coffee excellence.</p>
+            </div> 
+          </div>
+        </div>
 
         </div>
+        
       </div>
     </div>
   )

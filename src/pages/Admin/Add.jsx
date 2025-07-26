@@ -7,8 +7,12 @@ import AddCoffee from '../../components/AddCoffee'
 export default function Add() {
   const [see, setsee] = useState(true)
   const [see1, setsee1] = useState(false)
+  const [see2, setsee2] = useState(false)
   return (
-    <div className='min-h-screen'>
+    <div className='flex flex-col items-center'>
+    {see2 &&
+    <AddCoffee setsee2={setsee2} see2={see2}/>}
+    <div className={`min-h-screen w-full ${see2 ? "blur":""}`}>
         {/**At the top */}
         <div className='flex px-24 bg-red-600 items-center py-4'>
             <div className='flex gap-4 items-center'>
@@ -51,14 +55,13 @@ export default function Add() {
         </div>
 
         {see &&
-            <CoffeeManagment/>
+            <CoffeeManagment setsee2={setsee2} see2={see2}/>
         }
         {see1 &&
             <TradingProducts/>
         }
-        <AddCoffee/>
-        
-
+    </div>
+    
     </div>
   )
 }
