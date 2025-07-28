@@ -112,7 +112,7 @@ const handleclick = async() => {
   },
   {
     "image": Knorr,
-    "brand_name": Lang ? "" :"Knorr",
+    "brand_name": Lang ? "ክኖር" :"Knorr",
     "tagline": Lang ? "ዩኒሊቨር ብራንድ" :"Unilever Brand",
     "description": Lang ? "ከፍተኛ ጥራት ያላቸው የምግብ አዘገጃጀቶችና ጣዕም ማጎልበቻዎች" :"Premium cooking ingredients and flavor enhancers",
     "products": [
