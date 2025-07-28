@@ -43,7 +43,10 @@ import { useLanguageContext } from '../LanguageContext';
             <Link to={'/products'} className='py-1 sm:text-sm'>{language.Products}</Link>
             <Link to={'/us'} className='py-1 sm:text-sm'>{language.Aboutus}</Link>
             <Link to={'/Contact'} className='py-1 sm:text-sm'>{language.Contactus}</Link>
-            <button onClick={toggleLang} className='p-2 bg-black text-white rounded-full dark:bg-white dark:text-black hidden md:block'>{language.Language}</button>
+            <select name="" id="" onChange={toggleLang} >
+              <option  value="eng">english </option>
+              <option value="amh">አማርኛ </option>
+            </select>
          <div
   onClick={() => {
     if (light) {
