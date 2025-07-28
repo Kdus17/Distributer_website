@@ -26,7 +26,7 @@ export default function ComposeEmail({see4, setsee4}) {
 
   const validateform = () =>{
     const newerrors = {};
-    if(!formData.descrption.trim()){
+    if(!formData.descrption){
       newerrors.body = "You forgot to write the message!"
     }
     seterrors(newerrors)
