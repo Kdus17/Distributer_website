@@ -105,8 +105,7 @@ export const Contact = () => {
           </div>
             <div className="flex flex-col justify-center items-center gap-2 text-gray-700 dark:text-gray-300  ">
               <p className="uppercase text-sm font-bold text-black dark:text-white">{langopt.t5}</p>
-              <p className="text-sm font-semibold  ">+251xxxxxxxx</p>
-              <p className="text-sm font-semibold  ">+251xxxxxxxx</p>
+              <p className="text-sm font-semibold  ">+251902393332</p>
               <p className="text-xs ">{langopt.t6}</p>
             </div>
         </div>
@@ -118,8 +117,7 @@ export const Contact = () => {
           </div>
             <div className="flex flex-col justify-center items-center gap-2 text-gray-700 dark:text-gray-200">
               <p className="uppercase text-sm font-bold text-black  dark:text-white">{langopt.t7}</p>
-              <p className="text-sm font-semibold  ">kingdombusiness@gmail.com</p>
-              <p className="text-sm font-semibold  ">infoatkingdombusiness@gmail.com</p>
+              <p className="text-sm font-semibold  "> kingdombusinessf5@gmail.com</p>
               <p className="text-xs ">{langopt.t8}</p>
             </div>
         </div>

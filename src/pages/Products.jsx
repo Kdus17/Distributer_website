@@ -1,10 +1,17 @@
 import {Coffee,Handshake,Globe,Crown, Shield, Heart,  Zap, Award,Mountain, Leaf, Book, Target, CheckCircle, ArrowRight, PhoneCall, CoffeeIcon, Cuboid, Globe2, MountainIcon, Square, BoxIcon, CalendarDays, CalendarDaysIcon, Calendar, LucideCoffee, ForkKnife, PersonStanding, Contact, Contact2, Contact2Icon, Users, Wifi, Music, CuboidIcon} from "lucide-react"
 import  cafe1  from "../assets/Images/cafe 1.jpg"
 import  cafe2  from "../assets/Images/cafe 2.jpg"
+import  Omo from "../assets/Images/OMO.png"
+import  Lifebuoy from "../assets/Images/Lifebuoy.png"
+import  Knorr from "../assets/Images/Knorr.png"
+import  Signal from "../assets/Images/Signal.png"
+import  Sunsilk from "../assets/Images/Sunsilk.png"
+import  Sunlight from "../assets/Images/Sunlight.png"
 import { useLanguageContext } from '../LanguageContext';
 import { useState } from "react";
 
 const Products = () => {
+  const smallcards = "bg-red-300/10 p-4 rounded-2xl flex gap-4 shadow-sm border border-red-300  dark:bg-white/20 dark:border-gray-200 dark:text-gray-100";
 
 const [email, setemail] = useState("")
 
@@ -77,6 +84,82 @@ const handleclick = async() => {
     h50: Lang ? "የቀን መቁጠሪያ":"Schedule Consultation",
 
   }
+  
+  const tradingprodu = [
+  {
+    "image": Lifebuoy,
+    "brand_name": Lang ? "ላይፍቦይ" : "Lifebuoy",
+    "tagline": Lang ? "ዩኒሊቨር ብራንድ" :"Unilever Brand",
+    "description": Lang ? "ለመላው ቤተሰብ የሚሆኑ የጤና እና የንፅህና ጥበቃ ምርቶች" :"Health and hygiene protection products for the whole family",
+    "products": [
+     Lang ? "ፀረ-ባክቴሪያ የእጅ ሳሙና" : "Antibacterial Hand Soap",
+    Lang ? "የሰውነት ማጠቢያ" :"Body Wash",
+     Lang ? "የእጅ ማጽጃ" : "Hand Sanitizer",
+     Lang ? "ሙሉ ጥበቃ" : "Total Protection"
+    ]
+  },
+  {
+    "image": Sunsilk,
+    "brand_name": Lang ? "ሰንሲልክ" :"Sunsilk",
+    "tagline": Lang ? "ዩኒሊቨር ብራንድ" :"Unilever Brand",
+    "description": Lang ? "ውብ እና ጤናማ ጸጕር ለማግኘት የተሟላ የፀጉር እንክብካቤ መፍትሄዎች" : "Complete hair care solutions for beautiful, healthy hair",
+    "products": [
+     Lang ? "ሻምፑ" : "Shampoo",
+     Lang ? "ኮንዲሽነር" : "Conditioner",
+    Lang ? "የፀጉር አያያዝ" :"Hair Treatment",
+     Lang ? "ስታይሊንግ ፕሮዳክቶች" :"Styling Products"
+    ]
+  },
+  {
+    "image": Knorr,
+    "brand_name": Lang ? "" :"Knorr",
+    "tagline": Lang ? "ዩኒሊቨር ብራንድ" :"Unilever Brand",
+    "description": Lang ? "ከፍተኛ ጥራት ያላቸው የምግብ አዘገጃጀቶችና ጣዕም ማጎልበቻዎች" :"Premium cooking ingredients and flavor enhancers",
+    "products": [
+      Lang ? "የቅመማ ቅመም ኩብ" : "Seasoning Cubes",
+      Lang ? "የሾርባ ድብልቆች" :"Soup Mixes",
+      Lang ? "የምግብ አዘገጃጀት" :"Cooking Sauces",
+      Lang ? "የቅመማ ቅመም ድብልቆች" :"Spice Blends"
+    ]
+  },
+  {
+    "image": Sunlight,
+    "brand_name":Lang ? "ስንላይት" : "Sunlight",
+    "tagline": Lang ? "ዩኒሊቨር ብራንድ" :"Unilever Brand",
+    "description": Lang ? "በኩሽና እና በቤት ውስጥ ጥቅም ላይ የሚውሉ ኃይለኛ የጽዳት መፍትሄዎች" :"Powerful cleaning solutions for kitchen and household use",
+    "products": [
+     Lang ? "የዕቃ ማጠቢያ ፈሳሽ" : "Dishwashing Liquid",
+     Lang ? "የልብስ ማጠቢያ ሳሙና" : "Laundry Bar Soap",
+     Lang ? "ሁለገብ የጽዳት መሣሪያ" : "Multi-Purpose Cleaner",
+     Lang ? "የወጥ ቤት ቅባት ማስወገጃ" : "Kitchen Degreaser"
+    ]
+  },
+  {
+    "image": Omo,
+    "brand_name": Lang ? "ኦም" :"OMO",
+    "tagline": Lang ? "ዩኒሊቨር ብራንድ" :"Unilever Brand",
+    "description": Lang ? "የላቀ የጽዳት ውጤቶችን ለማግኘት የላቀ የልብስ ማጠቢያ እንክብካቤ" :"Advanced laundry care for superior cleaning results",
+    "products": [
+      Lang ? "የልብስ ማጠቢያ ዱቄት" :"Laundry Powder",
+      Lang ? "ፈሳሽ ማጽጃ" :"Liquid Detergent",
+      Lang ? "የጨርቃ ጨርቅ ማስታገሻ" :"Fabric Softener",
+      Lang ? "ቆሻሻ ማስወገጃ" :"Stain Remover"
+    ]
+  },
+  {
+    "image": Signal,
+    "brand_name":Lang ? "ሲግናል" : "Signal",
+    "tagline": Lang ? "ዩኒሊቨር ብራንድ" :"Unilever Brand",
+    "description":Lang ? "ጤናማ ጥርስና ድድ ለመጠበቅ የሚያስችል የተሟላ የቃል እንክብካቤ መፍትሄ" : "Complete oral care solutions for healthy teeth and gums",
+    "products": [
+    Lang ? "የጥርስ ሳሙና" :  "Toothpaste",
+    Lang ? "የጥርስ ብሩሽ" : "Toothbrush",
+    Lang ? "የአፍ ማጠቢያ" :  "Mouthwash",
+    Lang ? "የጥርስ ህክምና ኪት" :  "Dental Care Kit"
+    ]
+  }
+]
+
   const coffeeProducts = [
     {
       name: "Yirgacheffe Premium",
@@ -124,9 +207,9 @@ const handleclick = async() => {
     }
   ];
   return (
-    <div className="flex flex-col items-center bg-gray-50">
+    <div className="flex flex-col items-center bg-gray-50 ">
    {/*   Hero  */}
-      <div className="flex flex-col gap-2 items-center bg-gradient-to-r from-red-500 to-red-700 w-full py-24 text-white border-b border-red-200">
+      <div className="flex flex-col gap-2 items-center bg-gradient-to-r from-red-500 to-red-700 w-full py-24 text-white border-b border-red-200 dark:from-gray-500 dark:to-gray-700  dark:border-gray-900">
         <div className='flex gap-2 pt-5'>
             <div className='bg-white/30 rounded-full'><Coffee className='w-16 h-16 p-3'/></div>
             <div className='bg-white/30 rounded-full'><Crown className='w-16 h-16 p-3 text-yellow-400'/></div>
@@ -138,6 +221,10 @@ const handleclick = async() => {
         <p className="mt-12 max-w-160 text-center">
 {Langopt.h4}
         </p>
+        <p className="text-center mt-3 p-4 dark:bg-white/5 dark:text-gray-400 bg-gray-600  inset-ring-1 inset-ring-gray-400/20 rounded-lg "/> 
+{Langopt.h5}
+
+
         <div className='bg-gray-100/20 px-11 py-6 mt-6 rounded-2xl '>
             <p className='max-w-130 text-center font-semibold'> {Langopt.h5}</p>
         </div>
@@ -145,14 +232,14 @@ const handleclick = async() => {
       </div>
 {/*  section nav  */}
 
-        <div className='flex flex-col sm:flex-row justify-center gap-4 select-none w-full bg-red-50 py-4 border border-red-200'>
+        <div className='flex flex-col sm:flex-row justify-center gap-4 select-none w-full bg-red-50 py-4 border border-red-200 dark:bg-gray-700 dark:border-gray-700'>
           <a href="#coffee">
             <div className='group  border border-red-300 bg-white text-red-800 py-2 px-8 rounded-lg flex md:gap-4 items-center hover:bg-red-600 hover:text-white  transition-all duration-300 ease-in-out '>
                 <Coffee className='group-hover:scale-110 w-8 h-8 transition-all duration-300 ease-in-out'/>
                 <p className='text-center max-w-30 font-semibold'> premium coffee</p>
             </div>
           </a>
-          <a href="">
+          <a href="#trading-products">
             <div className='group  border border-red-300 bg-white text-red-800  py-2 px-8 rounded-lg flex md:gap-4 items-center hover:bg-red-600 hover:text-white transition-all duration-300 ease-in-out'>
                 <Cuboid className='group-hover:scale-110 w-8 h-8 transition-all duration-300 ease-in-out'/>
                 <p className='text-center max-w-30'> trading products</p>
@@ -167,16 +254,16 @@ const handleclick = async() => {
         </div>
 
 {/* premium Ethiopian coffee  */}
-        <section id="coffee" className="flex flex-col items-center gap-4 px-12 py-4 ">
-          <h1 className="text-center text-black font-bold text-5xl mt-12 mb-4"> 
+        <section id="coffee" className="flex flex-col items-center gap-4 px-12 py-4  dark:bg-gray-900">
+          <h1 className="text-center text-black font-bold text-5xl mt-12 mb-4 dark:text-white" > 
            {Langopt.h9}
           </h1>
-          <p className="text-center text-gray-600 max-w-[600px] mb-12">
+          <p className="text-center text-gray-600 max-w-[600px] mb-12 dark:text-gray-100">
           {Langopt.h10}
           </p>
           {/* coffee cards */}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          {coffeeProducts.map((coffee,key)=>(<div key={key} className="flex flex-col rounded-2xl overflow-hidden max-w-[600px] bg-white mb-2  shadow-lg border border-red-400 pb-4 hover:scale-102 transition-all duration-400 ease-in-out">
+          {coffeeProducts.map((coffee,key)=>(<div key={key} className="flex flex-col rounded-2xl overflow-hidden max-w-[600px] bg-white mb-2  shadow-lg border border-red-400 pb-4 hover:scale-102 transition-all duration-400 ease-in-out  dark:bg-gradient-to-r dark:from-gray-600 dark:to-gray-800 ">
             <div  style={{ backgroundImage: `url(${coffee.image})` }} className={` bg-cover   h-[200px] relative `}>
             <span  className="bg-yellow-400 px-1 py-0.5 rounded-full mt-3 mr-4  absolute top-0 right-0 ">{coffee.grade}</span>
           <p className="flex flex-col gap-1 absolute bottom-0 left-0 pb-2 pl-5  text-white">
@@ -188,23 +275,23 @@ const handleclick = async() => {
             </span>
           </p>
             </div>
-          <div className="  flex flex-col gap-2 p-4 ">
+          <div className="  flex flex-col gap-2 p-4 dark:text-gray-300">
           <p>{coffee.description}</p>
           <div className="grid  grid-cols-2 gap-4 ">
           <div className="flex flex-col gap-1">
-            <span className="text-gray-500">{Langopt.h11}</span>
+            <span className="text-gray-500 dark:text-white">{Langopt.h11}</span>
             <span>{coffee.profile}</span>
           </div>
           <div className="flex flex-col gap-2">
-            <span  className="text-gray-500">{Langopt.h12}</span>
+            <span  className="text-gray-500 dark:text-white">{Langopt.h12}</span>
             <span>{coffee.processing}</span>
           </div>
           <div className="flex flex-col gap-2">
-            <span className="text-gray-500">{Langopt.h13}</span>
+            <span className="text-gray-500 dark:text-white">{Langopt.h13}</span>
             <span>{coffee.altitude}</span>
           </div>
           <div className="flex flex-col gap-2">
-            <span className="text-gray-500">{Langopt.h14}</span>
+            <span className="text-gray-500 dark:text-white">{Langopt.h14}</span>
             <span  className="text-red-500">{Langopt.h15}</span>
           </div>
           </div>
@@ -213,12 +300,12 @@ const handleclick = async() => {
           </div>
 
           {/* from bean to cup Exellence */}
-          <div className="flex flex-col items-center gap-4 mt-6 w-full mx-15 bg-red-50 p-8 rounded-2xl border border-red-200 shadow-xl">
+          <div className="flex flex-col items-center gap-4 mt-6 w-full mx-15 bg-red-50 p-8 rounded-2xl border border-red-200 shadow-xl dark:bg-gradient-to-r  dark:from-gray-500 dark:to-gray-700  dark:border-gray-900">
             <h1 className="text
-            text-3xl font-bold">
+            text-3xl font-bold dark:text-white">
           {Langopt.h16}
             </h1>
-            <p className="text-black text-center mb-8">
+            <p className="text-black text-center mb-8 dark:text-gray-50">
               {Langopt.h17}
             </p>
             <div className="flex  md:justify-around md:flex-row flex-col w-full ">
@@ -226,10 +313,10 @@ const handleclick = async() => {
                 <div className='bg-red-600  p-2 rounded-full '>
                                     <MountainIcon className='w-14 h-14 p-3 text-white'/>
                                 </div>
-                                <h1 className="text-2xl font-bold text-center"> 
+                                <h1 className="text-2xl font-bold text-center dark:text-white"> 
                                   {Langopt.h18}
                                 </h1>
-                                <p className="text-center">
+                                <p className="text-center dark:text-gray-100">
             {Langopt.h19}
                                 </p>
               </div>
@@ -237,10 +324,10 @@ const handleclick = async() => {
                 <div className='bg-red-600  p-2 rounded-full '>
                                     <Shield className='w-14 h-14 p-3 text-white'/>
                                 </div>
-                                <h1 className="text-2xl font-bold text-center"> 
+                                <h1 className="text-2xl font-bold text-center dark:text-white"> 
                               {Langopt.h20}
                                 </h1>
-                                <p className="text-center">
+                                <p className="text-center dark:text-gray-100">
                                   {Langopt.h21}
                                 </p>
               </div>
@@ -248,10 +335,10 @@ const handleclick = async() => {
                 <div className='bg-red-600  p-2 rounded-full '>
                                     <BoxIcon className='w-14 h-14 p-3 text-white'/>
                                 </div>
-                                <h1 className="text-2xl font-bold text-center"> 
+                                <h1 className="text-2xl font-bold text-center dark:text-white"> 
                                 {Langopt.h22}
                                 </h1>
-                                <p className="text-center">
+                                <p className="text-center dark:text-gray-100">
             {Langopt.h23}
                                 </p>
               </div>
@@ -259,10 +346,10 @@ const handleclick = async() => {
                 <div className='bg-red-600  p-2 rounded-full '>
                                     <Globe className='w-14 h-14 p-3 text-white'/>
                                 </div>
-                                <h1 className="text-2xl font-bold text-center"> 
+                                <h1 className="text-2xl font-bold text-center dark:text-white"> 
                             {Langopt.h24}
                                 </h1>
-                                <p className="text-center">
+                                <p className="text-center dark:text-gray-100">
             {Langopt.h25}
                                 </p>
               </div>
@@ -270,11 +357,46 @@ const handleclick = async() => {
             </div>
           </div>
         </section>
+        <section id="trading-products" className="flex flex-col gap-4 py-7 w-full items-center dark:bg-darkc">
+          <h1 className="text-3xl font-bold dark:text-white">Trading products</h1>
+          <p className="text-center text-gray-600 dark:text-gray-100">
+Comprehensive range of quality products for business and household needs
+          </p>
+          <div className=" w-full">
+            <div className="grid grid-cols-2  w-full items-center mx-4">
+              {tradingprodu.map((product,key)=>(
+                <div key={key} className="flex flex-col rounded-2xl overflow-hidden w-[600px] bg-white mb-2  shadow-lg border border-red-400  hover:scale-102 transition-all duration-400 ease-in-out ">
+                 <div style={{ backgroundImage:  `url(${product.image})`, backgroundPosition: "center",}} className={` h-[200px] relative w-[600px]  bg-no-repeat`}>
+                <p className="items-start flex  flex-col gap-4 ml-3 absolute bottom-0 left-0">
+                  <span className="text-2xl font-bold ">
+                    {product.brand_name}
+                  </span>
+                  <span className="font-stretch-semi-condensedbold">
+                    {product.tagline}
+                  </span>
+                </p>
+                </div>
+                <div className="flex flex-col gap-4 p-4  bg-gray-50 dark:bg-gradient-to-b  dark:from-gray-800 dark:to-gray-600">
+                  <p className="dark:text-gray-200">{product.description}</p>
+                 <p className={smallcards}> <CheckCircle/> {product.products[0]}</p>
+                 <p className={smallcards}> <CheckCircle/> {product.products[1]}</p>
+                 <p className={smallcards}> <CheckCircle/> {product.products[2]}</p>
+                 <p className={smallcards}> <CheckCircle/> {product.products[3]}</p>
+                </div>
+            
+              </div>
+            ))}
 
-<section id ="cafe" className="grid grid-cols-1 md:grid-cols-2 bg-gray-50 gap-4  px-12 py-6 ">
+            </div>
+
+          </div>
+
+        </section>
+
+<section id ="cafe" className="grid grid-cols-1 md:grid-cols-2 bg-gray-50 gap-4  px-12 py-6 dark:bg-[#121212]">
   <div className="grid grid-cols-1 gap-4 px-12">
  {/*    Kingdome house coffee card */}
-<div className="flex flex-col justify-end gap-4  p-8  bg-white border border-red-200 rounded-xl  shadow-lg">
+<div className="flex flex-col justify-end gap-4  p-8  bg-white border border-red-200 rounded-xl  shadow-lg dark:bg-gradient-to-b dark:from-gray-800 dark:to-gray-900 ">
 
 <div className="flex justify-start gap-4 ">
   <div className="bg-red-400/20  rounded-full ">
@@ -282,25 +404,25 @@ const handleclick = async() => {
   </div>
 
 <div>
-  <h1 className="text-3xl font-bold">
+  <h1 className="text-3xl font-bold dark:text-white">
 {Langopt.h26}
   </h1>
 </div>
 </div>
-<p>
+<p className="dark:text-gray-300">
  {Langopt.h27}</p>
   
 {/*  the two cards */}
-<div className="flex gap-3">
+<div className="flex gap-3 ">
 
-  <div className="flex flex-col items-start w-full bg-red-50 border border-red-200 rounded-lg p-3">
+  <div className="flex flex-col items-start w-full bg-red-50 border border-red-200 rounded-lg p-3 dark:border-gray-900  dark:bg-white/30">
 
 <Calendar/>
 <p>{Langopt.h28}</p>
 <time dateTime="2025-9-9">{Langopt.h29} </time>
   </div>
 
-  <div className="flex flex-col items-start w-full bg-red-50 border border-red-200 rounded-lg p-3">
+  <div className="flex flex-col items-start w-full bg-red-50 border border-red-200 rounded-lg p-3 dark:border-gray-900  dark:bg-white/30">
 
 <Calendar/>
 <p>{Langopt.h30}</p>
@@ -309,75 +431,75 @@ const handleclick = async() => {
 </div>
 </div>
 
-<div className="grid grid-cols-2 gap-4">
-  <div className=" flex items-start  flex-col bg-gray-400/20 p-4 rounded-2xl bg-white border border-red-200 hover:scale-102 transition-all duration-400 ease-in-out shadow-lg">
+<div className="grid grid-cols-2 gap-4 ">
+  <div className=" flex items-start  flex-col  p-4 rounded-2xl bg-white border border-red-200 hover:scale-102 transition-all duration-400 ease-in-out shadow-lg dark:bg-gray-400/20 ">
     <div className=' p-2 rounded-full w-fit bg-red-400/20 dark:bg-yellow-300/30'>
             <LucideCoffee className='w-9 h-9 p-1 text-red-600 dark:text-yellow-400  '/>
      </div>
-     <h1 className="text-xl font-bold">
+     <h1 className="text-xl font-bold dark:text-white">
 {Langopt.h32}
      </h1>
-     <p>
+     <p className="dark:text-gray-300">
       {Langopt.h33}
      </p>
      </div>
 
-  <div className=" flex items-start  flex-col bg-gray-400/20 p-4 rounded-2xl bg-white border border-red-200 hover:scale-102 transition-all duration-400 ease-in-out shadow-lg">
+  <div className=" flex items-start  flex-col  p-4 rounded-2xl bg-white border border-red-200 hover:scale-102 transition-all duration-400 ease-in-out shadow-lg dark:bg-gray-400/20">
     <div className=' p-2 rounded-full w-fit bg-red-400/20 dark:bg-yellow-300/30'>
             <ForkKnife className='w-9 h-9 p-1 text-red-600 dark:text-yellow-400 '/>
      </div>
-     <h1 className="text-xl font-bold text-center">
+     <h1 className="text-xl font-bold dark:text-white text-center">
 {Langopt.h34}
      </h1>
-     <p>
+     <p  className="dark:text-gray-300">
 {Langopt.h35}
        </p>
      </div>
-  <div className=" flex items-start  flex-col bg-gray-400/20 p-4 rounded-2xl bg-white border border-red-200 hover:scale-102 transition-all duration-400 ease-in-out shadow-lg">
+  <div className=" flex items-start  flex-col  p-4 rounded-2xl bg-white border border-red-200 hover:scale-102 transition-all duration-400 ease-in-out shadow-lg dark:bg-gray-400/20">
     <div className=' p-2 rounded-full w-fit bg-red-400/20 dark:bg-yellow-300/30'>
             <Users className='w-9 h-9 p-1 text-red-600 dark:text-yellow-400 '/>
      </div>
-     <h1 className="text-xl font-bold text-center">
+     <h1 className="text-xl font-bold dark:text-white text-center">
 {Langopt.h36}
      </h1>
-     <p>
+     <p  className="dark:text-gray-300">
 {Langopt.h37}
      </p>
      </div>
 
-  <div className=" flex items-start  flex-col bg-gray-400/20 p-4 rounded-2xl bg-white border border-red-200 hover:scale-102 transition-all duration-400 ease-in-out shadow-lg">
+  <div className=" flex items-start  flex-col  p-4 rounded-2xl bg-white border border-red-200 hover:scale-102 transition-all duration-400 ease-in-out shadow-lg dark:bg-gray-400/20">
     <div className=' p-2 rounded-full w-fit bg-red-400/20 dark:bg-yellow-300/30'>
             <Wifi className='w-9 h-9 p-1 text-red-600 dark:text-yellow-400 '/>
      </div>
-     <h1 className="text-xl font-bold text-center">
+     <h1 className="text-xl font-bold dark:text-white text-center">
 {Langopt.h38}
 
      </h1>
-     <p>
+     <p   className="dark:text-gray-300">
 {Langopt.h39}
      </p>
      </div>
-  <div className=" flex items-start  flex-col bg-gray-400/20 p-4 rounded-2xl bg-white border border-red-200 hover:scale-102 transition-all duration-400 ease-in-out shadow-lg">
+  <div className=" flex items-start  flex-col  p-4 rounded-2xl bg-white border border-red-200 hover:scale-102 transition-all duration-400 ease-in-out shadow-lg dark:bg-gray-400/20">
     <div className=' p-2 rounded-full w-fit bg-red-400/20 dark:bg-yellow-300/30'>
             <Music className='w-9 h-9 p-1 text-red-600 dark:text-yellow-400 '/>
      </div>
-     <h1 className="text-xl font-bold text-center">
+     <h1 className="text-xl font-bold dark:text-white text-center">
 {Langopt.h40}
      </h1>
-     <p>
+     <p  className="dark:text-gray-300">
 {Langopt.h41}
      </p>
      </div>
 
-  <div className=" flex items-start  flex-col bg-gray-400/20 p-4 rounded-2xl bg-white border border-red-200 hover:scale-102 transition-all duration-400 ease-in-out shadow-lg">
+  <div className=" flex items-start  flex-col  p-4 rounded-2xl bg-white border border-red-200 hover:scale-102 transition-all duration-400 ease-in-out shadow-lg dark:bg-gray-400/20">
     <div className=' p-2 rounded-full w-fit  bg-red-400/20 dark:bg-yellow-300/30'>
             <Heart className='w-9 h-9 p-1 text-red-600 dark:text-yellow-400 '/>
      </div>
-     <h1 className="text-xl font-bold text-center">
+     <h1 className="text-xl font-bold dark:text-white text-center">
 {Langopt.h42}
 
      </h1>
-     <p>
+     <p  className="dark:text-gray-300">
 {Langopt.h43}
      </p>
      </div>
@@ -395,19 +517,19 @@ const handleclick = async() => {
 
 {/* stay updated */}
 
-<div className="flex flex-col  items-center gap-6 w-full  border-b border-red-200 py-12 mb-4 ">
+<div className="flex flex-col  items-center gap-6 w-full  border-b border-red-200 py-12 pb-4 dark:border-gray-700 dark:bg-darkc ">
 
-  <h1 className="text-3xl  font-bold">
+  <h1 className="text-3xl  font-bold dark:text-white">
 {Langopt.h44}
   </h1>
-  <p className="items-center">
+  <p className="items-center dark:text-gray-300">
     {Langopt.h45}
   </p>
 
   <div  className="flex justify-center gap-4 w-2/3 ">
  <input type="email" className="pl-4 py-4 rounded-lg  bg-white w-2/5 border border-red-200"  placeholder="enter your email" name="email" id="email" value={email} 
  onChange={(e)=>{setemail(e.target.value)}}/>
- <button onClick={handleclick} className=" flex justify-around py-4 px-5 gap-1 bg-gradient-to-r from-red-600 to-red-800 w-1/5 text-white rounded-lg">
+ <button onClick={handleclick} className=" flex justify-around py-4 px-5 gap-1 bg-gradient-to-r from-red-600 to-red-800 w-1/5 text-white rounded-lg ease-in-out transition-all hover:scale-105 duration-100">
  {Langopt.h46} <ArrowRight/>
 
  </button>
@@ -415,10 +537,10 @@ const handleclick = async() => {
 
 </div>
 {/* ready to partner to us */}
-
-<div className="flex flex-col items-center gap-7 my-4 py-12 max-w-[800px]">
-  <h1 className="text-6xl font-bold text-center">{Langopt.h47}</h1>
-  <p className="text-center text-lg font-light text-gray-700">{Langopt.h48}</p>
+<div className="w-full dark:bg-[#121212] flex justify-center">
+<div className="flex flex-col items-center gap-7  py-16 max-w-[800px] ">
+  <h1 className="text-6xl font-bold text-center dark:text-gray-100">{Langopt.h47}</h1>
+  <p className="text-center text-lg font-light text-gray-700 dark:text-gray-200">{Langopt.h48}</p>
 <div className="flex justify-center gap-4">
   <button className="flex justify-around gap-3 px-4 py-4 bg-white rounded-xl border border-red-300 cursor-pointer hover:bg-red-600 hover:text-white hover:scale-103 transition duration:400 shadow-lg">
     <p>{Langopt.h49}</p>
@@ -430,6 +552,7 @@ const handleclick = async() => {
     <p>{Langopt.h50} </p>
     <Calendar/>
   </button> */}
+</div>
 </div>
 </div>
 
