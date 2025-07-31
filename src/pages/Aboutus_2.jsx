@@ -2,7 +2,7 @@ import Aboutus_en from '../Lang/en/Aboutus.json'
 import Aboutus_amh from '../Lang/amh/Aboutus.json'
 import logo  from '../assets/Images/businesslogo.jpg'
 import Map from "../components/Map"
-
+import { useNavigate } from 'react-router-dom'
 import { useLanguageContext } from '../LanguageContext';
 import { useState,useEffect } from 'react';
 import {Coffee,Handshake,Globe,Crown, Shield, Heart,  Zap, Award,Mountain, Leaf, Book, Target, CheckCircle, ArrowRight, BoxIcon, Cuboid, Locate, LocateIcon, LocationEditIcon, LocateFixedIcon, LocationEdit, LocateOffIcon, MapIcon, MapPin, Send, SendIcon, PinIcon} from "lucide-react"
@@ -159,8 +159,10 @@ const businessobj =[
    t43: Lang ? "አቅጣጫውን ጠይቅ" : "get directions"
    
   } */
+  const navigate = useNavigate();
   
   return (
+    
 <div className='flex flex-col items-center '>
     <div className='flex flex-col justify-center items-center bg-gradient-to-r from-red-500 to-red-700  py-10 text-white w-full dark:from-gray-800 dark:to-gray-700'>
         <img src={logo} alt="logo" className='mb-10 rounded-full'/>
@@ -208,12 +210,12 @@ const businessobj =[
                 <div className='flex w-full gap-2'>
                 <div className='bg-white/30 rounded-full h-13'><BoxIcon className='w-13 h-13 p-3'/></div>
                 <div className='flex flex-col gap-3'>
-                <h1 className='text-4xl sm:text-5xl font-bold mb-6 '> {lang.t8}</h1>
-                <p className='self-center'>{lang.t9}</p>
+                <h1 className='text-4xl sm:text-5xl font-bold mb-6 dark:text-gray-100 '> {lang.t8}</h1>
+                <p className='self-center  dark:text-gray-200'>{lang.t9}</p>
                 </div>
                 </div>
                 <div className='w-1/6 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mb-12'></div>
-                <p className='text-lg mb-6'> {lang.t10}</p>
+                <p className='text-lg mb-6 dark:text-gray-300'> {lang.t10}</p>
                 <div className='flex flex-col lg:flex-row gap-6 w-full'>
                     <div className='bg-white flex flex-col text-center px-8 gap-3 py-6 rounded-lg shadow-xl w-full'>
                         <Cuboid className='w-14 h-14 text-orange-500'/>
@@ -222,7 +224,7 @@ const businessobj =[
                     </div>
                     <div className='bg-white flex flex-col text-center px-8 gap-3 py-6 rounded-lg shadow-xl w-full'>
                         <Globe className='w-14 h-14 text-green-500'/>
-                        <h2 className='text-2xl font-bold'> {lang.t13}</h2>
+                        <h2 className='text-2xl font-bold '> {lang.t13}</h2>
                         <p className='text-md'> {lang.t14}</p>
                     </div>
                 </div>
@@ -233,13 +235,13 @@ const businessobj =[
                 <div className='flex w-full gap-3'>
                 <div className='bg-white/30 rounded-full h-13'><Coffee className='w-13 h-13 p-3'/></div>
                 <div className='flex flex-col gap-3'>
-                <h1 className='text-4xl sm:text-5xl font-bold mb-6 '> {lang.t15}</h1>
-                <p className='self-center'>premium export quality</p>
+                <h1 className='text-4xl sm:text-5xl font-bold mb-6 dark:text-gray-100'> {lang.t15}</h1>
+                <p className='self-center dark:text-gray-200'>{Lang ? "የላቀ የኤክስፖርት ጥራት ያለው" : "premium export quality"}</p>
                 </div>
                 </div>
                 <div className='w-1/6 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mb-12'></div>
-                <p className='text-lg mb-6'> {lang.t16}</p>
-                <p className='text-lg mb-6'>{lang.t17}</p>
+                <p className='text-lg mb-6 dark:text-gray-300'> {lang.t16}</p>
+                <p className='text-lg mb-6 dark:text-gray-300'>{lang.t17}</p>
                 <div className='flex flex-col lg:flex-row gap-6 w-full'>
                     <div className='bg-white flex flex-col text-center px-8 gap-3 py-6 rounded-lg shadow-xl w-full'>
                         <Mountain className='w-14 h-14 text-orange-500'/>
@@ -299,7 +301,7 @@ const businessobj =[
     {/**Impacts */}
     <div className='bg-gray-50 px-4 sm:px-12 md:px-24 py-24 text-center flex flex-col items-center dark:bg-[#121212]'>
         <h1 className='text-4xl sm:text-5xl  font-bold mb-6 dark:text-white'> {lang.t25}</h1>
-        <p className='text-xl max-w-200 mb-12 text-gray-600'> {lang.t26}</p>
+        <p className='text-xl max-w-200 mb-12 text-gray-600 dark:text-gray-100'> {lang.t26}</p>
         <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-12 w-full'>
         {Impact.map((Impact, index)=>(
             
@@ -342,7 +344,7 @@ const businessobj =[
         </div>
    <h1 className='sm:text-4xl text-3xl text-white mb-8 font-bold text-center'> {lang.t32}</h1>
         <p className='text-xl text-center max-w-180 text-white mb-12'> {lang.t33}</p>
-        <button   className='py-4 px-6 rounded-2xl font-bold text-lg bg-white text-red-600 flex gap-4 items-center group shadow-xl mb-12'>{lang.t34}
+        <button onClick={()=>navigate("/contact")}  className='py-4 px-6 rounded-2xl font-bold text-lg bg-white text-red-600 flex gap-4 items-center group shadow-xl mb-12'>{lang.t34}
             <ArrowRight className='group-hover:translate-x-1  transition-all duration-300 ease-in-out'/>
         </button>
      
@@ -354,18 +356,18 @@ const businessobj =[
         <div className='p-9 bg-white/60 shadow-lg gap-2.5 flex flex-col w-full bg-gradient-to-r from-red-50 to-red-400 dark:from-gray-700 dark:to-gray-800'>
 <div className='flex justify-start  gap-2.5  '>
  <div className='bg-white/30 rounded-full'><BoxIcon className='w-16 h-16 p-3'/></div>
- <div className='flex flex-col gap-1.5'>
-    <h1 className='font-bold text-2xl' >{lang.t35}</h1>
-    <p>{lang.t36}</p>
+ <div className='flex flex-col gap-1.5 dark:text-white'>
+    <h1 className='font-bold text-2xl dark:text-gray-100' >{lang.t35}</h1>
+    <p className='dark:text-gray-200'>{lang.t36}</p>
  </div>
 </div>
 <div className='flex flex-col gap-2.5 items-start'>
     <div className='flex gap-3'>
-      <SendIcon/>
-        <h1 className='font-bold'>{lang.t37}</h1>
+      <SendIcon className='dark:text-white'/>
+        <h1 className='font-bold dark:text-white'>{lang.t37}</h1>
         </div>
-<p className='text-gray-600'>{lang.t38}</p>
-<p className='text-gray-600'>{lang.t39} </p>
+<p className='text-gray-600 dark:text-gray-200'>{lang.t38}</p>
+<p className='text-gray-600 dark:text-gray-200'>{lang.t39} </p>
 </div>
 </div>
 <div>
@@ -374,17 +376,17 @@ const businessobj =[
     
     <div className='flex flex-col gap-4 p-6 w-full bg-white/60 shadow-lg bg-gradient-to-r from-red-50 to-red-400 dark:from-gray-700 dark:to-gray-800'>
         <div className='self-end p-2 flex gap-1.5 bg-gray rounded-md bg-white/30'>
-            <PinIcon />
-            <p>
+            <PinIcon className='dark:text-white' />
+            <p className='text-gray-200'>
              {lang.t40}
             </p>
         </div>
 
         <div className='flex flex-col gap-3.5 items-center  '>
-             <div className='bg-white/30 rounded-full'><MapPin className='w-16 h-16 p-3'/></div>
-               <h1 className='text-3xl font-bold'>{lang.t41}</h1>
-               <p className='text-gray-500'>{lang.t42}</p>
-               <button  id='show' onClick={() => setShow(!show)} className='flex gap-3 p-3 rounded-sm bg-white/20'><Send/> {lang.t43}</button>
+             <div className='bg-white/30 rounded-full dark:text-white'><MapPin className='w-16 h-16 p-3'/></div>
+               <h1 className='text-3xl font-bold dark:text-gray-50'>{lang.t41}</h1>
+               <p className='text-gray-500 dark:text-gray-200'>{lang.t42}</p>
+               <button  id='show' onClick={() => setShow(!show)} className='flex gap-3 p-3 rounded-sm bg-white/20 dark:text-gray-300'><Send/> {lang.t43}</button>
         </div>
     </div>
     
