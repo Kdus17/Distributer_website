@@ -180,7 +180,13 @@ const businessobj =[
 
     {/**Our Core Values */}
     <div className='flex flex-col items-center dark:bg-[#121212]'>
-        <h1 className='text-4xl sm:text-5xl font-bold my-10 dark:text-white'> {lang.t6}</h1>
+        <h1 className='text-4xl sm:text-5xl font-bold my-10 dark:text-white'>
+             {lang.t6}
+         <helmet>
+            <meta name="title" content="Kingdom Business PLC | Ethiopia’s Premier Coffee Exporter, Unilever Distributor and trader in various products"/>
+         </helmet>
+
+             </h1>
         <p className='text-center max-w-150 text-xl text-gray-600 mb-10'> {lang.t7}</p>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:px-24 px-4 lg:px-24 gap-6 py-12'>
             {info.map((info, index)=>(

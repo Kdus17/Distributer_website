@@ -1,5 +1,6 @@
 import {  ArrowRight,  CheckCheck,  CircleCheck,  CircleCheckBig,  Clock, Coffee, CoffeeIcon, Globe, Heart, Leaf, LeafIcon,  Star, Target, TrendingUp, Truck, Users } from 'lucide-react'
 import { useLanguageContext } from '../LanguageContext';
+import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 export default function Home_2() {
     const {Lang,toggleLang} = useLanguageContext()
@@ -7,25 +8,25 @@ export default function Home_2() {
     promotingethiopian: Lang ? "የኢትዮጵያ ቡና" : "Promoting   Ethiopian",
     h1: Lang ?  "ጥራጥሬዎችን ማስተዋወቅ":  "Coffee & Pulses" ,
     h2: Lang ?  "በዓለም አቀፍ ደረጃ":  "Globally" ,
-    h3: Lang ?  "ለደንበኞች እርካታ ጥራት እና ዋጋን በማስቀደም ኪንግደም በኤክስፖርት እና በአጠቃላይ የንግድ ንግድ መሪዎችን በማቋቋም ላይ ይገኛል።":  "Establishing Kingdom among the leaders in export and general trading business, prioritizing quality and value for customer satisfaction." ,
+    h3: Lang ?  "ለደንበኞች እርካታ ጥራት እና ዋጋን በማስቀደም ኪንግደም ቢዝነስ በኤክስፖርት እና በአጠቃላይ የንግድ መሪዎችን በማቋቋም ላይ ይገኛል።":  "Establishing Kingdom among the leaders in export and general trading business, prioritizing quality and value for customer satisfaction." ,
     h4: Lang ?  "ምርቶቻችንን ይመልከቱ":  "Explore Our Products" ,
     h5: Lang ?  "ተጨማሪ መረጃ ያግኙ":  "Learn more" ,
     h6: Lang ?  "ከፍተኛ ጥራት ያለው ቡና":  "Premium Coffee" ,
     h7: Lang ?  "ልዩ መዓዛና የተለየ ጣዕም አለው":  "Special aroma & distinct flavor",
     h8: Lang ?  "ጥራቱን የጠበቁ ምርቶች":  "Quality Pulses",
-    h9: Lang ?  "በነባሪነት ኦርጋኒክ":  "Organic by default" ,
+    h9: Lang ?  "ሁሌም ኦርጋኒክ":  "Organic by default" ,
     h10: Lang ?  "ግሎባል ኤክስፖርት":  "Global Export" ,
     h11: Lang ?  "ዓለም አቀፍ ገበያዎች":  "International markets" ,
     h12: Lang ?  "እየጨመረ የሚሄድ ንግድ":  "Growing Business" ,
     h13: Lang ?  "እንቅስቃሴዎችን ማስፋት":  "Expanding operations" ,
     h14: Lang ?  "ራዕያችን እና ተልዕኮችን":  "Our Vision & Mission" ,
-    h15: Lang ?  "ራእይ":  "Leading the way in Ethiopian agricultural exports with quality and value at our core" ,/* ERROR HERE */
+    h15: Lang ?  "በኢትዮጵያ የግብርና ምርቶች ኤክስፖርት ውስጥ በዋናነት ጥራትንና ዋጋን እናስከድማለን":  "Leading the way in Ethiopian agricultural exports with quality and value at our core" ,/* ERROR HERE */
     h16: Lang ?  "ተልዕኮ ":  " Mission" ,
-    h17: Lang ?  "የኢትዮጵያ ቡና እና ጥራጥሬዎችን በዓለም አቀፍ ደረጃ በማስተዋወቅ ኪንግደም በኤክስፖርት እና በአጠቃላይ በንግድ ንግድ መሪዎችን በማቋቋም ለደንበኞች፣ ለሰራተኞች እና ለባለድርሻ አካላት እርካታ ጥራት እና እሴት ቅድሚያ ይሰጣል":  "To promote Ethiopian coffee and pulses globally, establishing KINGDOM among the leaders in the export and general trading business that prioritizes quality and value for the satisfaction of customers, employees and stakeholders" ,
+    h17: Lang ?  "የኢትዮጵያ ቡና እና ጥራጥሬዎችን በዓለም አቀፍ ደረጃ በማስተዋወቅ ኪንግደም በኤክስፖርት እና በአጠቃላይ በንግድ ንግድ መሪዎችን በማቋቋም ለደንበኞች፣ ለሰራተኞች እና ለባለድርሻ አካላት እርካታ ጥራት እና እሴት ቅድሚያ ይሰጣል":  "To promote Ethiopian coffee and pulses globally, establishing Kingdom business among the leaders in the export and general trading business that prioritizes quality and value for the satisfaction of customers, employees and stakeholders" ,
     h18: Lang ?  "ራእይ":"Vision",
-    h19: Lang ?  "ትርፍ በሚያስገኝ የቡና እና የጥራጥሬ ምርቶች ኤክስፖርት ንግድ ላይ ለመሳተፍ በትርፍ መልክ ገቢን ለማመንጨት እና በዚህም የንግድ ሥራውን ለማስፋት የአክሲዮን ባለቤቶችን ፍላጐት ለማሟላት":  "To participate in profitable export trade of coffee and pulses to generate income in the form of profit and thereby expand the business to address shareholder expectations." ,
+    h19: Lang ?  "ትርፍ በሚያስገኝ የቡና እና የጥራጥሬ ምርቶች ኤክስፖርት ንግድ ላይ ለመሳተፍ በትርፍ መልክ ገቢን ለማመንጨት እና በዚህም የንግድ ሥራውን ለማስፋት የአክሲዮን ባለቤቶችን ፍላጐት ማሟላት":  "To participate in profitable export trade of coffee and pulses to generate income in the form of profit and thereby expand the business to address shareholder expectations." ,
     h20: Lang ?  "ኪንግደም ቢዝነስ መምረጥ ያለብን ለምንድን ነው":  "Why Choose Kingdom Business" ,
-    h21: Lang ?  "የኢትዮጵያ የግብርና ምርቶችን ወደ ውጭ ለመላክ አስተማማኝ አጋራችሁ":  "Your trusted partner for premium Ethiopian agricultural export",
+    h21: Lang ?  "የኢትዮጵያ የግብርና ምርቶችን ወደ ውጭ በመላክና የተለያዩ ምርቶችን በመገበያየት ረገድ እምነት የሚጣልበት አጋር ነው":  "Your trusted partner for premium Ethiopian agricultural export",
     h22: Lang ?  "ከፍተኛ ጥራት ያለው":  "Premium Quality" ,
     h23: Lang ?  "ልዩ መዓዛና ልዩ ጣዕም ያለው የኢትዮጵያ ቡና ለየት ባለ ጥራቱ በዓለም አቀፍ ገበያዎች ከፍተኛ ዋጋ ይሰጠዋል።":  "Ethiopian coffee with special aroma and distinct flavor, highly valued in international markets for its exceptional quality." ,
     h24: Lang ?  "በነባሪነት ኦርጋኒክ":  "Organic by Default" ,
@@ -67,6 +68,7 @@ export default function Home_2() {
     h60: Lang ?  "አጋር":  "Partner" ,
    
 }
+const navigate = useNavigate();
     
   return (
     <div>
@@ -74,18 +76,23 @@ export default function Home_2() {
         <div className='flex flex-col lg:flex-row w-full p-4 lg:p-24 gap-2 bg-gradient-to-r from-red-50 to-transparent shadow-lg shadow-gray-100  dark:bg-[#121212]'>
             {/**Text With Buttons */}
             <div className='flex flex-col'>
-                <h1 className='text-4xl sm:text-6xl font-bold'>{language.promotingethiopian}</h1>
+                <h1 className='text-4xl sm:text-6xl font-bold'>
+                    {language.promotingethiopian}
+                    <helmet>
+                        <meta name="description" content="Exporting premium Ethiopian coffee and trading in various trading products." />
+                    </helmet>
+                    </h1>
                 <h1 className='text-4xl sm:text-6xl font-bold text-red-600'>{language.h1}</h1>
                 <p className='text-2xl sm:text-3xl text-gray-500'>{language.h2}</p>
                 <br />
                 <p className='text-xl text-gray-500'>{language.h3}</p>
                 <div className='flex flex-col md:flex-row gap-6 mt-6'>
                     <div className='relative bg-black rounded-lg'>
-                    <button className='w-full  md:relative hover:bg-red-700 border-2 border-gray-200 -top-1 right-1 active:top-0 active:right-0 active:bg-red-800 
+                    <button onClick={()=>navigate("/products")} className='w-full  md:relative hover:bg-red-700 border-2 border-gray-200 -top-1 right-1 active:top-0 active:right-0 active:bg-red-800 
                     flex items-center rounded-lg px-8 active:border-transparent gap-2 bg-red-600 text-white py-4'>{language.h4} <ArrowRight/></button>
                     </div>
                     <div className='relative bg-black rounded-lg'>
-                    <button className='w-full md:relative -top-1 right-1 py-4 rounded-lg px-8  bg-white active:top-0 active:right-0  
+                    <button onClick={()=>navigate("/us")} className='w-full md:relative -top-1 right-1 py-4 rounded-lg px-8  bg-white active:top-0 active:right-0  
                     border-2 border-red-600 active:border-transparent text-red-600 hover:bg-gray-100 active:bg-gray-300'>{language.h5}</button>
                     </div>
                 </div>
