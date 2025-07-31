@@ -1,4 +1,4 @@
-import {Coffee,Handshake,Globe,Crown, Shield, Heart,  Zap, Award,Mountain, Leaf, Book, Target, CheckCircle, ArrowRight, PhoneCall, CoffeeIcon, Cuboid, Globe2, MountainIcon, Square, BoxIcon, CalendarDays, CalendarDaysIcon, Calendar, LucideCoffee, ForkKnife, PersonStanding, Contact, Contact2, Contact2Icon, Users, Wifi, Music, CuboidIcon} from "lucide-react"
+import {Coffee,Handshake,Globe,Crown, Shield, Heart,  Zap, Award,Mountain, Leaf, Book, Target, CheckCircle, ArrowRight, PhoneCall, CoffeeIcon, Cuboid, Globe2, MountainIcon, Square, BoxIcon, CalendarDays, CalendarDaysIcon, Calendar, LucideCoffee, ForkKnife, PersonStanding, Contact, Contact2, Contact2Icon, Users, Wifi, Music, CuboidIcon, LocationEdit, LocationEditIcon, Pin, MapPin} from "lucide-react"
 import  cafe1  from "../assets/Images/cafe 1.jpg"
 import  cafe2  from "../assets/Images/cafe 2.jpg"
 import  Omo from "../assets/Images/OMO.png"
@@ -35,11 +35,11 @@ const handleclick = async() => {
     h1: Lang ? "ኪንግደም ":"kingdom",
     h2: Lang ? "ቢዝነስ ምርቶች እና ":"Business products &",
     h3: Lang ?"አገልግሎቶች":" services",
-    h4: Lang ? "ከፍተኛ ጥራት ያላቸውን የኢትዮጵያ ቡና፣ የንግድ ምርቶችን እና ሙያዊ አገልግሎቶችን ያግኙ። በተጨማሪም፣ ስለ መጪው የባህል ካፌ ልምዳችን ይደሰቱ!":"  Discover our comprehensive range of premium Ethiopian coffee, trading products, and professional services. Plus, get excited about our upcoming cultural cafe experience!",
+    h4: Lang ? "ከፍተኛ ጥራት ያላቸውን የኢትዮጵያ ቡና፣ የንግድ ምርቶችን እና ሙያዊ አገልግሎቶችን ያግኙ። በተጨማሪም፣ ስለ መጪው የብና ካፌያችን ይደሰቱ!":"  Discover our comprehensive range of premium Ethiopian coffee, trading products, and professional services. Plus, get excited about our upcoming cultural cafe experience!",
     h5: Lang ? "ከግብርና ወደ ስኒ፣ ከኢትዮጵያ ወደ ዓለም... ":"   from farm to cup, from to Ethiopia to the world.",
-    h6: Lang ? "ከፍተኛ ጥራት ያለው ቡና ":"premium coffee",
+    h6: Lang ? "ጥራት ያለው ቡና ":"premium coffee",
     h7: Lang ? "የንግድ ምርቶች. ":"trading products",
-    h8: Lang ? "አገልግሎቶች":"services",
+    h8: Lang ? "የብና ካፌ":"coffee house",
     h9: Lang ? "ከፍተኛ ጥራት ያለው የኢትዮጵያ ቡና ":"Premium Ethiopian Coffee",
     h10: Lang ? "በቀጥታ ከኢትዮጵያ ምርጥ የቡና ክልሎች የሚመጣው እያንዳንዱ ዝርያ ልዩ ባህሪያት እና ልዩ ጥራት አለው። ":"Sourced directly from Ethiopia finest coffee regions, each variety  offers a unique characteristics and exceptional quality",
     h11: Lang ? "የጣዕም መገለጫ":"Flavor Profile",
@@ -61,8 +61,8 @@ const handleclick = async() => {
     h27: Lang ? "በቀጣዩ ቡና ቤታችን ውስጥ እውነተኛውን የኢትዮጵያ ቡና ባህል ይለማመዱ። ከባህላዊ የቡና ሥነ ሥርዓቶች እስከ ዘመናዊ የመጠጥ ቴክኒኮች ድረስ የበለጸገውን የኢትዮጵያ ቡና ቅርስ ከጣፋጭ ባህላዊ ምግብ ጐን ለጐን እናሳያለን።":" Experience the authentic Ethiopian coffee culture in our upcoming cafe. From traditional coffee ceremonies to modern brewing techniques, we'll showcase the rich heritage of Ethiopian coffee alongside delicious traditional cuisine.",
     h28: Lang ? "የመክፈቻ ቀን":"opening day",
     h29: Lang ? "2025፣ መስከረም 9":"2025, september 9",
-    h30: Lang ? "የመክፈቻ ቀን":"opening day",
-    h31: Lang ? "2025፣ መስከረም 9":"2025, september 9",
+    h30: Lang ? "ቦታው":"Location",
+    h31: Lang ? "ጌርጂ፣ አዲስ አበባ":"gerji,Addis Abeba",
     h32: Lang ? "እውነተኛ የኢትዮጵያ ቡና":"Authentic Ethiopian coffee",
     h33: Lang ? "ባህላዊ የቡና ሥነ-ሥርዓቶች እና ከፍተኛ ጥራት ያላቸው የአንድ ምንጭ ቡናዎች።":"traditional coffee ceremonies and premium single-origin brews",
     h34: Lang ? "የኢትዮጵያ ኵሲን።":"Ethiopian  Cuisine",
@@ -240,19 +240,19 @@ const handleclick = async() => {
           <a href="#coffee">
             <div className='group  border border-red-300 bg-white text-red-800 py-2 px-8 rounded-lg flex md:gap-4 items-center hover:bg-red-600 hover:text-white  transition-all duration-300 ease-in-out '>
                 <Coffee className='group-hover:scale-110 w-8 h-8 transition-all duration-300 ease-in-out'/>
-                <p className='text-center max-w-30 font-semibold'> premium coffee</p>
+                <p className='text-center max-w-30 font-semibold'> {Langopt.h6}</p>
             </div>
           </a>
           <a href="#trading-products">
             <div className='group  border border-red-300 bg-white text-red-800  py-2 px-8 rounded-lg flex md:gap-4 items-center hover:bg-red-600 hover:text-white transition-all duration-300 ease-in-out'>
                 <Cuboid className='group-hover:scale-110 w-8 h-8 transition-all duration-300 ease-in-out'/>
-                <p className='text-center max-w-30'> trading products</p>
+                <p className='text-center max-w-30'>{Langopt.h7}</p>
             </div>
           </a>
           <a href="#cafe">
             <div className='group  border border-red-300 bg-white text-red-800  py-2 px-8 rounded-lg flex md:gap-4 items-center hover:bg-red-600 hover:text-white transition-all duration-300 ease-in-out'>
                 <Globe className='group-hover:scale-110 w-8 h-8 transition-all duration-300 ease-in-out'/>
-                <p className='text-center max-w-30'> services</p>
+                <p className='text-center max-w-30'> {Langopt.h8}</p>
             </div>
           </a>
         </div>
@@ -362,9 +362,9 @@ const handleclick = async() => {
           </div>
         </section>
         <section id="trading-products" className="flex flex-col gap-4 py-7 w-full items-center dark:bg-darkc">
-          <h1 className="text-3xl font-bold dark:text-white">Trading products</h1>
+          <h1 className="text-3xl font-bold dark:text-white">{Lang ? "የምርቶች ግብይት" : "trading products"}</h1>
           <p className="text-center text-gray-600 dark:text-gray-100">
-Comprehensive range of quality products for business and household needs
+           {Lang ? "ለንግድ እና ለቤተሰብ ፍላጐቶች የተሟላ ጥራት ያላቸው ምርቶች":"Comprehensive range of quality products for business and household needs"}
           </p>
           <div className=" w-full">
             <div className="grid grid-cols-2  w-full items-center mx-4">
@@ -428,7 +428,7 @@ Comprehensive range of quality products for business and household needs
 
   <div className="flex flex-col items-start w-full bg-red-50 border border-red-200 rounded-lg p-3 dark:border-gray-900  dark:bg-white/30">
 
-<Calendar/>
+<MapPin/>
 <p>{Langopt.h30}</p>
 <time dateTime="2025-9-9">{Langopt.h31} </time>
   </div>
