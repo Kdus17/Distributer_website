@@ -217,6 +217,10 @@ const handleclick = async() => {
         </div>
         <h1 className="md:text-8xl text-4xl sm:text-7xl max-w-240 font-bold  text-center">
           {Langopt.h1} <span className="text-yellow-300">{Langopt.h2}</span> {Langopt.h3}
+          <helmet>
+          
+            <meta name="description"  content="Kingdom Business deals in trading various products, runs a coffee café, and also exports coffee"/>
+            </helmet>
         </h1>
         <p className="mt-12 max-w-160 text-center">
 {Langopt.h4}

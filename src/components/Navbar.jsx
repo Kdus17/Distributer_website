@@ -39,15 +39,15 @@ import { useLanguageContext } from '../LanguageContext';
 
         <div className='flex gap-8 dark:text-[#E0E0E0] dark:bg-[#121212]uppercase'>
 
-            <Link to={'/'} className='py-1  sm:text-sm '>{language.Home}</Link>
-            <Link to={'/products'} className='py-1 sm:text-sm'>{language.Products}</Link>
-            <Link to={'/us'} className='py-1 sm:text-sm'>{language.Aboutus}</Link>
-            <Link to={'/Contact'} className='py-1 sm:text-sm'>{language.Contactus}</Link>
+            <Link to={'/'} className='py-1  text-sm  md:text-lg'>{language.Home}</Link>
+            <Link to={'/products'} className='py-1 text-sm md:text-lg'>{language.Products}</Link>
+            <Link to={'/us'} className='py-1 text-sm md:text-lg'>{language.Aboutus}</Link>
+            <Link to={'/Contact'} className='py-1 text-sm md:text-lg'>{language.Contactus}</Link>
             <select name="" id="" onChange={toggleLang} >
               <option  value="eng">english </option>
               <option value="amh">አማርኛ </option>
             </select>
-         <div
+         <div  
   onClick={() => {
     if (light) {
        settheme(!theme)
@@ -58,7 +58,7 @@ import { useLanguageContext } from '../LanguageContext';
     }
     setselect(!select);
   }}
-  className={`md:w-20  rounded-full ${theme ? 'bg-gray-100' : 'bg-gray-300'}`}
+  className={`md:w-20  rounded-full ${theme ? 'bg-gray-300' : 'bg-gray-600'}`}
 >
   <div
     className={`md:h-10 md:w-10 rounded-full ${theme ? 'ml-10 bg-black' : 'bg-slate-500'}`}

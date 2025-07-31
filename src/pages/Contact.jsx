@@ -85,7 +85,12 @@ export const Contact = () => {
     
     <div className="flex flex-col min-h-screen ">
       <div className="relative flex flex-col justify-center px-8 items-center h-100 bg-gradient-to-r  from-red-700 to-red-800 gap-6 dark:from-black dark:to-gray-600">
-        <h1 className="text-6xl md:text-7xl font-bold text-white  relative top-20 text-shadow-md">{langopt.t1}</h1>
+        <h1 className="text-6xl md:text-7xl font-bold text-white  relative top-20 text-shadow-md">
+          {langopt.t1}
+<helmet>
+  <meta name="title" content="get in contact with kingdom business"/>
+</helmet>
+        </h1>
         <div className="text-white flex flex-col items-center relative top-20 gap-4">
           <p>{langopt.t2}</p>
           <p>{langopt.t3}</p>
