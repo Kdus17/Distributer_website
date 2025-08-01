@@ -24,12 +24,26 @@ export default function ComposeEmail({see4, setsee4}) {
     }
   }
 
-  const validateform = () =>{
+  const validateform = async (e) =>{
     const newerrors = {};
-    if(!formData.descrption){
+    if(!formData.body){
       newerrors.body = "You forgot to write the message!"
+      seterrors(newerrors)
+      console.log(newerrors)
+    } else {
+        const post_options = {
+            method: "POST",
+            headers:{
+                "content-type": "application/json"
+            },
+            body: JSON.stringify({
+                formData
+            })
+        }
+        const response = await fetch(`http://localhost:4000/local/send-email`,post_options)
+        console.log(response.json())
     }
-    seterrors(newerrors)
+    
   }
 
   return (
