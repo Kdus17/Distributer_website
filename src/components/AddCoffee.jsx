@@ -35,7 +35,7 @@ export default function AddCoffee({setsee2, see2}) {
     }
   }
 
-  const validateform = () =>{
+  const validateform = async () =>{
     const newerrors = {};
     if(!formData.productname.trim()){
       newerrors.productname = "product name is required!"
@@ -64,7 +64,10 @@ export default function AddCoffee({setsee2, see2}) {
     if(!formData.descrption.trim()){
       newerrors.descrption = "You forgot to write descrption!"
     }
+
+    if(newerrors){
     seterrors(newerrors)
+    console.log(newerrors)
     setsome(true)
   }
    const handleClick = async () => {
@@ -118,7 +121,7 @@ export default function AddCoffee({setsee2, see2}) {
 
         <div className='col-span-2 md:col-span-1 flex flex-col py-2 gap-2'>
           <p className='text-lg font-semibold'>Processing Method</p>
-          <select type="text" className='p-2 border outline-none rounded-xl bg-red-100 border-red-300' name='method' value={formData.method} onChange={handlechange}>
+          <select type="text" className='p-2 border outline-none rounded-xl bg-red-100 border-red-300' name='method' id='method' value={formData.method} onChange={handlechange}>
            <option value="">Select Processing</option>
            <option value="Washed">Washed</option>
            <option value="Natural">Natural</option>
@@ -153,10 +156,11 @@ export default function AddCoffee({setsee2, see2}) {
 
         <div className='col-span-2 flex flex-col py-2 gap-2'>
           <p className='text-lg font-semibold'>Descrption</p>
-          <input type="text" className='p-2 border outline-none rounded-xl bg-red-100 border-red-300' name='desc' value={formData.desc} onChange={handlechange}/>
+          <input type="text" className='p-2 border outline-none rounded-xl bg-red-100 border-red-300' name='descrption' value={formData.descrption} onChange={handlechange}/>
         </div>
 
         <div className='col-span-2 flex gap-3 py-2'>
+          <p className='text-lg font-semibold w-full border text-center rounded-xl border-red-700 bg-red-600 text-white p-2' onClick={validateform} onSubmit={handleSubmit}>Add</p>
           <p className='text-lg font-semibold w-full border text-center rounded-xl border-red-700 bg-red-600 text-white p-2' onClick={validateform} onClick={handleClick}>Add</p>
         </div>
         
@@ -164,4 +168,6 @@ export default function AddCoffee({setsee2, see2}) {
       </div>
     </div>
   )
+  }
 }
+

@@ -1,7 +1,9 @@
 import { Box, Cross, Pencil, Plus, Trash, X } from 'lucide-react'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function TradingProducts({see3, setsee3}) {
+
+
   return (
     <div className='flex flex-col px-24 py-5 min-h-screen'>
       
