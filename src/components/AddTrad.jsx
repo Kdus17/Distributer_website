@@ -1,5 +1,5 @@
 import { Box, X } from 'lucide-react'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ErrorCard from '../assets/ErrorCard'
 
 export default function AddTrad({see3, setsee3}) {
@@ -9,6 +9,7 @@ export default function AddTrad({see3, setsee3}) {
   })
 
   const [errors,seterrors] = useState({})
+
 
   const handlechange = (e) =>{
     const {name,value} = e.target;
@@ -24,16 +25,42 @@ export default function AddTrad({see3, setsee3}) {
     }
   }
 
-  const validateform = () =>{
+  const validateform = async () =>{
     const newerrors = {};
-    if(!formData.productname.trim()){
+    if(!formData.productname){
       newerrors.productname = "product name is required!"
     }
-    if(!formData.descrption.trim()){
+    if(!formData.descrption){
       newerrors.descrption = "You forgot to write descrption!"
     }
     seterrors(newerrors)
+    const post_options = {
+    method: "POST",
+    headers:{
+      "content-type": "application/json"
+      },
+      body: JSON.stringify(formData),
+    }
+
+    const response = await fetch('http://localhost:4000/local/post', post_options);
+    const data = await response.json()
+    console.log(data)
   }
+  
+  const handlesubmit = async (e) =>{
+    const post_options = {
+    method: "POST",
+    headers:{
+      "content-type": "application/json"
+      },
+      body: JSON.stringify(formData),
+    }
+
+    const response = await fetch('http://localhost:4000/local/post', post_options);
+    const data = await response.json()
+    console.log(data)
+  }
+
 
   return (
     <div className='absolute z-100 rounded-lg w-full sm:w-2/3 lg:w-1/2  bg-white  pb-12 top-30 flex flex-col shadow-lg'>

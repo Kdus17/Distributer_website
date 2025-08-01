@@ -19,30 +19,6 @@ export default function CoffeeManagment({setsee2, see2}) {
         </div>
       </div>
 
-      {/**Search */}
-      <div className='border-1 border-red-100 flex p-6 rounded-2xl w-full gap-3 shadow-lg mb-10'>
-        <div className='flex w-4/5 border-1 py-3 px-2 rounded-xl gap-3 border-red-300 bg-red-50'>
-          <Search className='text-red-400'/>
-          <input type='' className='w-full outline-none placeholder-red-400' placeholder='Search Coffee Products'/>
-        </div>
-        <div className='flex gap-3'>
-          <select name="grade" id="grade" className='bg-red-50 rounded-xl p-2 border-1 border-red-300 outline-none'>
-            <option value="All">All grades</option>
-            <option value="grade-1">Grade 1</option>
-            <option value="grade-2">Grade 2</option>
-            <option value="grade-3">Grade 3</option>
-          </select>
-
-          <select name="region" id="region" className='bg-red-50 rounded-xl p-2 border-1 border-red-300 outline-none'>
-            <option value="All">All region</option>
-            <option value="region-1">region 1</option>
-            <option value="region-2">region 2</option>
-            <option value="region-3">region 3</option>
-          </select>
-
-        </div>
-      </div>
-
       {/**Cards */}
       <div className=' grid md:grid-cols-2 gap-8 relative'>
 
