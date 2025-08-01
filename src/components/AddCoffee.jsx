@@ -69,26 +69,31 @@ export default function AddCoffee({setsee2, see2}) {
     seterrors(newerrors)
     console.log(newerrors)
     setsome(true)
-    }
-
-    const post_options = {
-      method: "POST",
-      headers:{
-      "content-type": "application/json"
+  }
+   const handleClick = async () => {
+  try {
+    const response = await fetch('https://example.com/api/endpoint', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify(formData),
-    }
+      body: JSON.stringify({
+        productname: formData.productname,
+        descrption: formData.descrption,
+        altitude: formData.altitude,
+        flavor: formData.flavor,
+        grade: formData.grade,
+        image: formData.image
+      })
+    });
 
-    const response = await fetch('http://localhost:4000/local/poster', post_options);
-    const data = await response.json()
-    console.log(data)
+    const data = await response.json();
+    console.log('Success:', data);
+  } catch (error) {
+    console.error('Error:', error);
   }
+};
 
-    const handleSubmit = async (e) => {
-    e.preventDefault();
-
-
-  }
   return (
     <div className='absolute z-100 rounded-lg w-full sm:w-2/3 lg:w-1/2  bg-white  pb-12 top-30 flex flex-col shadow-lg'>
       <div className='bg-red-600 h-20 mb-8 rounded-t-md flex justify-between px-8 items-center text-white'>
@@ -156,10 +161,13 @@ export default function AddCoffee({setsee2, see2}) {
 
         <div className='col-span-2 flex gap-3 py-2'>
           <p className='text-lg font-semibold w-full border text-center rounded-xl border-red-700 bg-red-600 text-white p-2' onClick={validateform} onSubmit={handleSubmit}>Add</p>
+          <p className='text-lg font-semibold w-full border text-center rounded-xl border-red-700 bg-red-600 text-white p-2' onClick={validateform} onClick={handleClick}>Add</p>
         </div>
         
         {some && <div className='col-span-2'><ErrorCard wrong="Incomplete form "/></div>}
       </div>
     </div>
   )
+  }
 }
+

@@ -6,7 +6,8 @@ import { useLanguageContext } from '../LanguageContext';
 // eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion } from "framer-motion";
 
-export const Contact = () => {
+export default function Contact  () {
+  const [isSubmitting, setIsSubmitting] = useState(false)
      const {Lang,toggleLang} = useLanguageContext();
      const langopt ={
       t1:Lang ? "እኛን ያነጋግሩን" : "Contact Us",
@@ -79,10 +80,22 @@ export const Contact = () => {
     }
     seterrors(newerrors)
   }
+ const sub_myform = async (e) => {
+     e.preventDefault();
+       const formData = new FormData(e.target);
+       console.log(formData);
+       formData.append("access_key", "9d33ba97-c068-4900-8b50-8a57c4b97cc8");
+       setIsSubmitting(true);
+       console.log("roman");
+       const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+       });
+     }
 
   return (
     <>
-    
+    <form action="" onSubmit={sub_myform}>
     <div className="flex flex-col min-h-screen ">
       <div className="relative flex flex-col justify-center px-8 items-center h-100 bg-gradient-to-r  from-red-700 to-red-800 gap-6 dark:from-black dark:to-gray-600">
         <h1 className="text-6xl md:text-7xl font-bold text-white  relative top-20 text-shadow-md">
@@ -256,7 +269,7 @@ export const Contact = () => {
 
           {/**Button */}
           <div className="flex justify-center mt-6">
-            <button className="bg-red-600 w-full p-2 cursor-pointer text-white rounded-md uppercase hover:bg-red-700 flex justify-center items-center gap-2" onClick={validateform}> 
+            <button className="bg-red-600 w-full p-2 cursor-pointer text-white rounded-md uppercase hover:bg-red-700 flex justify-center items-center gap-2" onClick={validateform} type="submit"> 
               {/* <LoadingCircle/> */}
               {langopt.t24}</button>
           </div>
@@ -265,7 +278,7 @@ export const Contact = () => {
       </div>
 
     </div>
+    </form>
     </>
   )
 }
-export default Contact

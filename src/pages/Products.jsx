@@ -9,10 +9,10 @@ import  Sunsilk from "../assets/Images/Sunsilk.png"
 import  Sunlight from "../assets/Images/Sunlight.png"
 import { useLanguageContext } from '../LanguageContext';
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom"
 const Products = () => {
   const smallcards = "bg-red-300/10 p-4 rounded-2xl flex gap-4 shadow-sm border border-red-300  dark:bg-white/20 dark:border-gray-200 dark:text-gray-100";
-
+ const navigate = useNavigate();
 const [email, setemail] = useState("")
 
 const handleclick = async() => {
@@ -546,7 +546,7 @@ const handleclick = async() => {
   <h1 className="text-6xl font-bold text-center dark:text-gray-100">{Langopt.h47}</h1>
   <p className="text-center text-lg font-light text-gray-700 dark:text-gray-200">{Langopt.h48}</p>
 <div className="flex justify-center gap-4">
-  <button className="flex justify-around gap-3 px-4 py-4 bg-white rounded-xl border border-red-300 cursor-pointer hover:bg-red-600 hover:text-white hover:scale-103 transition duration:400 shadow-lg">
+  <button  className="flex justify-around gap-3 px-4 py-4 bg-white rounded-xl border border-red-300 cursor-pointer hover:bg-red-600 hover:text-white hover:scale-103 transition duration:400 shadow-lg">
     <p>{Langopt.h49}</p>
     <CuboidIcon/>
 
