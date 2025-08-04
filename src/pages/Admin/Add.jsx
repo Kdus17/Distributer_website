@@ -25,7 +25,6 @@ export default function Add() {
     <ComposeEmail see4={see4} setsee4={setsee4}/>}
     {see3 &&
     <AddTrad setsee3={setsee3} see3={see3} />}
-    {console.log(TradePro)}
     {see2 &&
     <AddCoffee setsee2={setsee2} see2={see2}/>}
     <div className={`min-h-screen w-full ${see2 ? "blur":""} ${see3 ? "blur":""} ${see4 ? "blur":""}`}>

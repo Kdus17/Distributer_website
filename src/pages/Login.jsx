@@ -11,6 +11,39 @@ const Login = () => {
     email: "",
     password: "",
   })
+
+const handleLogin = async () => {
+  // validateform(); // still runs validation
+
+  // Block if there are errors
+  if (Object.keys(errors).length > 0) return;
+
+  try {
+    const response = await fetch('http://localhost:4000/local/login', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: formData.email,  // match this with `username` on backend
+        password: formData.password,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      alert(data.message || "Login failed");
+    } else {
+      alert(data.message || "Login successful");
+      // Redirect or save token here
+    }
+
+  } catch (err) {
+    console.error("Login error:", err);
+    alert("Something went wrong.");
+  }
+};
   const [errors, seterrors] = useState({})
 
   const handlechange = (e) => {
@@ -84,7 +117,7 @@ const {Lang,toggleLang} = useLanguageContext();
 
           {/**Button */}
           <div className="flex justify-center mt-6 select-none">
-            <button className="bg-red-600 w-full p-2 cursor-pointer text-white rounded-md uppercase hover:bg-red-700 flex justify-center items-center gap-2" onClick={validateform}> 
+            <button className="bg-red-600 w-full p-2 cursor-pointer text-white rounded-md uppercase hover:bg-red-700 flex justify-center items-center gap-2" onClick={handleLogin}> 
               {/* <Loader2 className="w-5 h-5 animate-spin" /> */}
               {Langopt.t5}</button>
           </div>
