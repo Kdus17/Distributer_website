@@ -4,58 +4,7 @@ import { useLanguageContext } from '../LanguageContext';
 export default function CoffeeManagment({setsee2, see2}) {
   const [see,setsee]=useState(true)
    const {Lang,toggleLang} = useLanguageContext();
-   const [coffeprod,setCoffeprod] = useState(/* [
-  {
-    name: "Yirgacheffe Premium",
-    origin: "Yirgacheffe Region",
-    profile: "Floral, Citrus, Wine-like",
-    processing: "Washed",
-    altitude: "1,700-2,200m",
-    grade: "Grade 1",
-    image: "https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg",
-    price: "Premium Export Quality",
-    description:
-      "Renowned for its bright acidity and complex floral notes, our Yirgacheffe coffee represents the pinnacle of Ethiopian coffee excellence."
-  },
-  {
-    name: "Sidamo Excellence",
-    origin: "Sidamo Region",
-    profile: "Chocolate, Berry, Spice",
-    processing: "Natural",
-    altitude: "1,400-2,200m",
-    grade: "Grade 1",
-    image: "https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg",
-    price: "Premium Export Quality",
-    description:
-      "Full-bodied with rich chocolate undertones and berry notes, Sidamo coffee offers a complex and satisfying cup."
-  },
-  {
-    name: "Harrar Heritage",
-    origin: "Harrar Region",
-    profile: "Wine, Blueberry, Earthy",
-    processing: "Natural",
-    altitude: "1,500-2,100m",
-    grade: "Grade 1",
-    image: "https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg",
-    price: "Premium Export Quality",
-    description:
-      "One of the world's oldest coffee varieties, Harrar offers distinctive wine-like characteristics and fruity complexity."
-  },
-  {
-    name: "Limu Classic",
-    origin: "Limu Region",
-    profile: "Balanced, Sweet, Mild",
-    processing: "Washed",
-    altitude: "1,400-1,800m",
-    grade: "Grade 2",
-    image: "https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg",
-    price: "Export Quality",
-    description:
-      "Well-balanced with mild acidity and sweet undertones, perfect for those seeking a smooth, approachable Ethiopian coffee."
-  }
-   ] */
-  [{name:"",origin:"",profile:"",processing:"",altitude:"",grade:"",image:"",price:"",description:""}]
-)
+   const [coffeprod,setCoffeprod] = useState([{name:"",origin:"",profile:"",processing:"",altitude:"",grade:"",image:"",price:"",description:""}])
     const  Langopt ={
     h1: Lang ? "ኪንግደም ":"kingdom",
     h2: Lang ? "ቢዝነስ ምርቶች እና ":"Business products &",
@@ -108,57 +57,7 @@ export default function CoffeeManagment({setsee2, see2}) {
     h49: Lang ? "የምርት ካታሎግ ይጠይቁ.":"Request product Catalogue",
     h50: Lang ? "የቀን መቁጠሪያ":"Schedule Consultation",
     }
-  
-  const coffeeProducts = [
-    {
-      id:1,
-      name: "Yirgacheffe Premium",
-      origin: "Yirgacheffe Region",
-      profile: "Floral, Citrus, Wine-like",
-      processing: "Washed",
-      altitude: "1,700-2,200m",
-      grade: "Grade 1",
-      image: "https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg",
-      price: "Premium Export Quality",
-      description: "Renowned for its bright acidity and complex floral notes, our Yirgacheffe coffee represents the pinnacle of Ethiopian coffee excellence."
-    },
-    {
-      id:2,
-      name: "Sidamo Excellence",
-      origin: "Sidamo Region",
-      profile: "Chocolate, Berry, Spice",
-      processing: "Natural",
-      altitude: "1,400-2,200m",
-      grade: "Grade 1",
-      image: "https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg",
-      price: "Premium Export Quality",
-      description: "Full-bodied with rich chocolate undertones and berry notes, Sidamo coffee offers a complex and satisfying cup."
-    },
-    {
-      id:3,
-      name: "Harrar Heritage",
-      origin: "Harrar Region",
-      profile: "Wine, Blueberry, Earthy",
-      processing: "Natural",
-      altitude: "1,500-2,100m",
-      grade: "Grade 1",
-      image: "https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg",
-      price: "Premium Export Quality",
-      description: "One of the world's oldest coffee varieties, Harrar offers distinctive wine-like characteristics and fruity complexity."
-    },
-    {
-      id:4,
-      name: "Limu Classic",
-      origin: "Limu Region",
-      profile: "Balanced, Sweet, Mild",
-      processing: "Washed",
-      altitude: "1,400-1,800m",
-      grade: "Grade 2",
-      image: "https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg",
-      price: "Export Quality",
-      description: "Well-balanced with mild acidity and sweet undertones, perfect for those seeking a smooth, approachable Ethiopian coffee."
-    }
-  ];
+
 
   useEffect(() => {
     
@@ -180,17 +79,10 @@ export default function CoffeeManagment({setsee2, see2}) {
 
 
 
-  const roma = async (index,e) => {
-      e.preventDefault();
-  const updated = [...coffeprod];
-      const response = await fetch(`http://localhost:4000/local/products/${coffeprod[index].id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(updated[index])
-      }
-  )}
+  const roma = (e)=>{
+
+    console.log(e.Target.value)
+  }
    const r = (index, field, value) => {
   const updated = [...coffeprod];
   updated[index][field] = value; 
@@ -318,7 +210,7 @@ const deleteCard =(index,e)=>{
               <div className="flex flex-col gap-2">
                 <span className="text-gray-500 dark:text-white">{Langopt.h14}</span>
                 <span className="text-red-500">{Langopt.h15}</span>
-                <button onClick={(e)=>roma(key,e)}>submit</button>
+                <button type="submit">submit</button>
                 
               </div>
             </div>
@@ -328,107 +220,6 @@ const deleteCard =(index,e)=>{
     </div>
           </form>
       {/**Cards */}
-      <div className=' grid md:grid-cols-2 gap-8 relative'>
-
-        {/**Card 1 */}
-        <div className='h-full col-span-1 border-1 rounded-2xl relative flex flex-col'>
-          {/**Symbols */}
-          <span className='absolute top-2 left-4 border-1 bg-red-500 p-1 rounded-full text-white'>
-            <Edit className='p-1'/>
-          </span>
-          <span className='absolute top-2 left-13 border-1 bg-red-500 p-1 rounded-full text-white'>
-            <Trash className='p-1'/>
-          </span>
-          <span className='absolute top-2 right-4  bg-amber-300 px-4  rounded-full font-semibold'>
-            Grade 1
-          </span>
-
-        <img src="https://images.app.goo.gl/D6PhtQn9d46L34ud9"
-            className='w-full h-48  select-none bg-black rounded-t-2xl mb-2' alt="asd" />
-          {/**The Rest */}
-        <div className='p-4 flex flex-col'>
-          <div className='flex flex-col gap-2'>
-            <h1 className='font-bold text-lg'>Name</h1>
-            <p>Name</p>
-          </div>
-
-          <div className='grid grid-cols-2'>
-            <div className='flex flex-col gap-2'>
-              <h1 className='font-bold text-lg'>Flavor</h1>
-              <p>Name</p>
-            </div> 
-            <div className='flex flex-col gap-2'>
-              <h1 className='font-bold text-lg'>Processing</h1>
-              <p>Name</p>
-            </div> 
-            <div className='flex flex-col gap-2'>
-              <h1 className='font-bold text-lg'>Altitude</h1>
-              <p>Name</p>
-            </div> 
-            <div className='flex flex-col gap-2'>
-              <h1 className='font-bold text-lg'>Quality</h1>
-              <p>Name</p>
-            </div> 
-
-            <div className=' col-span-2 py-2'>
-              <p>Renowned for its bright acidity and complex floral notes, our Yirgacheffe coffee represents the pinnacle of Ethiopian coffee excellence.</p>
-            </div> 
-          </div>
-        </div>
-        
-          
-        </div>
-        
-
-        {/**Cards 2 */}
-        <div className='h-full col-span-1 border-1 rounded-2xl relative'>
-          {/**Symbols */}
-          <span className='absolute top-2 left-4 border-1 bg-red-500 p-1 rounded-full text-white'>
-            <Edit className='p-1'/>
-          </span>
-          <span className='absolute top-2 left-13 border-1 bg-red-500 p-1 rounded-full text-white'>
-            <Trash className='p-1'/>
-          </span>
-          <span className='absolute top-2 right-4  bg-amber-300 px-4  rounded-full font-semibold'>
-            Grade 1
-          </span>
-        <img src="https://images.app.goo.gl/D6PhtQn9d46L34ud9"
-            className='w-full h-48 select-none bg-black rounded-t-2xl' alt="asd" />
-
-          {/**The Rest */}
-        <div className='p-4 flex flex-col'>
-          <div className='flex flex-col gap-2'>
-            <h1 className='font-bold text-lg'>Name</h1>
-            <p>Name</p>
-          </div>
-
-          <div className='grid grid-cols-2'>
-            <div className='flex flex-col gap-2'>
-              <h1 className='font-bold text-lg'>Flavor</h1>
-              <p>Name</p>
-            </div> 
-            <div className='flex flex-col gap-2'>
-              <h1 className='font-bold text-lg'>Processing</h1>
-              <p>Name</p>
-            </div> 
-            <div className='flex flex-col gap-2'>
-              <h1 className='font-bold text-lg'>Altitude</h1>
-              <p>Name</p>
-            </div> 
-            <div className='flex flex-col gap-2'>
-              <h1 className='font-bold text-lg'>Quality</h1>
-              <p>Name</p>
-            </div> 
-
-            <div className=' col-span-2 py-2'>
-              <p>Renowned for its bright acidity and complex floral notes, our Yirgacheffe coffee represents the pinnacle of Ethiopian coffee excellence.</p>
-            </div> 
-          </div>
-        </div>
-
-        </div>
-        
-      </div>
     </div>
     </>
   )
