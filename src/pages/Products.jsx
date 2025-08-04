@@ -397,7 +397,7 @@ const handleclick = async() => {
 
         </section>
 
-<section id ="cafe" className="grid grid-cols-1 md:grid-cols-2 bg-gray-50 gap-4  px-12 py-6 dark:bg-[#121212]">
+<section id ="cafe" className="grid grid-cols-1 lg:grid-cols-2 bg-gray-50 gap-4  px-12 py-6 dark:bg-[#121212]">
   <div className="grid grid-cols-1 gap-4 px-12">
  {/*    Kingdome house coffee card */}
 <div className="flex flex-col justify-end gap-4  p-8  bg-white border border-red-200 rounded-xl  shadow-lg dark:bg-gradient-to-b dark:from-gray-800 dark:to-gray-900 ">
