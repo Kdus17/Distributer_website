@@ -1,10 +1,9 @@
 import { Edit, Plus, Search, Trash } from 'lucide-react'
 import {useEffect, useState} from 'react'
 import { useLanguageContext } from '../LanguageContext';
-export default function CoffeeManagment({setsee2, see2}) {
+export default function CoffeeManagment({setsee2, see2, coffeprod, setCoffeprod}) {
   const [see,setsee]=useState(true)
    const {Lang,toggleLang} = useLanguageContext();
-   const [coffeprod,setCoffeprod] = useState([{name:"",origin:"",profile:"",processing:"",altitude:"",grade:"",image:"",price:"",description:""}])
     const  Langopt ={
     h1: Lang ? "ኪንግደም ":"kingdom",
     h2: Lang ? "ቢዝነስ ምርቶች እና ":"Business products &",
@@ -83,19 +82,31 @@ export default function CoffeeManagment({setsee2, see2}) {
 
     console.log(e.Target.value)
   }
-   const r = (index, field, value) => {
+  
+const r = (index, field, value) => {
   const updated = [...coffeprod];
   updated[index][field] = value; 
   setCoffeprod(updated);
 };
-const deleteCard =(index,e)=>{
+
+
+const deleteCard =async (index,e)=>{
   e.stopPropagation(); 
-
- const updated = coffeprod.filter((_, i) => i !== index);
-  setCoffeprod(updated);
-
-
+  const todelete = coffeprod[index]
+  try{
+    const del = await fetch(`http://localhost:4000/local/products/${todelete._id}`,{
+      method: "DELETE"
+    })
+    if (!del.ok) throw new Error('Failed to delete');
+    const updated = coffeprod.filter((_, i) => i !== index);
+    setCoffeprod(updated);
+    alert("deleted succesfully")
+  } catch (err) {
+    console.log(err)
+    alert("failed")
+  }
 }
+
  const [activeOverlay, setActiveOverlay] = useState(null);
   return (
     <>
