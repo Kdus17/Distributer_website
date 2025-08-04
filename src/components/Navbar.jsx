@@ -35,6 +35,21 @@ function Navbar() {
           <Link to="/products" className="text-sm md:text-lg">{language.Products}</Link>
           <Link to="/us" className="text-sm md:text-lg">{language.Aboutus}</Link>
           <Link to="/Contact" className="text-sm md:text-lg">{language.Contactus}</Link>
+           <select onChange={toggleLang} className="border rounded px-2 py-1 dark:bg-[#121212]">
+              <option value="eng">English</option>
+              <option value="amh">አማርኛ</option>
+            </select>
+              {/* Theme Toggle (Mobile only) */}
+          <div className="flex flex-col gap-1">
+            <div
+              onClick={handleThemeToggle}
+              className={`w-16 h-8 flex items-center rounded-full cursor-pointer px-1 ${theme ? 'bg-gray-300' : 'bg-gray-600'}`}
+            >
+              <div
+                className={`h-6 w-6 rounded-full transition-all duration-300 ${theme ? 'ml-auto bg-black' : 'ml-0 bg-slate-500'}`}
+              />
+            </div>
+          </div>
         </div>
 
         {/* Hamburger Icon */}

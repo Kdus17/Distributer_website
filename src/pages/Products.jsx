@@ -10,10 +10,13 @@ import  Sunlight from "../assets/Images/Sunlight.png"
 import { useLanguageContext } from '../LanguageContext';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"
+import mypdf from '../assets/pd.pdf'
 const Products = () => {
   const smallcards = "bg-red-300/10 p-4 rounded-2xl flex gap-4 shadow-sm border border-red-300  dark:bg-white/20 dark:border-gray-200 dark:text-gray-100";
  const navigate = useNavigate();
 const [email, setemail] = useState("")
+
+
 
 const handleclick = async() => {
   const post_options = {
@@ -371,9 +374,9 @@ const handleclick = async() => {
            {Lang ? "ለንግድ እና ለቤተሰብ ፍላጐቶች የተሟላ ጥራት ያላቸው ምርቶች":"Comprehensive range of quality products for business and household needs"}
           </p>
           <div className=" w-full">
-            <div className="grid grid-cols-2  w-full items-center mx-4">
+            <div className="grid grid-cols-1 md:grid-cols-2  w-full items-center mx-4">
               {tradingprodu.map((product,key)=>(
-                <div key={key} className="flex flex-col rounded-2xl overflow-hidden w-[600px] bg-white mb-2  shadow-lg border border-red-400  hover:scale-102 transition-all duration-400 ease-in-out ">
+                <div key={key} className="flex flex-col rounded-2xl overflow-hidden w-[400px] md:w-[600px] bg-white mb-2  shadow-lg border border-red-400  hover:scale-102 transition-all duration-400 ease-in-out ">
                  <div style={{ backgroundImage:  `url(${product.image})`, backgroundPosition: "center",}} className={` h-[200px] relative w-[600px]  bg-no-repeat`}>
                 <p className="items-start flex  flex-col gap-4 ml-3 absolute bottom-0 left-0">
                   <span className="text-2xl font-bold ">
@@ -401,10 +404,10 @@ const handleclick = async() => {
 
         </section>
 
-<section id ="cafe" className="grid grid-cols-1 md:grid-cols-2 bg-gray-50 gap-4  px-12 py-6 dark:bg-[#121212]">
+<section id ="cafe" className="grid grid-cols-1 md:grid-cols-2 bg-gray-50 gap-4  md:px-12 py-6 dark:bg-[#121212]">
   <div className="grid grid-cols-1 gap-4 px-12">
  {/*    Kingdome house coffee card */}
-<div className="flex flex-col justify-end gap-4  p-8  bg-white border border-red-200 rounded-xl  shadow-lg dark:bg-gradient-to-b dark:from-gray-800 dark:to-gray-900 ">
+<div className="flex  flex-col justify-end gap-4  p-8  bg-white border border-red-200 rounded-xl  shadow-lg dark:bg-gradient-to-b dark:from-gray-800 dark:to-gray-900 ">
 
 <div className="flex justify-start gap-4 ">
   <div className="bg-red-400/20  rounded-full ">
@@ -412,12 +415,12 @@ const handleclick = async() => {
   </div>
 
 <div>
-  <h1 className="text-3xl font-bold dark:text-white">
+  <h1 className="md:text-3xl text-2xl font-bold dark:text-white ">
 {Langopt.h26}
   </h1>
 </div>
 </div>
-<p className="dark:text-gray-300">
+<p className="dark:text-gray-300 text-sm">
  {Langopt.h27}</p>
   
 {/*  the two cards */}
@@ -426,7 +429,7 @@ const handleclick = async() => {
   <div className="flex flex-col items-start w-full bg-red-50 border border-red-200 rounded-lg p-3 dark:border-gray-900  dark:bg-white/30">
 
 <Calendar/>
-<p>{Langopt.h28}</p>
+<p className="text-sm md:text-base">{Langopt.h28}</p>
 <time dateTime="2025-9-9">{Langopt.h29} </time>
   </div>
 
@@ -530,14 +533,14 @@ const handleclick = async() => {
   <h1 className="text-3xl  font-bold dark:text-white">
 {Langopt.h44}
   </h1>
-  <p className="items-center dark:text-gray-300">
+  <p className="items-center dark:text-gray-300 px-4">
     {Langopt.h45}
   </p>
 
   <div  className="flex justify-center gap-4 w-2/3 ">
- <input type="email" className="pl-4 py-4 rounded-lg  bg-white w-2/5 border border-red-200"  placeholder="enter your email" name="email" id="email" value={email} 
+ <input type="email" className="pl-4 py-4 rounded-lg  bg-white  border border-red-200"  placeholder="email :" name="email" id="email" value={email} 
  onChange={(e)=>{setemail(e.target.value)}}/>
- <button onClick={handleclick} className=" flex justify-around py-4 px-5 gap-1 bg-gradient-to-r from-red-600 to-red-800 w-1/5 text-white rounded-lg ease-in-out transition-all hover:scale-105 duration-100">
+ <button onClick={handleclick} className="flex justify-around py-4 px-5 gap-1 bg-gradient-to-r from-red-600 to-red-800  text-white rounded-lg ease-in-out transition-all hover:scale-105 duration-100">
  {Langopt.h46} <ArrowRight/>
 
  </button>
@@ -550,11 +553,18 @@ const handleclick = async() => {
   <h1 className="text-6xl font-bold text-center dark:text-gray-100">{Langopt.h47}</h1>
   <p className="text-center text-lg font-light text-gray-700 dark:text-gray-200">{Langopt.h48}</p>
 <div className="flex justify-center gap-4">
-  <button  className="flex justify-around gap-3 px-4 py-4 bg-white rounded-xl border border-red-300 cursor-pointer hover:bg-red-600 hover:text-white hover:scale-103 transition duration:400 shadow-lg">
+  <a href={mypdf} download onClick={(e) => {
+    const confirmed = window.confirm("Do you want to download the product catalogue?")
+  if(!confirmed){
+    e.preventDefault()
+  }
+  }}
+     className="flex justify-around gap-3 px-4 py-4 bg-white rounded-xl border border-red-300 cursor-pointer hover:bg-red-600 hover:text-white hover:scale-103 transition duration:400 shadow-lg" >
+
     <p>{Langopt.h49}</p>
     <CuboidIcon/>
 
-  </button>
+  </a>
 
   {/* <button className="flex justify-around gap-3 px-4 py-4 bg-white">
     <p>{Langopt.h50} </p>
