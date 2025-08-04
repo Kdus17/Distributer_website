@@ -162,6 +162,7 @@ const handleclick = async() => {
 
   const coffeeProducts = [
     {
+      id:1,
       name: "Yirgacheffe Premium",
       origin: "Yirgacheffe Region",
       profile: "Floral, Citrus, Wine-like",
@@ -173,6 +174,7 @@ const handleclick = async() => {
       description: "Renowned for its bright acidity and complex floral notes, our Yirgacheffe coffee represents the pinnacle of Ethiopian coffee excellence."
     },
     {
+      id:2,
       name: "Sidamo Excellence",
       origin: "Sidamo Region",
       profile: "Chocolate, Berry, Spice",
@@ -184,6 +186,7 @@ const handleclick = async() => {
       description: "Full-bodied with rich chocolate undertones and berry notes, Sidamo coffee offers a complex and satisfying cup."
     },
     {
+      id:3,
       name: "Harrar Heritage",
       origin: "Harrar Region",
       profile: "Wine, Blueberry, Earthy",
@@ -195,6 +198,7 @@ const handleclick = async() => {
       description: "One of the world's oldest coffee varieties, Harrar offers distinctive wine-like characteristics and fruity complexity."
     },
     {
+      id:4,
       name: "Limu Classic",
       origin: "Limu Region",
       profile: "Balanced, Sweet, Mild",

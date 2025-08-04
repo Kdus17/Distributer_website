@@ -90,7 +90,8 @@ export default function AddCoffee({setsee2, see2}) {
 
   }
   return (
-    <div className='absolute z-100 rounded-lg w-full sm:w-2/3 lg:w-1/2  bg-white  pb-12 top-30 flex flex-col shadow-lg'>
+        <div  className='absolute z-100 rounded-lg w-full sm:w-2/3 lg:w-1/2  bg-white  pb-12 top-30 flex flex-col shadow-lg' >
+
       <div className='bg-red-600 h-20 mb-8 rounded-t-md flex justify-between px-8 items-center text-white'>
         <div className='text-xl font-bold flex items-center gap-3' >
           <Coffee className='w-8 h-8'/>
@@ -155,12 +156,13 @@ export default function AddCoffee({setsee2, see2}) {
         </div>
 
         <div className='col-span-2 flex gap-3 py-2'>
-          <p className='text-lg font-semibold w-full border text-center rounded-xl border-red-700 bg-red-600 text-white p-2' onClick={validateform} onSubmit={handleSubmit}>Add</p>
+          <p className='text-lg font-semibold w-full border text-center rounded-xl border-red-700 bg-red-600 text-white p-2'  onClick={validateform} onSubmit={handleSubmit}>Add</p>
         </div>
         
         {some && <div className='col-span-2'><ErrorCard wrong="Incomplete form "/></div>}
       </div>
-    </div>
+    
+</div>
   )
 }
 

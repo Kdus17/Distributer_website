@@ -111,6 +111,7 @@ export default function CoffeeManagment({setsee2, see2}) {
   
   const coffeeProducts = [
     {
+      id:1,
       name: "Yirgacheffe Premium",
       origin: "Yirgacheffe Region",
       profile: "Floral, Citrus, Wine-like",
@@ -122,6 +123,7 @@ export default function CoffeeManagment({setsee2, see2}) {
       description: "Renowned for its bright acidity and complex floral notes, our Yirgacheffe coffee represents the pinnacle of Ethiopian coffee excellence."
     },
     {
+      id:2,
       name: "Sidamo Excellence",
       origin: "Sidamo Region",
       profile: "Chocolate, Berry, Spice",
@@ -133,6 +135,7 @@ export default function CoffeeManagment({setsee2, see2}) {
       description: "Full-bodied with rich chocolate undertones and berry notes, Sidamo coffee offers a complex and satisfying cup."
     },
     {
+      id:3,
       name: "Harrar Heritage",
       origin: "Harrar Region",
       profile: "Wine, Blueberry, Earthy",
@@ -144,6 +147,7 @@ export default function CoffeeManagment({setsee2, see2}) {
       description: "One of the world's oldest coffee varieties, Harrar offers distinctive wine-like characteristics and fruity complexity."
     },
     {
+      id:4,
       name: "Limu Classic",
       origin: "Limu Region",
       profile: "Balanced, Sweet, Mild",
@@ -176,10 +180,17 @@ export default function CoffeeManagment({setsee2, see2}) {
 
 
 
-  const roma = (e)=>{
-
-    console.log(e.Target.value)
-  }
+  const roma = async (index,e) => {
+      e.preventDefault();
+  const updated = [...coffeprod];
+      const response = await fetch(`http://localhost:4000/local/products/${coffeprod[index].id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(updated[index])
+      }
+  )}
    const r = (index, field, value) => {
   const updated = [...coffeprod];
   updated[index][field] = value; 
@@ -307,7 +318,7 @@ const deleteCard =(index,e)=>{
               <div className="flex flex-col gap-2">
                 <span className="text-gray-500 dark:text-white">{Langopt.h14}</span>
                 <span className="text-red-500">{Langopt.h15}</span>
-                <button type="submit">submit</button>
+                <button onClick={(e)=>roma(key,e)}>submit</button>
                 
               </div>
             </div>
