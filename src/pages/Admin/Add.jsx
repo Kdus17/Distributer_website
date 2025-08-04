@@ -1,5 +1,6 @@
 import { Box, Coffee, Settings } from 'lucide-react'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from "react-router-dom";
 import CoffeeManagment from '../../components/CoffeeManagment'
 import TradingProducts from '../../components/TradingProducts'
 import AddCoffee from '../../components/AddCoffee'
@@ -18,6 +19,12 @@ export default function Add() {
     ]
   )
   const [coffeprod, setCoffeprod] = useState([{name:"",origin:"",profile:"",processing:"",altitude:"",grade:"",image:"",price:"",description:""}])
+  
+  const navigate = useNavigate();
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token || token !== "correct") navigate("/login");
+  }, [])
 
   return (
     <div className='flex flex-col items-center'>

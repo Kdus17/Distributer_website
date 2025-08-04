@@ -3,9 +3,12 @@ import { useState } from "react";
 import { Loader2, Mail,Lock ,Eye,EyeClosed} from "lucide-react";
 import ErrorCard from "../assets/ErrorCard";
 import { useLanguageContext } from '../LanguageContext';
+import { useNavigate } from "react-router-dom";
+
 
 
 const Login = () => {
+  const navigate = useNavigate()
   const [see, setsee] = useState(false)
   const [formData, setFromData] = useState({
     email: "",
@@ -13,6 +16,7 @@ const Login = () => {
   })
 
 const handleLogin = async () => {
+  
   // validateform(); // still runs validation
 
   // Block if there are errors
@@ -35,6 +39,9 @@ const handleLogin = async () => {
     if (!response.ok) {
       alert(data.message || "Login failed");
     } else {
+      localStorage.setItem("token",data.key)
+      console.log(data.key)
+      navigate('/add')
       alert(data.message || "Login successful");
       // Redirect or save token here
     }
@@ -124,7 +131,7 @@ const {Lang,toggleLang} = useLanguageContext();
 
           <div className="flex justify-center gap-1 items-center select-none">
             <p className="text-gray-400">{Langopt.t6}</p>
-            <Link to={'/signup'} className="text-red-500">{Langopt.t7}</Link>
+            {/* <Link to={'/signup'} className="text-red-500">{Langopt.t7}</Link> */}
           </div>
         </div>
     </div>

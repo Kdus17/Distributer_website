@@ -121,7 +121,7 @@ const deleteCard = async (index, e) => {
 
             </div>
 
-            <p>Complete range</p>
+            <p>{item.descrption}</p>
 
             {item.qualities.map((quality, i) => (
               <div key={i} className='p-2 bg-red-700/30 rounded-md flex justify-between items-center'>
