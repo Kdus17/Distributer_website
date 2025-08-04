@@ -12,12 +12,20 @@ export default function Add() {
   const [see2, setsee2] = useState(false)
   const [see3, setsee3] = useState(false)
   const [see4, setsee4] = useState(false)
+  const [TradePro,setTradePro] = useState(
+    [
+      {name:"",qualities:[]}
+    ]
+  )
+  const [coffeprod, setCoffeprod] = useState([{name:"",origin:"",profile:"",processing:"",altitude:"",grade:"",image:"",price:"",description:""}])
+
   return (
     <div className='flex flex-col items-center'>
     {see4 &&
     <ComposeEmail see4={see4} setsee4={setsee4}/>}
     {see3 &&
-    <AddTrad setsee3={setsee3} see3={see3}/>}
+    <AddTrad setsee3={setsee3} see3={see3} />}
+    {console.log(TradePro)}
     {see2 &&
     <AddCoffee setsee2={setsee2} see2={see2}/>}
     <div className={`min-h-screen w-full ${see2 ? "blur":""} ${see3 ? "blur":""} ${see4 ? "blur":""}`}>
@@ -66,13 +74,13 @@ export default function Add() {
         </div>
 
         {see &&
-            <CoffeeManagment setsee2={setsee2} see2={see2}/>
+            <CoffeeManagment setsee2={setsee2} see2={see2} coffeprod={coffeprod} setCoffeprod={setCoffeprod}/>
         }
         {see1 &&
-            <TradingProducts setsee3={setsee3} see3={see3}/>
+            <TradingProducts setsee3={setsee3} see3={see3} TradePro={TradePro} setTradePro={setTradePro}/>
         }
     </div>
-    
+
     </div>
   )
 }
