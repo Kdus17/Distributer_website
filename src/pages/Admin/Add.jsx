@@ -1,5 +1,6 @@
 import { Box, Coffee, Settings } from 'lucide-react'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from "react-router-dom";
 import CoffeeManagment from '../../components/CoffeeManagment'
 import TradingProducts from '../../components/TradingProducts'
 import AddCoffee from '../../components/AddCoffee'
@@ -17,7 +18,13 @@ export default function Add() {
       {name:"",qualities:[]}
     ]
   )
-  const [coffeprod, setCoffeprod] = useState([{productname:"",origin:"",profile:"",processing:"",altitude:"",grade:"",image:"",price:"",descrption:""}])
+  
+  const [coffeprod, setCoffeprod] = useState([{productname:"",origin:"",profile:"",processing:"",altitude:"",grade:"",image:"",price:"",descrption:""}])  
+  const navigate = useNavigate();
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token || token !== "correct") navigate("/login");
+  }, [])
 
   return (
     <div className='flex flex-col items-center'>
@@ -25,7 +32,6 @@ export default function Add() {
     <ComposeEmail see4={see4} setsee4={setsee4}/>}
     {see3 &&
     <AddTrad setsee3={setsee3} see3={see3} />}
-    {console.log(TradePro)}
     {see2 &&
     <AddCoffee setsee2={setsee2} see2={see2}/>}
     <div className={`min-h-screen w-full ${see2 ? "blur":""} ${see3 ? "blur":""} ${see4 ? "blur":""}`}>

@@ -45,6 +45,7 @@ const addQuality = (index) => {
   const updated = [...TradePro];
   updated[index].qualities.push("New Quality");
   setTradePro(updated);
+  console.log(TradePro)
 };
 
 const removeQuality = (cardIndex, qualityIndex) => {
@@ -104,7 +105,7 @@ const deleteCard = async (index, e) => {
                   <Box className='text-white'/>
                 </div>
                 <div className='flex flex-col'>
-                  <h2 className='font-bold'>{item.name || 'Unnamed Category'}</h2>
+                  <h2 className='font-bold'>{item.productname || 'Unnamed Category'}</h2>
                   <span>{item.qualities.length} item{item.qualities.length !== 1 ? 's' : ''}</span>
                 </div>
               </div>
@@ -120,7 +121,7 @@ const deleteCard = async (index, e) => {
 
             </div>
 
-            <p>Complete range</p>
+            <p>{item.descrption}</p>
 
             {item.qualities.map((quality, i) => (
               <div key={i} className='p-2 bg-red-700/30 rounded-md flex justify-between items-center'>

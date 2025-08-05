@@ -60,29 +60,22 @@ export default function CoffeeManagment({setsee2, see2, coffeprod, setCoffeprod}
 
 
   useEffect(() => {
-    
-  const fetchData = async () => {
+    const fetchData = async () => {
     try {
       const res = await fetch('http://localhost:4000/local/products');
       const data = await res.json();
-     
-      console.log(data.products);
-
-      console.log(coffeprod)
-      setCoffeprod(data.products)
+      setCoffeprod(Array.isArray(data.products) ? data.products : [])
       console.log("yeah")
     } catch (err) {
       console.error('❌ Fetch error:', err);
     }
   };
-
   fetchData();
 }, []);
 
 
-
   const roma = (e)=>{
-
+    e.preventDefault() // ✅ correct
     console.log(e.Target.value)
   }
   
@@ -91,6 +84,26 @@ const r = (index, field, value) => {
   updated[index][field] = value; 
   setCoffeprod(updated);
 };
+
+const updateCard = async (index) => {
+  const product = coffeprod[index];
+  try {
+    const res = await fetch(`http://localhost:4000/local/products/${product._id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(product)
+    });
+    if (!res.ok) throw new Error("Update failed");
+    alert("Product updated successfully");
+  } catch (err) {
+    console.error(err);
+    alert("Update failed");
+  }
+};
+
+
 
 
 const deleteCard =async (index,e)=>{
@@ -180,12 +193,13 @@ const deleteCard =async (index,e)=>{
                 type="text"
                 value={coffee.productname}
                 onChange={(e) => r(key, 'name', e.target.value)}
+
               />
-              <input
+              {/* <input
                 type="text"
                 value={coffee.origin}
                 onChange={(e) => r(key, 'origin', e.target.value)}
-              />
+              /> */}
             </p>
           </div>
 
@@ -201,18 +215,18 @@ const deleteCard =async (index,e)=>{
                 <span className="text-gray-500 dark:text-white">{Langopt.h11}</span>
                 <input
                   type="text"
-                  value={coffee.profile}
-                  onChange={(e) => r(key, 'profile', e.target.value)}
+                  value={coffee.flavor}
+                  onChange={(e) => r(key, 'flavor', e.target.value)}
                 />
               </div>
-              <div className="flex flex-col gap-2">
+              {/* <div className="flex flex-col gap-2">
                 <span className="text-gray-500 dark:text-white">{Langopt.h12}</span>
                 <input
                   type="text"
                   value={coffee.processing}
                   onChange={(e) => r(key, 'processing', e.target.value)}
                 />
-              </div>
+              </div> */}
               <div className="flex flex-col gap-2">
                 <span className="text-gray-500 dark:text-white">{Langopt.h13}</span>
                 <input
@@ -224,7 +238,7 @@ const deleteCard =async (index,e)=>{
               <div className="flex flex-col gap-2">
                 <span className="text-gray-500 dark:text-white">{Langopt.h14}</span>
                 <span className="text-red-500">{Langopt.h15}</span>
-                <button type="submit">submit</button>
+                <button  onClick={() => updateCard(key)}>submit</button>
                 
               </div>
             </div>
