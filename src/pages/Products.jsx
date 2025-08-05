@@ -120,132 +120,6 @@ useEffect(() => {
 
   const [coffeeProducts, setcoffee] = useState([{}])
   const [tradingprodu, setTrading] = useState([{}])
-//   const tradingprodu = [
-//   {
-//     "image": Lifebuoy,
-//     "brand_name": Lang ? "ላይፍቦይ" : "Lifebuoy",
-//     "tagline": Lang ? "ዩኒሊቨር ብራንድ" :"Unilever Brand",
-//     "description": Lang ? "ለመላው ቤተሰብ የሚሆኑ የጤና እና የንፅህና ጥበቃ ምርቶች" :"Health and hygiene protection products for the whole family",
-//     "products": [
-//      Lang ? "ፀረ-ባክቴሪያ የእጅ ሳሙና" : "Antibacterial Hand Soap",
-//     Lang ? "የሰውነት ማጠቢያ" :"Body Wash",
-//      Lang ? "የእጅ ማጽጃ" : "Hand Sanitizer",
-//      Lang ? "ሙሉ ጥበቃ" : "Total Protection"
-//     ]
-//   },
-//   {
-//     "image": Sunsilk,
-//     "brand_name": Lang ? "ሰንሲልክ" :"Sunsilk",
-//     "tagline": Lang ? "ዩኒሊቨር ብራንድ" :"Unilever Brand",
-//     "description": Lang ? "ውብ እና ጤናማ ጸጕር ለማግኘት የተሟላ የፀጉር እንክብካቤ መፍትሄዎች" : "Complete hair care solutions for beautiful, healthy hair",
-//     "products": [
-//      Lang ? "ሻምፑ" : "Shampoo",
-//      Lang ? "ኮንዲሽነር" : "Conditioner",
-//     Lang ? "የፀጉር አያያዝ" :"Hair Treatment",
-//      Lang ? "ስታይሊንግ ፕሮዳክቶች" :"Styling Products"
-//     ]
-//   },
-//   {
-//     "image": Knorr,
-//     "brand_name": Lang ? "ክኖር" :"Knorr",
-//     "tagline": Lang ? "ዩኒሊቨር ብራንድ" :"Unilever Brand",
-//     "description": Lang ? "ከፍተኛ ጥራት ያላቸው የምግብ አዘገጃጀቶችና ጣዕም ማጎልበቻዎች" :"Premium cooking ingredients and flavor enhancers",
-//     "products": [
-//       Lang ? "የቅመማ ቅመም ኩብ" : "Seasoning Cubes",
-//       Lang ? "የሾርባ ድብልቆች" :"Soup Mixes",
-//       Lang ? "የምግብ አዘገጃጀት" :"Cooking Sauces",
-//       Lang ? "የቅመማ ቅመም ድብልቆች" :"Spice Blends"
-//     ]
-//   },
-//   {
-//     "image": Sunlight,
-//     "brand_name":Lang ? "ስንላይት" : "Sunlight",
-//     "tagline": Lang ? "ዩኒሊቨር ብራንድ" :"Unilever Brand",
-//     "description": Lang ? "በኩሽና እና በቤት ውስጥ ጥቅም ላይ የሚውሉ ኃይለኛ የጽዳት መፍትሄዎች" :"Powerful cleaning solutions for kitchen and household use",
-//     "products": [
-//      Lang ? "የዕቃ ማጠቢያ ፈሳሽ" : "Dishwashing Liquid",
-//      Lang ? "የልብስ ማጠቢያ ሳሙና" : "Laundry Bar Soap",
-//      Lang ? "ሁለገብ የጽዳት መሣሪያ" : "Multi-Purpose Cleaner",
-//      Lang ? "የወጥ ቤት ቅባት ማስወገጃ" : "Kitchen Degreaser"
-//     ]
-//   },
-//   {
-//     "image": Omo,
-//     "brand_name": Lang ? "ኦም" :"OMO",
-//     "tagline": Lang ? "ዩኒሊቨር ብራንድ" :"Unilever Brand",
-//     "description": Lang ? "የላቀ የጽዳት ውጤቶችን ለማግኘት የላቀ የልብስ ማጠቢያ እንክብካቤ" :"Advanced laundry care for superior cleaning results",
-//     "products": [
-//       Lang ? "የልብስ ማጠቢያ ዱቄት" :"Laundry Powder",
-//       Lang ? "ፈሳሽ ማጽጃ" :"Liquid Detergent",
-//       Lang ? "የጨርቃ ጨርቅ ማስታገሻ" :"Fabric Softener",
-//       Lang ? "ቆሻሻ ማስወገጃ" :"Stain Remover"
-//     ]
-//   },
-//   {
-//     "image": Signal,
-//     "brand_name":Lang ? "ሲግናል" : "Signal",
-//     "tagline": Lang ? "ዩኒሊቨር ብራንድ" :"Unilever Brand",
-//     "description":Lang ? "ጤናማ ጥርስና ድድ ለመጠበቅ የሚያስችል የተሟላ የቃል እንክብካቤ መፍትሄ" : "Complete oral care solutions for healthy teeth and gums",
-//     "products": [
-//     Lang ? "የጥርስ ሳሙና" :  "Toothpaste",
-//     Lang ? "የጥርስ ብሩሽ" : "Toothbrush",
-//     Lang ? "የአፍ ማጠቢያ" :  "Mouthwash",
-//     Lang ? "የጥርስ ህክምና ኪት" :  "Dental Care Kit"
-//     ]
-//   }
-// ]
-
-  // const coffeeProducts = [
-  //   {
-  //     id:1,
-  //     name: "Yirgacheffe Premium",
-  //     origin: "Yirgacheffe Region",
-  //     profile: "Floral, Citrus, Wine-like",
-  //     processing: "Washed",
-  //     altitude: "1,700-2,200m",
-  //     grade: "Grade 1",
-  //     image: "https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg",
-  //     price: "Premium Export Quality",
-  //     description: "Renowned for its bright acidity and complex floral notes, our Yirgacheffe coffee represents the pinnacle of Ethiopian coffee excellence."
-  //   },
-  //   {
-  //     id:2,
-  //     name: "Sidamo Excellence",
-  //     origin: "Sidamo Region",
-  //     profile: "Chocolate, Berry, Spice",
-  //     processing: "Natural",
-  //     altitude: "1,400-2,200m",
-  //     grade: "Grade 1",
-  //     image: "https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg",
-  //     price: "Premium Export Quality",
-  //     description: "Full-bodied with rich chocolate undertones and berry notes, Sidamo coffee offers a complex and satisfying cup."
-  //   },
-  //   {
-  //     id:3,
-  //     name: "Harrar Heritage",
-  //     origin: "Harrar Region",
-  //     profile: "Wine, Blueberry, Earthy",
-  //     processing: "Natural",
-  //     altitude: "1,500-2,100m",
-  //     grade: "Grade 1",
-  //     image: "https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg",
-  //     price: "Premium Export Quality",
-  //     description: "One of the world's oldest coffee varieties, Harrar offers distinctive wine-like characteristics and fruity complexity."
-  //   },
-  //   {
-  //     id:4,
-  //     name: "Limu Classic",
-  //     origin: "Limu Region",
-  //     profile: "Balanced, Sweet, Mild",
-  //     processing: "Washed",
-  //     altitude: "1,400-1,800m",
-  //     grade: "Grade 2",
-  //     image: "https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg",
-  //     price: "Export Quality",
-  //     description: "Well-balanced with mild acidity and sweet undertones, perfect for those seeking a smooth, approachable Ethiopian coffee."
-  //   }
-  // ];
-
 
   return (
     <div className="flex flex-col items-center bg-gray-50 ">
@@ -299,7 +173,7 @@ useEffect(() => {
         </div>
 
 {/* premium Ethiopian coffee  */}
-        <section id="coffee" className="flex flex-col items-center gap-4 px-12 py-4  dark:bg-gray-900">
+        <section id="coffee" className="flex flex-col items-center gap-4 px-12 py-4 w-full dark:bg-gray-900">
           <h1 className="text-center text-black font-bold text-5xl mt-12 mb-4 dark:text-white" > 
            {Langopt.h9}
           </h1>
@@ -316,9 +190,9 @@ useEffect(() => {
             <span>
             {coffee.productname}
             </span>
-            {/* <span>
+            <span>
             {coffee.origin}
-            </span> */}
+            </span>
           </p>
             </div>
           <div className="  flex flex-col gap-2 p-4 dark:text-gray-300">
@@ -328,10 +202,10 @@ useEffect(() => {
             <span className="text-gray-500 dark:text-white">{Langopt.h11}</span>
             <span>{coffee.flavor}</span>
           </div>
-          {/* <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2">
             <span  className="text-gray-500 dark:text-white">{Langopt.h12}</span>
             <span>{coffee.processing}</span>
-          </div> */}
+          </div>
           <div className="flex flex-col gap-2">
             <span className="text-gray-500 dark:text-white">{Langopt.h13}</span>
             <span>{coffee.altitude}</span>
@@ -410,32 +284,45 @@ useEffect(() => {
           </p>
           <div className=" w-full">
 
-            <div className="grid grid-cols-2  w-full items-center mx-4">
-              {Array.isArray(tradingprodu) && 
-              tradingprodu.map((product,key)=>(
-                <div key={key} className="flex flex-col rounded-2xl overflow-hidden w-[600px] bg-white mb-2  shadow-lg border border-red-400  hover:scale-102 transition-all duration-400 ease-in-out ">
-                 <div style={{ backgroundImage:  `url(${product.image})`, backgroundPosition: "center",}} className={` h-[200px] relative w-[600px]  bg-no-repeat`}>
-                <p className="items-start flex  flex-col gap-4 ml-3 absolute bottom-0 left-0">
-                  <span className="text-2xl font-bold ">
-                    {product.productname}
-                  </span>
-                  {/* <span className="font-stretch-semi-condensedbold">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full md:px-24 px-12">
+  {Array.isArray(tradingprodu) &&
+    tradingprodu.map((product, key) => (
+      <div
+        key={key}
+        className="flex flex-col rounded-2xl dark:bg-gradient-to-b dark:from-gray-800 dark:to-gray-600 overflow-hidden bg-white mb-4 shadow-lg border border-red-400 hover:scale-[1.02] transition-transform duration-300 ease-in-out max-w-full"
+        style={{ width: '100%' }}
+      >
+        <div
+          style={{
+            backgroundImage: `url(${product.image})`,
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+          className="h-[200px] relative w-full"
+        >
+          <p className="absolute bottom-0 left-0 text-white ml-8  flex flex-col gap-2 items-start  drop-shadow-md">
+            <span className="text-2xl font-bold">{product.productname}</span>
+            <span className="font-stretch-semi-condensedbold">
                     {product.tagline}
-                  </span> */}
-                </p>
-                </div>
-                <div className="flex flex-col gap-4 p-4  bg-gray-50 dark:bg-gradient-to-b  dark:from-gray-800 dark:to-gray-600">
-                 <p className="dark:text-gray-200">{product.description}</p>
-                 {product.qualities.map((qualities,i)=>{
-                  <p className={smallcards} key={i}> <CheckCircle/> {qualities}</p>
-                 })}
-                 
-                </div>
-            
-              </div>
-            ))}
+                  </span>
+          </p>
+        </div>
 
-            </div>
+        <div className="flex flex-col gap-4 p-6">
+          <p className="dark:text-gray-200">{product.description}</p>
+          {product.qualities?.map((quality, i) => (
+            <p className={smallcards + " px-4"} key={i}>
+              <CheckCircle className="inline mr-2" /> {quality}
+            </p>
+          ))}
+        </div>
+      </div>
+    ))}
+</div>
+
+
+
 
           </div>
 

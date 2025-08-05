@@ -113,6 +113,7 @@ const deleteCard = async (index, e) => {
                 {item.productname || "Unnamed Category"}
               </h2>
               <span className="text-sm text-gray-600">
+                {item.tagline}
                 {item.qualities.length} item
                 {item.qualities.length !== 1 ? "s" : ""}
               </span>
