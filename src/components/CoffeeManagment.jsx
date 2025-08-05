@@ -4,6 +4,7 @@ import { useLanguageContext } from '../LanguageContext';
 export default function CoffeeManagment({setsee2, see2, coffeprod, setCoffeprod}) {
   const [see,setsee]=useState(true)
    const {Lang,toggleLang} = useLanguageContext();
+   
     const  Langopt ={
     h1: Lang ? "ኪንግደም ":"kingdom",
     h2: Lang ? "ቢዝነስ ምርቶች እና ":"Business products &",
@@ -64,10 +65,12 @@ export default function CoffeeManagment({setsee2, see2, coffeprod, setCoffeprod}
     try {
       const res = await fetch('http://localhost:4000/local/products');
       const data = await res.json();
-      console.log(data);
+     
+      console.log(data.products);
+
+      console.log(coffeprod)
       setCoffeprod(data.products)
       console.log("yeah")
-    console.log(coffeprod)
     } catch (err) {
       console.error('❌ Fetch error:', err);
     }
@@ -175,7 +178,7 @@ const deleteCard =async (index,e)=>{
             <p className="flex flex-col gap-1 absolute bottom-0 left-0 pb-2 pl-5 text-white">
               <input
                 type="text"
-                value={coffee.name}
+                value={coffee.productname}
                 onChange={(e) => r(key, 'name', e.target.value)}
               />
               <input
@@ -189,7 +192,7 @@ const deleteCard =async (index,e)=>{
           <div className="flex flex-col gap-2 p-4 dark:text-gray-300">
             <textarea
               type="text"
-              value={coffee.description}
+              value={coffee.descrption}
               onChange={(e) => r(key, 'description', e.target.value)}
             />
 
