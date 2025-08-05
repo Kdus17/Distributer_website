@@ -316,9 +316,9 @@ useEffect(() => {
             <span>
             {coffee.productname}
             </span>
-            {/* <span>
+            <span>
             {coffee.origin}
-            </span> */}
+            </span>
           </p>
             </div>
           <div className="  flex flex-col gap-2 p-4 dark:text-gray-300">
@@ -328,10 +328,10 @@ useEffect(() => {
             <span className="text-gray-500 dark:text-white">{Langopt.h11}</span>
             <span>{coffee.flavor}</span>
           </div>
-          {/* <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2">
             <span  className="text-gray-500 dark:text-white">{Langopt.h12}</span>
             <span>{coffee.processing}</span>
-          </div> */}
+          </div>
           <div className="flex flex-col gap-2">
             <span className="text-gray-500 dark:text-white">{Langopt.h13}</span>
             <span>{coffee.altitude}</span>

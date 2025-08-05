@@ -1,5 +1,5 @@
 import { Coffee, X } from 'lucide-react'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import ErrorCard from '../assets/ErrorCard'
 
 export default function AddCoffee({ setsee2, see2 }) {
@@ -17,6 +17,35 @@ export default function AddCoffee({ setsee2, see2 }) {
 
   const [some, setsome] = useState(false)
   const [errors, seterrors] = useState({})
+  const fileInputRef = useRef(null)
+
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0]
+    if (!file) return
+
+    // Only allow images (optional, already filtered by accept)
+    if (!file.type.startsWith('image/')) {
+      seterrors((prev) => ({ ...prev, image: 'Please select a valid image file.' }))
+      setsome(true)
+      return
+    }
+
+    // Read the file as base64 string
+    const reader = new FileReader()
+    reader.onloadend = () => {
+      setFromData((prev) => ({
+        ...prev,
+        image: reader.result  // base64 string
+      }))
+      seterrors((prev) => ({
+        ...prev,
+        image: ''
+      }))
+      setsome(false)
+    }
+    reader.readAsDataURL(file)
+  }
 
   const handlechange = (e) => {
     const { name, value } = e.target
@@ -151,13 +180,36 @@ export default function AddCoffee({ setsee2, see2 }) {
           </select>
           {errors.grade && <span className='text-red-500 text-sm'>{errors.grade}</span>}
         </div>
+        <div className='col-span-2 flex flex-col py-2 gap-2'>
+          <p className='text-lg font-semibold'>Image Upload</p>
 
-        {/* Optional Image Preview */}
-        {formData.image && (
-          <div className='col-span-2 flex justify-center py-2'>
-            <img src={formData.image} alt="Preview" className="max-h-48 rounded-xl border" />
-          </div>
-        )}
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
+            ref={fileInputRef}
+            className="hidden"
+          />
+
+          <button
+            type="button"
+            className="border rounded-xl p-2 bg-red-200 hover:bg-red-300 text-red-800 font-semibold"
+            onClick={() => fileInputRef.current && fileInputRef.current.click()}
+          >
+            Choose Image
+          </button>
+
+          {errors.image && <span className='text-red-500 text-sm'>{errors.image}</span>}
+
+          {/* Optional Image Preview */}
+          {formData.image && (
+            <img
+              src={formData.image}
+              alt="Preview"
+              className="max-h-48 rounded-xl border mt-2"
+            />
+          )}
+        </div>
 
         <div className='col-span-2 flex gap-3 py-2'>
           <button type='submit' className='text-lg font-semibold w-full border text-center rounded-xl border-red-700 bg-red-600 text-white p-2'>
