@@ -65,7 +65,7 @@ export default function CoffeeManagment({setsee2, see2, coffeprod, setCoffeprod}
       const res = await fetch('http://localhost:4000/local/products');
       const data = await res.json();
       setCoffeprod(Array.isArray(data.products) ? data.products : [])
-      console.log("yeah")
+      console.log(data)
     } catch (err) {
       console.error('❌ Fetch error:', err);
     }
@@ -156,7 +156,7 @@ const deleteCard =async (index,e)=>{
             className="bg-cover h-[200px] relative cursor-pointer"
           >
             <input value={coffee.grade} className="bg-yellow-400 px-1 py-0.5 rounded-full mt-3 mr-4 absolute top-0 right-0"
-                onChange={(e) => r(key, 'image', e.target.value)}
+                onChange={(e) => r(key, 'grade', e.target.value)}
                 onClick={(e) => (e.stopPropagation())}
                 type='text'
             />
@@ -192,14 +192,16 @@ const deleteCard =async (index,e)=>{
               <input
                 type="text"
                 value={coffee.productname}
-                onChange={(e) => r(key, 'name', e.target.value)}
+                 onClick={(e) => (e.stopPropagation())}
+                onChange={(e) => r(key, 'productname', e.target.value)}
 
               />
-              {/* <input
+              <input
                 type="text"
                 value={coffee.origin}
+                 onClick={(e) => (e.stopPropagation())}
                 onChange={(e) => r(key, 'origin', e.target.value)}
-              /> */}
+              />
             </p>
           </div>
 
@@ -207,7 +209,7 @@ const deleteCard =async (index,e)=>{
             <textarea
               type="text"
               value={coffee.descrption}
-              onChange={(e) => r(key, 'description', e.target.value)}
+              onChange={(e) => r(key, 'descrption', e.target.value)}
             />
 
             <div className="grid grid-cols-2 gap-4">
@@ -215,18 +217,18 @@ const deleteCard =async (index,e)=>{
                 <span className="text-gray-500 dark:text-white">{Langopt.h11}</span>
                 <input
                   type="text"
-                  value={coffee.flavor}
-                  onChange={(e) => r(key, 'flavor', e.target.value)}
+                  value={coffee.profile}
+                  onChange={(e) => r(key, 'profile', e.target.value)}
                 />
               </div>
-              {/* <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2">
                 <span className="text-gray-500 dark:text-white">{Langopt.h12}</span>
                 <input
                   type="text"
                   value={coffee.processing}
                   onChange={(e) => r(key, 'processing', e.target.value)}
                 />
-              </div> */}
+              </div>
               <div className="flex flex-col gap-2">
                 <span className="text-gray-500 dark:text-white">{Langopt.h13}</span>
                 <input
