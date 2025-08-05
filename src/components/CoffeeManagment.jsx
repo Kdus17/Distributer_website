@@ -4,6 +4,7 @@ import { useLanguageContext } from '../LanguageContext';
 export default function CoffeeManagment({setsee2, see2, coffeprod, setCoffeprod}) {
   const [see,setsee]=useState(true)
    const {Lang,toggleLang} = useLanguageContext();
+   
     const  Langopt ={
     h1: Lang ? "ኪንግደም ":"kingdom",
     h2: Lang ? "ቢዝነስ ምርቶች እና ":"Business products &",
@@ -63,7 +64,6 @@ export default function CoffeeManagment({setsee2, see2, coffeprod, setCoffeprod}
     try {
       const res = await fetch('http://localhost:4000/local/products');
       const data = await res.json();
-      console.log(data);
       setCoffeprod(Array.isArray(data.products) ? data.products : [])
       console.log("yeah")
     } catch (err) {
@@ -192,7 +192,8 @@ const deleteCard =async (index,e)=>{
               <input
                 type="text"
                 value={coffee.productname}
-                onChange={(e) => r(key, 'productname', e.target.value)}
+                onChange={(e) => r(key, 'name', e.target.value)}
+
               />
               {/* <input
                 type="text"
@@ -206,7 +207,7 @@ const deleteCard =async (index,e)=>{
             <textarea
               type="text"
               value={coffee.descrption}
-              onChange={(e) => r(key, 'descrption', e.target.value)}
+              onChange={(e) => r(key, 'description', e.target.value)}
             />
 
             <div className="grid grid-cols-2 gap-4">

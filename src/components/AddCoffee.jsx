@@ -7,13 +7,13 @@ export default function AddCoffee({setsee2, see2}) {
   const [formData, setFromData] = useState({
     productname:"",
     origin:"",
-    flavor:"",
-    method:"",
+    profile:"",
     altitude:"",
     grade:"",
     image:"",
     cat:"",
     descrption:"",
+    processing:""
     
   })
 
@@ -43,10 +43,10 @@ export default function AddCoffee({setsee2, see2}) {
     if(!formData.origin.trim()){
       newerrors.origin = "You forgot to write descrption!"
     }
-    if(!formData.flavor.trim()){
-      newerrors.flavor = "product name is required!"
+    if(!formData.profile.trim()){
+      newerrors.profile = "product name is required!"
     }
-    if(!formData.method.trim()){
+    if(!formData.processing.trim()){
       newerrors.method = "You forgot to write descrption!"
     }    
     if(!formData.altitude.trim()){
@@ -69,6 +69,7 @@ export default function AddCoffee({setsee2, see2}) {
     seterrors(newerrors)
     console.log(newerrors)
     setsome(true)
+    console.log(errors)
     }
 
     const post_options = {
@@ -112,12 +113,12 @@ export default function AddCoffee({setsee2, see2}) {
 
         <div className='col-span-2 md:col-span-1 flex flex-col py-2 gap-2'>
           <p className='text-lg font-semibold'>Flavor Profile</p>
-          <input type="text" className='p-2 border outline-none rounded-xl bg-red-100 border-red-300' name='flavor' value={formData.flavor} onChange={handlechange}/>
+          <input type="text" className='p-2 border outline-none rounded-xl bg-red-100 border-red-300' name='profile' value={formData.profile} onChange={handlechange}/>
         </div>
 
         <div className='col-span-2 md:col-span-1 flex flex-col py-2 gap-2'>
           <p className='text-lg font-semibold'>Processing Method</p>
-          <select type="text" className='p-2 border outline-none rounded-xl bg-red-100 border-red-300' name='method' id='method' value={formData.method} onChange={handlechange}>
+          <select type="text" className='p-2 border outline-none rounded-xl bg-red-100 border-red-300' name='processing' id='method' value={formData.processing} onChange={handlechange}>
            <option value="">Select Processing</option>
            <option value="Washed">Washed</option>
            <option value="Natural">Natural</option>
@@ -165,4 +166,3 @@ export default function AddCoffee({setsee2, see2}) {
 </div>
   )
 }
-

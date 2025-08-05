@@ -18,8 +18,8 @@ export default function Add() {
       {name:"",qualities:[]}
     ]
   )
-  const [coffeprod, setCoffeprod] = useState([{name:"",origin:"",profile:"",processing:"",altitude:"",grade:"",image:"",price:"",description:""}])
   
+  const [coffeprod, setCoffeprod] = useState([{productname:"",origin:"",profile:"",processing:"",altitude:"",grade:"",image:"",price:"",descrption:""}])  
   const navigate = useNavigate();
   useEffect(() => {
     const token = localStorage.getItem("token");
