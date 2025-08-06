@@ -7,7 +7,7 @@ export default function TradingProducts({see3, setsee3, TradePro, setTradePro}) 
 useEffect(() => {
   const fetchData = async () => {
     try {
-      const res = await fetch('https://distributor-backend.onrender.com/local/trade');
+      const res = await fetch('http://localhost:4000/local/trade');
       const data = await res.json();
       console.log(data);
       setTradePro(Array.isArray(data.trade) ? data.trade : []);
@@ -42,7 +42,7 @@ const handleImageChange = (e, index) => {
 const saveChanges = async (product) => {
   console.log('✅', product);
   try {
-    const res = await fetch(`https://distributor-backend.onrender.com/local/trade/${product._id}`, {
+    const res = await fetch(`http://localhost:4000/local/trade/${product._id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(product)
@@ -80,7 +80,7 @@ const deleteCard = async (index, e) => {
   const toDelete = TradePro[index];
 
   try {
-    const res = await fetch(`https://distributor-backend.onrender.com/local/trade/${toDelete._id}`, {
+    const res = await fetch(`http://localhost:4000/local/trade/${toDelete._id}`, {
       method: 'DELETE',
     });
 

@@ -40,7 +40,7 @@ export default function ComposeEmail({see4, setsee4}) {
                 formData
             })
         }
-        const response = await fetch(`https://distributor-backend.onrender.com/local/send-email`,post_options)
+        const response = await fetch(`http://localhost:4000/local/send-email`,post_options)
         console.log(response.json())
     }
     
