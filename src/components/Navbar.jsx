@@ -70,8 +70,8 @@ function Navbar() {
           <div className="flex flex-col gap-1">
             <label className="text-sm">Language</label>
             <select onChange={toggleLang} className="border rounded px-2 py-1 dark:bg-[#121212]">
-              <option value="eng">English</option>
-              <option value="amh">አማርኛ</option>
+              <option value="eng">አማርኛ </option>
+              <option value="amh">English</option>
             </select>
           </div>
 

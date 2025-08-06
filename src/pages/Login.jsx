@@ -84,10 +84,10 @@ const {Lang,toggleLang} = useLanguageContext();
       t1: Lang ?  "ኪንግደም ብዝንስ": "kingdom's business",
       t2:Lang ?  "የኢሜይል አድራሻ": "Email",
       t3:Lang ?  "የይለፍ ቃል": "Password",
-      t4:Lang ?  "እኔን አስታውስ": "Remember me",
-      t5:Lang ?  "መመዝገብ": "Sign Up",
-      t6:Lang ?  "መለያ የለዎትም?": "Don't have an account?",
-      t7:Lang ?  "መመዝገብ": "Sign Up",
+
+      t5:Lang ?  "ግባ": "login",
+
+     
     }
   return (
     <div className="min-h-screen flex  justify-center items-center bg-gray-100 dark:bg-[#121212]">
@@ -116,11 +116,7 @@ const {Lang,toggleLang} = useLanguageContext();
             {errors.password && <ErrorCard wrong={errors.password}/>}
           </div>
 
-          {/**Remember me */}
-          <div className="flex gap-2 items-center select-none">
-            <input type="checkbox" name="rem" id="rem" className="apperance-none w-4 h-4 accent-red-500"/>
-            <label htmlFor="rem" className="font-serif">{Langopt.t4}</label>
-          </div>
+          
 
           {/**Button */}
           <div className="flex justify-center mt-6 select-none">
@@ -129,10 +125,7 @@ const {Lang,toggleLang} = useLanguageContext();
               {Langopt.t5}</button>
           </div>
 
-          <div className="flex justify-center gap-1 items-center select-none">
-            <p className="text-gray-400">{Langopt.t6}</p>
-            {/* <Link to={'/signup'} className="text-red-500">{Langopt.t7}</Link> */}
-          </div>
+          
         </div>
     </div>
   )
