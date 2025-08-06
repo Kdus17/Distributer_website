@@ -62,7 +62,7 @@ export default function CoffeeManagment({setsee2, see2, coffeprod, setCoffeprod}
   useEffect(() => {
     const fetchData = async () => {
     try {
-      const res = await fetch('http://localhost:4000/local/products');
+      const res = await fetch('https://distributor-backend.onrender.com/local/products');
       const data = await res.json();
       setCoffeprod(Array.isArray(data.products) ? data.products : [])
       console.log(data)
@@ -88,7 +88,7 @@ const r = (index, field, value) => {
 const updateCard = async (index) => {
   const product = coffeprod[index];
   try {
-    const res = await fetch(`http://localhost:4000/local/products/${product._id}`, {
+    const res = await fetch(`https://distributor-backend.onrender.com/local/products/${product._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
@@ -110,7 +110,7 @@ const deleteCard =async (index,e)=>{
   e.stopPropagation(); 
   const todelete = coffeprod[index]
   try{
-    const del = await fetch(`http://localhost:4000/local/products/${todelete._id}`,{
+    const del = await fetch(`https://distributor-backend.onrender.com/local/products/${todelete._id}`,{
       method: "DELETE"
     })
     if (!del.ok) throw new Error('Failed to delete');

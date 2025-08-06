@@ -71,7 +71,7 @@ export default function AddTrad({see3, setsee3}) {
       body: JSON.stringify(formData),
     }
 
-    const response = await fetch('http://localhost:4000/local/post', post_options);
+    const response = await fetch('https://distributor-backend.onrender.com/local/post', post_options);
     const data = await response.json()
     console.log(data)
   }
@@ -85,7 +85,7 @@ export default function AddTrad({see3, setsee3}) {
       body: JSON.stringify(formData),
     }
 
-    const response = await fetch('http://localhost:4000/local/post', post_options);
+    const response = await fetch('https://distributor-backend.onrender.com/local/post', post_options);
     const data = await response.json()
     console.log(data)
   }

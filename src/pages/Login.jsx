@@ -23,7 +23,7 @@ const handleLogin = async () => {
   if (Object.keys(errors).length > 0) return;
 
   try {
-    const response = await fetch('http://localhost:4000/local/login', {
+    const response = await fetch('https://distributor-backend.onrender.com/local/login', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

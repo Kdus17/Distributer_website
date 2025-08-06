@@ -94,7 +94,7 @@ export default function AddCoffee({ setsee2, see2 }) {
     }
 
     try {
-      const response = await fetch('http://localhost:4000/local/poster', post_options)
+      const response = await fetch('https://distributor-backend.onrender.com/local/poster', post_options)
       const data = await response.json()
       console.log(data)
 

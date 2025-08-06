@@ -28,7 +28,7 @@ const handleclick = async() => {
       email
     })
   }
-  const response = await fetch(`http://localhost:4000/local/e`, post_options)
+  const response = await fetch(`https://distributor-backend.onrender.com/local/e`, post_options)
   const json_response = await response.json();
   console.log(json_response);
 }
@@ -91,7 +91,7 @@ const handleclick = async() => {
 useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('http://localhost:4000/local/trade');
+        const res = await fetch('https://distributor-backend.onrender.com/local/trade');
         const data = await res.json();
         console.log(data);
         setTrading(Array.isArray(data.trade) ? data.trade : []);
@@ -106,7 +106,7 @@ useEffect(() => {
 useEffect(() => {
     const fetchData = async () => {
     try {
-      const res = await fetch('http://localhost:4000/local/products');
+      const res = await fetch('https://distributor-backend.onrender.com/local/products');
       const data = await res.json();
       console.log(data);
       setcoffee(Array.isArray(data.products) ? data.products : [])
@@ -141,8 +141,8 @@ useEffect(() => {
         <p className="mt-12 max-w-160 text-center">
 {Langopt.h4}
         </p>
-        <p className="text-center mt-3 p-4 dark:bg-white/5 dark:text-gray-400 bg-gray-600  inset-ring-1 inset-ring-gray-400/20 rounded-lg "/> 
-{Langopt.h5}
+        <p className=" mt-8 p-8 "/> 
+
 
 
         <div className='bg-gray-100/20 px-11 py-6 mt-6 rounded-2xl '>
