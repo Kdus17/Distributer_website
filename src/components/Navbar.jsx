@@ -36,8 +36,8 @@ function Navbar() {
           <Link to="/us" className="text-sm md:text-lg">{language.Aboutus}</Link>
           <Link to="/Contact" className="text-sm md:text-lg">{language.Contactus}</Link>
            <select onChange={toggleLang} className="border rounded px-2 py-1 dark:bg-[#121212]">
-              <option value="eng">English</option>
-              <option value="amh">አማርኛ</option>
+              <option value="eng">አማርኛ</option>
+              <option value="amh">English</option>
             </select>
               {/* Theme Toggle (Mobile only) */}
           <div className="flex flex-col gap-1">

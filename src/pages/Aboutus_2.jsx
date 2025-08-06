@@ -113,52 +113,7 @@ const businessobj =[
     desc:  Lang ? "በምርታችን እና በአገልግሎት አቅርቦታችን የላቀነትን ለማሳካት እንጥራለን" :"We strive to achieve excellence in our product & Service delivery",
     color:"bg-gradient-to-br from-green-500 to-green-700"
     }];
-/* const lang = {
-   t1: Lang ? "የኢትዮጵያ ዋና" : "Ethiopia's Premier",
-   t2: Lang ? "የቡና ላኪ እና" : "Coffee Exporter &",
-   t3: Lang ? "ልዩ የዩኒሊቨር አከፋፋይ" : "Unilever Distributor",
-   t4: Lang ? "ኪንግደም ቢዝነስ ፒኤልሲ የዩኒሊቨር ምርቶች የኢትዮጵያ ታማኝ ልዩ አከፋፋይ እና ከፍተኛ ጥራት ያለው የኢትዮጵያ ቡና ላኪ ነው። ዓለም አቀፍ ብራንዶችን ከአካባቢያዊ ገበያዎች ጋር የሚያገናኙ እና የማህበረሰብ እድገትን የሚያበረታቱ የተቀናጁ የንግድ መፍትሄዎችን እናቀርባለን። " :"Kingdom Business PLC is Ethiopia’s trusted special distributor of Unilever products and a premier exporter of high-quality Ethiopian coffee. We deliver integrated trading solutions that connect global brands to local markets while fostering community growth",
-   t5: Lang ? "በጥራት፣ በቅንነት እና በዘላቂ የንግድ ልምዶች አህጉራትን ማገናኘት" : "Bridging continents through quality, integrity and sustainable trade practices",
-   t6: Lang ? "ዋነኛ እሴቶቻችን " : "Our Core Values",
-   t7: Lang ? "እያንዳንዱን ውሳኔ እና የምንገነባውን እያንዳንዱን ግንኙነት የሚቀርጹ መመሪያዎች" : "Guiding principles that shape every decision we make and every relationship we build",
-   t8: Lang ? 'የዩኒሊቨር አጋርነት' : 'Unilever Partnership',
-   t9: Lang ? 'ልዩ አከፋፋይ ሁኔታ' : 'Special Distributor Status',
-   t10: Lang ? 'በኢትዮጵያ የዩኒሊቨር ምርቶች ልዩ አከፋፋይ እንደመሆናችን መጠን በዓለም አቀፍ ደረጃ የታመኑ የሸማች ዕቃዎችን ለአካባቢያዊ ገበያዎች እናቀርባለን። አጋርነታችን ትክክለኛዎቹ የዩኒሊቨር ምርቶች በጠንካራ እና ሰፊ በሆነ የስርጭት አውታረ መረባችን በኩል ወደ ኢትዮጵያ ሸማቾች እንዲደርሱ ዋስትና ይሰጣል።' : 'As the special distributor of Unilever products in Ethiopia, we deliver globally trusted consumer goods to local markets. Our partnership guarantees that authentic Unilever products reach Ethiopian consumers through our robust and far-reaching distribution network.',
-   t11: Lang ? '500+ ምርቶች' : '500+ products',
-   t12: Lang ? 'የግል እንክብካቤን፣ የቤት እንክብካቤን እና የምግብ ምርቶችን ጨምሮ ሙሉ የዩኒሊቨር ፖርትፎሊዮ።' : 'complete Unilever portfolio including personal care, home care and food products',
-   t13: Lang ? 'ሜጀር ሪች' : 'Major Reach',
-   t14: Lang ? 'ዋና ዋና የኢትዮጵያ ክልሎችን ያካተተ አጠቃላይ ተደራሽነት።' : 'Comprehensive reach containing major Ethiopian regions',
-   t15: Lang ? "የኢትዮጵያ ቡና ልዕልና" : "Ethiopian Coffee Excellence",
-   t16: Lang ? "የኢትዮጵያ ቡና ለየት ባለ መዓዛው እና ለየት ባለ ጣዕሙ በዓለም አቀፍ ደረጃ ከፍተኛ ተፈላጊነትን ማግኘቱን ቀጥሏል። እንደ የአየር ንብረት ለውጥ እና የደን ጭፍጨፋ ያሉ ቀጣይ ተግዳሮቶች ቢኖሩም ከፍተኛ ጥራት ያለው ቡና ለማምረት እና ለማቅረብ ቁርጠኛ ነን" : "Ethiopian coffee continues to enjoy strong international demand, renowned for its unique aroma and distinct flavor.  Despite ongoing challenges such as climate change and deforestation, we remain committed to sourcing and delivering high-quality coffee",
-   t17: Lang ? "አብዛኛው የኢትዮጵያ ቡና የሚመረተው በተራራማ አካባቢዎች ቢሆንም የሀገሪቱ የተለያዩ መልክዓ ምድራዊ አቀማመጥ እና የአየር ንብረት የተለያዩ የቡና ዝርያዎች እንዲኖሩ ያስችላቸዋል። በጣም ታዋቂዎቹ ዝርያዎች የሚከተሉትን ያካትታሉ: ጌሻ( ወይም ጌሻ)፣ ይርጋቼፌ እና ሲዳሞ " : "While most Ethiopian coffee is grown in the highlands, the country's diverse geography and climate allow for a wide range of coffee varieties. The most popular varieties include: Gesha (or Geisha), Yirgacheffe, and Sidamo",
-   t18: Lang ? "ከፍተኛ ከፍታ " : "High Altitude",
-   t19: Lang ? "የላቀ ጣዕም መገለጫዎችን ለማግኘት በጣም ጥሩ ከሆኑ የዕድገት ክልሎች ማምረት" : "Sourcing from optimal growing regions for superior flavor profiles",
-   t20: Lang ? "ኦርጋኒክ ጥራት " : "Organic Quality",
-   t21: Lang ? "የተፈጥሮ ኦርጋኒክ የእርሻ ልምዶችን እና የምስክር ወረቀቶችን መደገፍ " : "Supporting naturally organic farming practices and certification",
-   t22: Lang ? "የንግድ ግቦቻችን " : "Our Business Objectives",
-   t23: Lang ? "የኤክስፖርት እና የሀገር ውስጥ ንግድ ስራዎችን ለማጐልበት ተልዕኮአችንን የሚገፋፉ ስትራቴጂካዊ ግቦች" : "Strategic goals driving our misson to enhance export and domestic trading operations",
-   t24: Lang ? "ስትራቴጂያዊ ራዕያችን" : "Our Strategic Vision",
-   t25: Lang ? "የዛሬ ተጽዕኖያችን" : "Our Impact Today",
-   t26: Lang ? "በዘላቂ የንግድ ልውውጦች አማካኝነት በኢትዮጵያ ልቀት እና በዓለም አቀፍ ገበያዎች መካከል ድልድይ መገንባት" : "Building bridges between Ethiopian excellence and global markets through sustainable trading practices",
-   t27: Lang ? "የእኛን የንግድ አውታረ መረብ ይቀላቀሉ " : "Join Our Trading Network",
-   t28: Lang ? "ከፍተኛ ጥራት ያለው የኢትዮጵያ ቡና ለማግኘት፣ የንግድ እድሎችን ለመዳሰስ፣ ወይም ዘላቂ በሆኑ የንግድ ልምዶች ከእኛ ጋር ለመተባበር ቢፈልጉ፣ በዓለም ዙሪያ ማህበረሰቦችን እና ገበያዎችን የሚጠቅሙ ዘላቂ ግንኙነቶችን ለመገንባት እዚህ ተገኝተናል" : "Whether you're looking to source premium Ethiopian coffee, explore trading opportunities, or partner with us in sustainable business practices, we're here to build lasting relationships that benefit communities and markets worldwide.",
-   t29: Lang ? "የቡና ምርቶችን ያስሱ " : "Explore Coffee Products",
-   t30: Lang ? "የሽርክና ዕድሎች" : "Partnership Opportunities",
-   t31: Lang ? "ዓለም አቀፋዊ ንግድ " : "Global Trading",
-   t32: Lang ? "የኢትዮጵያን የላቀ ጥራት ለመለማመድ ዝግጁ ነዎት? " : "Ready to Experience Ethiopian Excellence?",
-   t33: Lang ? "ኪንግደም ቢዝነስ ፒኤልሲ የንግድ ስራዎን እንዴት እንደሚያሻሽል እና ወደ ኢትዮጵያ ምርጥ ምርቶች እንዴት እንደሚያቀርብልዎ ለማወቅ ከእኛ ጋር ይገናኙ " : "Connect with us to discover how Kingdom Business PLC can enhance your trading operations  and bring you closer to Ethiopia's finest products.",
-   t34: Lang ? "ጉዞአችሁን ጀምሩ" : "ጉዞአችሁን ጀምሩ",
-   t35: Lang ? "ያለንበት ቦታ" : "Our Location",
-   t36: Lang ? "አዲስ አበባ፣ ኢትዮጵያ" : "Addis Abeba, Ethiopia",
-   t37: Lang ? "አድራሻ" : "Address",
-   t38: Lang ? "የዓለም ሕንጻ፣ 5ኛ ፎቅ" : "Alem bulding, 5th floor",
-   t39: Lang ?  "አዲስ አበባ፣ ገርጂ":"Addis Abeba, Gerji",
-   t40: Lang ?  "ኢትዮጵያ":"Ethiopia",
-   t41: Lang ? "ኪንግደም ቢዝነስ ፒልሲ" : "Kingdom Business PLC",
-   t42: Lang ? "አዲስ አበባ፣ ኢትዮጵያ" : "Addis Abeba, Ethiopia",
-   t43: Lang ? "አቅጣጫውን ጠይቅ" : "get directions"
-   
-  } */
+
   const navigate = useNavigate();
   
   return (
@@ -204,8 +159,8 @@ const businessobj =[
     </div>
 
     {/**mountain and leafes */}      
-    <div className='dark:bg-darkc flex gap-4'>
-    <div className='bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl my-20 mx-4 p-8 lg:p-12 shadow-2xl flex flex-col lg:flex-row gap-12 md:mx-24v dark:from-gray-700 dark:to-gray-600 w-full'>
+    <div className='dark:bg-darkc flex flex-col sm:flex-row gap-4'>
+    <div className='bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl sm:my-20 mx-4 p-8 lg:p-12 shadow-2xl flex flex-col lg:flex-row gap-12 md:mx-24v dark:from-gray-700 dark:to-gray-600 w-full'>
             <div className='flex flex-col w-full text-center '>
                 <div className='flex w-full gap-2'>
                 <div className='bg-white/30 rounded-full h-13'><BoxIcon className='w-13 h-13 p-3'/></div>
@@ -351,9 +306,9 @@ const businessobj =[
         
     </div>
     {/* where are we */}
- <div className='flex gap-4 justify-center w-full p-6  dark:bg-darkc'>
+ <div className='flex flex-col sm:flex-row gap-4 justify-center w-full p-6  dark:bg-darkc'>
     
-        <div className='p-9 bg-white/60 shadow-lg gap-2.5 flex flex-col w-full bg-gradient-to-r from-red-50 to-red-400 dark:from-gray-700 dark:to-gray-800'>
+    <div className='p-9 bg-white/60 shadow-lg gap-2.5 flex flex-col w-full bg-gradient-to-r from-red-600 to-red-700 dark:from-gray-700 dark:to-gray-800'>
 <div className='flex justify-start  gap-2.5  '>
  <div className='bg-white/30 rounded-full'><BoxIcon className='w-16 h-16 p-3'/></div>
  <div className='flex flex-col gap-1.5 dark:text-white'>
@@ -374,10 +329,10 @@ const businessobj =[
 
 </div>
     
-    <div className='flex flex-col gap-4 p-6 w-full bg-white/60 shadow-lg bg-gradient-to-r from-red-50 to-red-400 dark:from-gray-700 dark:to-gray-800'>
+    <div className='flex flex-col gap-4 p-6 w-full bg-white/60 shadow-lg bg-gradient-to-r from-red-600 to-red-700 dark:from-gray-700 dark:to-gray-800'>
         <div className='self-end p-2 flex gap-1.5 bg-gray rounded-md bg-white/30'>
             <PinIcon className='dark:text-white' />
-            <p className='text-gray-200'>
+            <p className=''>
              {lang.t40}
             </p>
         </div>
@@ -385,7 +340,7 @@ const businessobj =[
         <div className='flex flex-col gap-3.5 items-center  '>
              <div className='bg-white/30 rounded-full dark:text-white'><MapPin className='w-16 h-16 p-3'/></div>
                <h1 className='text-3xl font-bold dark:text-gray-50'>{lang.t41}</h1>
-               <p className='text-gray-500 dark:text-gray-200'>{lang.t42}</p>
+               <p className=' dark:text-gray-200'>{lang.t42}</p>
                <button  id='show' onClick={() => setShow(!show)} className='flex gap-3 p-3 rounded-sm bg-white/20 dark:text-gray-300'><Send/> {lang.t43}</button>
         </div>
     </div>
