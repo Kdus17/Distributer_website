@@ -82,7 +82,7 @@ const handleLogin = async () => {
 const {Lang,toggleLang} = useLanguageContext();
     const Langopt = {
       t1: Lang ?  "ኪንግደም ብዝንስ": "kingdom's business",
-      t2:Lang ?  "የኢሜይል አድራሻ": "Email",
+      t2:Lang ?  "የተጠቃሚ ስም": "Username",
       t3:Lang ?  "የይለፍ ቃል": "Password",
 
       t5:Lang ?  "ግባ": "login",
