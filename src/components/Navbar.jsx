@@ -78,6 +78,7 @@ function Navbar() {
             onClick={()=>{toggleLang(!Lang) }}>
               {Lang? "Amharic":"English"}
             </button>
+
           </div>
 
           {/* Theme Toggle (Mobile only) */}

@@ -85,6 +85,11 @@ export default function Contact  () {
        const formData = new FormData(e.target);
        console.log(formData);
        formData.append("access_key", "9d33ba97-c068-4900-8b50-8a57c4b97cc8");
+       document.getElementById("firstname").value = '';
+       document.getElementById("lastname").value = "";
+       document.getElementById("email").value = "";
+       document.getElementById("phone").value = "";
+       document.getElementById("messeage").value = "";
        setIsSubmitting(true);
        console.log("roman");
        const response = await fetch("https://api.web3forms.com/submit", {
