@@ -1,8 +1,10 @@
 import { Coffee, X } from 'lucide-react'
 import React, { useRef, useState } from 'react'
 import ErrorCard from '../assets/ErrorCard'
+import SuccessCard from '../assets/SuccessCard'
 
 export default function AddCoffee({ setsee2, see2 }) {
+  const [status, setStatus] = useState(null)
   const [formData, setFromData] = useState({
     productname: "",
     origin: "",
@@ -49,6 +51,7 @@ export default function AddCoffee({ setsee2, see2 }) {
 
   const handlechange = (e) => {
     const { name, value } = e.target
+    setStatus(null)
     setFromData((prev) => ({
       ...prev,
       [name]: value
@@ -96,6 +99,7 @@ export default function AddCoffee({ setsee2, see2 }) {
     try {
       const response = await fetch('https://distributor-backend.onrender.com/local/poster', post_options)
       const data = await response.json()
+      
       console.log(data)
 
       // Reset form after success
@@ -111,8 +115,17 @@ export default function AddCoffee({ setsee2, see2 }) {
         processing: ""
       })
       setsee2(false)
+      setStatus("success")
+      setTimeout(() => {
+        setStatus(null)
+      }, 3000);
+
     } catch (error) {
       console.error("Error submitting form:", error)
+      setStatus("error")
+      setTimeout(() => {
+        setStatus(null)
+      }, 3000);
     }
   }
 
@@ -223,6 +236,8 @@ export default function AddCoffee({ setsee2, see2 }) {
           </div>
         )}
       </form>
+      {status === "success" && <SuccessCard Success="Successfully Added" />}
+      {status === "error" && <ErrorCard wrong="Failed to Add" />}
     </div>
   )
 }
