@@ -1,8 +1,10 @@
 import { Box, X } from 'lucide-react'
 import React, { useRef, useState } from 'react'
 import ErrorCard from '../assets/ErrorCard'
+import SuccessCard from '../assets/SuccessCard'
 
 export default function AddTrad({see3, setsee3}) {
+  const [status, setstatus] = useState(null)
   const [formData, setFromData] = useState({
     productname:"",
     descrption:"",
@@ -42,6 +44,7 @@ export default function AddTrad({see3, setsee3}) {
 
   const handlechange = (e) =>{
     const {name,value} = e.target;
+    setstatus(null)
     setFromData((prev)=>({
       ...prev,
       [name]:value
@@ -63,20 +66,17 @@ export default function AddTrad({see3, setsee3}) {
       newerrors.descrption = "You forgot to write descrption!"
     }
     seterrors(newerrors)
-    const post_options = {
-    method: "POST",
-    headers:{
-      "content-type": "application/json"
-      },
-      body: JSON.stringify(formData),
-    }
 
-    const response = await fetch('https://distributor-backend.onrender.com/local/post', post_options);
-    const data = await response.json()
-    console.log(data)
+    return Object.keys(newerrors).length === 0
+
+    
   }
   
   const handlesubmit = async (e) =>{
+    e.preventDefault()
+    const isvalid = validateform()
+    if(!isvalid) return
+
     const post_options = {
     method: "POST",
     headers:{
@@ -84,10 +84,24 @@ export default function AddTrad({see3, setsee3}) {
       },
       body: JSON.stringify(formData),
     }
-
+    try{
     const response = await fetch('https://distributor-backend.onrender.com/local/post', post_options);
     const data = await response.json()
+    setFromData(
+   {productname:"",
+    descrption:"",
+    image:"",
+    tagline:""}
+    )
     console.log(data)
+    setstatus("success");
+    setTimeout(() => setstatus(null), 3000)
+    }
+    catch(err){
+    console.log(err)
+    setstatus("error");
+    setTimeout(() => setstatus(null), 3000)
+    }
   }
 
 
@@ -148,13 +162,15 @@ export default function AddTrad({see3, setsee3}) {
           )}
         </div>
 
-        <div className='col-span-2 flex gap-3 py-2' onClick={validateform}>
+        <div className='col-span-2 flex gap-3 py-2' onClick={handlesubmit}>
           <p className='text-lg font-semibold w-full border text-center rounded-xl border-red-700 bg-red-600 text-white p-2'>Add</p>
         </div>
 
         {errors.productname && ( <div className='col-span-2'> <ErrorCard wrong={errors.productname} /> </div>)}
         {errors.descrption && ( <div className='col-span-2'> <ErrorCard wrong={errors.descrption} /> </div>)}
       </div>
+      {status === "success" && <SuccessCard Success="Successfully Added" />}
+      {status === "error" && <ErrorCard wrong="Failed to Add" />}
     </div>
   )
 }
