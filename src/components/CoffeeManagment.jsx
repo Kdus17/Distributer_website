@@ -133,8 +133,8 @@ const deleteCard =async (index,e)=>{
       {/**Head */}
       <div className='flex justify-between py-4'>
         <div className='flex flex-col gap-2'>
-          <h1 className='text-3xl font-bold '>Coffee Products Managment</h1>
-          <p className='text-gray-600'>Manage your premium Ethiopian coffee product catalog</p>
+          <h1 className='text-3xl font-bold dark:text-white'>Coffee Products Managment</h1>
+          <p className='text-gray-600 dark:text-gray-300'>Manage your premium Ethiopian coffee product catalog</p>
         </div>
         <div className='flex items-center'>
           <div className='bg-red-600 text-white cursor-pointer hover:bg-red-800 rounded-xl py-3 px-4 flex gap-4' onClick={()=>setsee2(!see2)}>
