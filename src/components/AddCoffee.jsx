@@ -130,8 +130,8 @@ export default function AddCoffee({ setsee2, see2 }) {
   }
 
   return (
-    <div className='absolute z-100 rounded-lg w-full sm:w-2/3 lg:w-1/2 bg-white pb-12 top-30 flex flex-col shadow-lg'>
-      <div className='bg-red-600 h-20 mb-8 rounded-t-md flex justify-between px-8 items-center text-white'>
+    <div className='absolute z-100 rounded-lg w-full sm:w-2/3 lg:w-1/2 bg-white dark:bg-gray-700 pb-12 top-30 flex flex-col shadow-lg'>
+      <div className='bg-red-600 dark:bg-gray-900 h-20 mb-8 rounded-t-md flex justify-between px-8 items-center text-white'>
         <div className='text-xl font-bold flex items-center gap-3'>
           <Coffee className='w-8 h-8' />
           Add Coffee Products
@@ -150,7 +150,7 @@ export default function AddCoffee({ setsee2, see2 }) {
           { label: "Description", name: "descrption", colSpan: 2 }
         ].map(({ label, name, colSpan }) => (
           <div key={name} className={`col-span-2 md:col-span-${colSpan || 1} flex flex-col py-2 gap-2`}>
-            <p className='text-lg font-semibold'>{label}</p>
+            <p className='text-lg font-semibold dark:text-gray-300'>{label}</p>
             <input
               type="text"
               className='p-2 border outline-none rounded-xl bg-red-100 border-red-300'
@@ -163,9 +163,9 @@ export default function AddCoffee({ setsee2, see2 }) {
         ))}
 
         <div className='col-span-2 md:col-span-1 flex flex-col py-2 gap-2'>
-          <p className='text-lg font-semibold'>Processing Method</p>
+          <p className='text-lg font-semibold dark:text-gray-300'>Processing Method</p>
           <select
-            className='p-2 border outline-none rounded-xl bg-red-100 border-red-300'
+            className='p-2 border outline-none rounded-xl bg-red-100 border-red-300 '
             name='processing'
             value={formData.processing}
             onChange={handlechange}
@@ -179,7 +179,7 @@ export default function AddCoffee({ setsee2, see2 }) {
         </div>
 
         <div className='col-span-2 md:col-span-1 flex flex-col py-2 gap-2'>
-          <p className='text-lg font-semibold'>Grade</p>
+          <p className='text-lg font-semibold dark:text-gray-300'>Grade</p>
           <select
             className='p-2 border outline-none rounded-xl bg-red-100 border-red-300'
             name='grade'
@@ -194,7 +194,7 @@ export default function AddCoffee({ setsee2, see2 }) {
           {errors.grade && <span className='text-red-500 text-sm'>{errors.grade}</span>}
         </div>
         <div className='col-span-2 flex flex-col py-2 gap-2'>
-          <p className='text-lg font-semibold'>Image Upload</p>
+          <p className='text-lg font-semibold dark:text-gray-300'>Image Upload</p>
 
           <input
             type="file"

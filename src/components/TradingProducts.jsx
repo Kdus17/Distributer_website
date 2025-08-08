@@ -104,8 +104,8 @@ const deleteCard = async (index, e) => {
       {/**Head */}
       <div className='flex justify-between py-4 lg:px-10'>
         <div className='flex flex-col gap-2'>
-          <h1 className='text-3xl font-bold '>Trading Products Managment</h1>
-          <p className='text-gray-600'>Manage your trading products catalog</p>
+          <h1 className='text-3xl font-bold dark:text-white'>Trading Products Managment</h1>
+          <p className='text-gray-600 dark:text-gray-300'>Manage your trading products catalog</p>
         </div>
         <div className='flex items-center'>
           <div className='bg-red-600 text-white cursor-pointer hover:bg-red-800 rounded-xl py-3 px-4 flex gap-4' onClick={()=>setsee3(!see3)}>
@@ -157,7 +157,7 @@ const deleteCard = async (index, e) => {
               </div>
 
               {/* Content Section */}
-              <div className="p-6 flex flex-col gap-4">
+              <div className="p-6 flex flex-col gap-4 dark:bg-gray-300">
 
 
                 <div className="flex flex-col gap-2">
