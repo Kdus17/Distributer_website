@@ -131,7 +131,7 @@ const deleteCard =async (index,e)=>{
     <div className='flex flex-col px-24 py-5 min-h-screen'>
       
       {/**Head */}
-      <div className='flex justify-between py-4'>
+      <div className='flex flex-col md:flex-row justify-between py-4 '>
         <div className='flex flex-col gap-2'>
           <h1 className='text-3xl font-bold dark:text-white'>Coffee Products Managment</h1>
           <p className='text-gray-600 dark:text-gray-300'>Manage your premium Ethiopian coffee product catalog</p>
@@ -155,13 +155,13 @@ const deleteCard =async (index,e)=>{
             style={{ backgroundImage: `url(${coffee.image})` }}
             className="bg-cover h-[200px] relative cursor-pointer"
           >
-            <input value={coffee.grade} className="bg-yellow-400 px-1 py-0.5 rounded-full mt-3 mr-4 absolute top-0 right-0"
+            <input value={coffee.grade} className="bg-yellow-400 md:px-1 py-0.5 rounded-full md:mt-3 md:mr-4 absolute top-0 right-0 px-0 mr-0.5 mt-0.5"
                 onChange={(e) => r(key, 'grade', e.target.value)}
                 onClick={(e) => (e.stopPropagation())}
                 type='text'
             />
              
-<button type='button' className='absolute top-2 left-13 border-1 bg-red-500 p-1 rounded-full text-white'
+<button type='button' className='absolute top-2 md:left-13 border-1 bg-red-500 p-1 rounded-full text-white  '
                 onClick={(e)=>deleteCard(key,e)}
                 >
             <Trash className='p-1'/>
@@ -181,7 +181,7 @@ const deleteCard =async (index,e)=>{
                 />
                 <button
                   onClick={() => setActiveOverlay(null)}
-                  className="absolute top-2 right-2 text-white"
+                  className="absolute top-2 right-2 text-white "
                 >
                   ✖
                 </button>
