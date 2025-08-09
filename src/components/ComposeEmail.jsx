@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import ErrorCard from '../assets/ErrorCard'
 
 export default function ComposeEmail({see4, setsee4}) {
+  const [status, setstatus] = useState(null)
   const [formData, setFromData] = useState({
     title:"",
     body:"",
@@ -30,21 +31,38 @@ export default function ComposeEmail({see4, setsee4}) {
       newerrors.body = "You forgot to write the message!"
       seterrors(newerrors)
       console.log(newerrors)
-    } else {
-        const post_options = {
-            method: "POST",
-            headers:{
-                "content-type": "application/json"
-            },
-            body: JSON.stringify({
-                formData
-            })
-        }
-        const response = await fetch(`https://distributor-backend.onrender.com/local/send-email`,post_options)
-        console.log(response.json())
     }
+    return Object.keys(newerrors).length === 0
     
   }
+
+const handlesubmit = async(e) => {
+  e.preventDefault();
+  const isvalid = validateform
+  if(!isvalid){
+    setFromData({title:"",body:""})
+    setstatus("error")
+    setTimeout(() => {
+      setstatus(null)
+    }, 3000);
+    return 
+  } 
+  const post_options = {
+  method: "POST",
+  headers:{
+    "content-type": "application/json"
+    },
+    body: JSON.stringify({
+                formData
+            })
+    }
+    const response = await fetch(`https://distributor-backend.onrender.com/local/send-email`,post_options)
+    setstatus("success")
+    setTimeout(() => {
+      setstatus(null)
+    }, 3000);
+    console.log(response.json())
+}
 
   return (
     <div className='absolute z-100 rounded-lg w-full sm:w-2/3 lg:w-1/2  bg-white  pb-12 top-30 flex flex-col shadow-lg'>
@@ -72,6 +90,8 @@ export default function ComposeEmail({see4, setsee4}) {
 
         {errors.body && ( <div className='col-span-2'> <ErrorCard wrong={errors.body} /> </div>)}
       </div>
+      {status === "success" && <SuccessCard Success="Successfully Sent" />}
+      {status === "error" && <ErrorCard wrong="Failed to Send" />}
     </div>
   )
 }
