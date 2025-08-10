@@ -90,12 +90,8 @@ const handlesubmit = async(e) => {
 
         {errors.body && ( <div className='col-span-2'> <ErrorCard wrong={errors.body} /> </div>)}
       </div>
-<<<<<<< HEAD
-    </form>
-=======
       {status === "success" && <SuccessCard Success="Successfully Sent" />}
       {status === "error" && <ErrorCard wrong="Failed to Send" />}
-    </div>
->>>>>>> 84ba5f2608a50a2c0662f769fee890a800495310
+    </form>
   )
 }
