@@ -1,6 +1,7 @@
 import { Box, Mail, X } from 'lucide-react'
 import React, { useState } from 'react'
 import ErrorCard from '../assets/ErrorCard'
+import SuccessCard from '../assets/SuccessCard'
 
 export default function ComposeEmail({see4, setsee4}) {
   const [status, setstatus] = useState(null)
