@@ -26,6 +26,7 @@ export default function ComposeEmail({see4, setsee4}) {
   }
 
   const validateform = async (e) =>{
+    e.preventDefault()
     const newerrors = {};
     if(!formData.body){
       newerrors.body = "You forgot to write the message!"
@@ -57,15 +58,16 @@ const handlesubmit = async(e) => {
             })
     }
     const response = await fetch(`https://distributor-backend.onrender.com/local/send-email`,post_options)
+    console.log(response.json())
     setstatus("success")
     setTimeout(() => {
       setstatus(null)
     }, 3000);
-    console.log(response.json())
+    
 }
 
   return (
-    <form onSubmit={validateform} className='absolute z-100 rounded-lg w-full sm:w-2/3 lg:w-1/2  bg-white  pb-12 top-30 flex flex-col shadow-lg'>
+    <form onSubmit={handlesubmit} className='absolute z-100 rounded-lg w-full sm:w-2/3 lg:w-1/2  bg-white  pb-12 top-30 flex flex-col shadow-lg'>
       <div className='bg-red-600 h-20 mb-8 rounded-t-md flex justify-between px-8 items-center text-white'>
         <div className='text-xl font-bold flex items-center gap-3' >
           <Mail className='w-8 h-8'/>
