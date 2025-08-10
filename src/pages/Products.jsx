@@ -11,14 +11,33 @@ import { useLanguageContext } from '../LanguageContext';
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"
 import mypdf from '../assets/pd.pdf'
+import ErrorCard from "../assets/ErrorCard"
+import SuccessCard from "../assets/SuccessCard"
 const Products = () => {
   const smallcards = "bg-red-300/10 p-4 rounded-2xl flex gap-4 shadow-sm border border-red-300  dark:bg-white/20 dark:border-gray-200 dark:text-gray-100";
  const navigate = useNavigate();
 const [email, setemail] = useState("")
+const [success, setsuccess] = useState(null)
 
+ const validate = () => {
+    const newerrors = {};
+    if(!email){
+      newerrors.body = "You forgot to write the message!"
+      console.log(newerrors)
+    }
+    return Object.keys(newerrors).length === 0
+ }
 
 
 const handleclick = async() => {
+  const isvalid = validate()
+  if(!isvalid){
+    setsuccess("error")
+    setTimeout(() => {
+      setsuccess(null)
+    }, 3000);
+    return
+  }
   const post_options = {
     method: "POST",
     headers:{
@@ -30,6 +49,10 @@ const handleclick = async() => {
   }
   const response = await fetch(`https://distributor-backend.onrender.com/local/e`, post_options)
   const json_response = await response.json();
+  setsuccess("success")
+  setTimeout(() => {
+    setsuccess(null)
+  }, 3000);
   console.log(json_response);
 }
   const sectionNav = "flex gap-3  bg-white/15  inset-ring-1 inset-ring-gray-400/20  p-3 py-3 px-7 rounded-xl hover:bg-orange-600";
@@ -191,9 +214,9 @@ useEffect(() => {
             <span>
             {coffee.productname}
             </span>
-            {/* <span>
+            <span>
             {coffee.origin}
-            </span> */}
+            </span>
           </p>
             </div>
           <div className="  flex flex-col gap-2 p-4 dark:text-gray-300">
@@ -203,10 +226,10 @@ useEffect(() => {
             <span className="text-gray-500 dark:text-white">{Langopt.h11}</span>
             <span>{coffee.flavor}</span>
           </div>
-          {/* <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2">
             <span  className="text-gray-500 dark:text-white">{Langopt.h12}</span>
             <span>{coffee.processing}</span>
-          </div> */}
+          </div>
           <div className="flex flex-col gap-2">
             <span className="text-gray-500 dark:text-white">{Langopt.h13}</span>
             <span>{coffee.altitude}</span>
@@ -468,6 +491,8 @@ useEffect(() => {
 
  </button>
   </div>
+    {success === "error" && <ErrorCard wrong="Something went wrong"/>}
+    {success === "success" && <SuccessCard Success="You have successfully Subscribed"/>}
 
 </div>
 {/* ready to partner to us */}
